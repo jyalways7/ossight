@@ -1,0 +1,10 @@
+{
+  "audience": "startup investor and market analyst",
+  "purpose": "investment research and sector monitoring",
+  "domains": ["ai", "vc", "investment", "market structure", "korea"],
+  "source_mix": ["global VC", "public reports", "Korea startup", "financial research"],
+  "output_mode": "research memo",
+  "lens_team": ["VC Market Mapper", "Research Librarian", "Founder Insight Editor"],
+  "tone": "source-backed, cautious, thesis-oriented",
+  "time_window": "last 7 days"
+}

@@ -1,0 +1,6 @@
+interface:
+  display_name: "Daily Signal Editor"
+  short_description: "Source-backed daily market briefs"
+  default_prompt: "Use $daily-signal-editor to create a source-backed daily brief for my audience and turn the best signals into content angles."
+policy:
+  allow_implicit_invocation: true

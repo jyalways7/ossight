@@ -1,0 +1,9 @@
+{
+  "audience": "Korean founder-investor",
+  "purpose": "market research and content ideation",
+  "domains": ["ai", "business", "startups", "vc", "investment", "korea"],
+  "source_mix": ["global VC", "Korea startup", "AI research", "market reports"],
+  "output_mode": "daily brief plus content angles",
+  "tone": "sharp, useful, source-backed, not hype-driven",
+  "time_window": "last 7 days"
+}

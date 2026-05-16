@@ -1,0 +1,10 @@
+{
+  "audience": "Korean B2B SaaS founder",
+  "purpose": "product strategy and weekly founder newsletter",
+  "domains": ["ai", "b2b saas", "startups", "workflow", "korea"],
+  "source_mix": ["global VC", "AI research", "Korea startup", "developer community"],
+  "output_mode": "daily brief plus newsletter draft",
+  "lens_team": ["AI Workflow Architect", "Founder Insight Editor", "Korea Business Operator", "Content Strategist"],
+  "tone": "practical, founder-oriented, sharp but not hype-driven",
+  "time_window": "last 7 days"
+}

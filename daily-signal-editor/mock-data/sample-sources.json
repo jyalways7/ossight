@@ -1,0 +1,56 @@
+[
+  {
+    "id": "yc",
+    "name": "Y Combinator",
+    "url": "https://www.ycombinator.com/blog",
+    "access": "public_web",
+    "tier": 1,
+    "domains": ["startups", "founder", "ai"],
+    "quality": 5
+  },
+  {
+    "id": "a16z",
+    "name": "a16z",
+    "url": "https://a16z.com",
+    "access": "public_web",
+    "tier": 1,
+    "domains": ["vc", "ai", "business"],
+    "quality": 5
+  },
+  {
+    "id": "geeknews",
+    "name": "GeekNews",
+    "url": "https://news.hada.io",
+    "access": "rss",
+    "tier": 2,
+    "domains": ["tech", "korea", "developer"],
+    "quality": 4
+  },
+  {
+    "id": "thevc",
+    "name": "THE VC",
+    "url": "https://thevc.kr",
+    "access": "public_web",
+    "tier": 2,
+    "domains": ["korea", "startup", "investment"],
+    "quality": 4
+  },
+  {
+    "id": "kb-research",
+    "name": "KB Research",
+    "url": "https://www.kbfg.com/kbresearch",
+    "access": "public_report",
+    "tier": 1,
+    "domains": ["wealth", "korea", "finance"],
+    "quality": 4
+  },
+  {
+    "id": "openai",
+    "name": "OpenAI Blog",
+    "url": "https://openai.com/news",
+    "access": "public_web",
+    "tier": 1,
+    "domains": ["ai", "product", "research"],
+    "quality": 5
+  }
+]

@@ -1,0 +1,52 @@
+[
+  {
+    "id": "yc-blog",
+    "name": "Y Combinator Blog",
+    "feed_url": "https://www.ycombinator.com/blog/rss",
+    "url": "https://www.ycombinator.com/blog",
+    "access": "rss",
+    "tier": 1,
+    "domains": ["startups", "founder", "ai", "business"],
+    "quality": 5
+  },
+  {
+    "id": "a16z",
+    "name": "a16z",
+    "feed_url": "https://a16z.com/feed/",
+    "url": "https://a16z.com",
+    "access": "rss",
+    "tier": 1,
+    "domains": ["vc", "ai", "business", "investment"],
+    "quality": 5
+  },
+  {
+    "id": "openai-news",
+    "name": "OpenAI News",
+    "feed_url": "https://openai.com/news/rss.xml",
+    "url": "https://openai.com/news",
+    "access": "rss",
+    "tier": 1,
+    "domains": ["ai", "product", "research", "agents"],
+    "quality": 5
+  },
+  {
+    "id": "hacker-news",
+    "name": "Hacker News",
+    "feed_url": "https://news.ycombinator.com/rss",
+    "url": "https://news.ycombinator.com",
+    "access": "rss",
+    "tier": 2,
+    "domains": ["technology", "startups", "developer", "ai"],
+    "quality": 4
+  },
+  {
+    "id": "geeknews",
+    "name": "GeekNews",
+    "feed_url": "https://news.hada.io/rss/news",
+    "url": "https://news.hada.io",
+    "access": "rss",
+    "tier": 2,
+    "domains": ["tech", "korea", "developer", "startup"],
+    "quality": 4
+  }
+]

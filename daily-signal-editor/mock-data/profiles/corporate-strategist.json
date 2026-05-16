@@ -1,0 +1,10 @@
+{
+  "audience": "corporate strategy team",
+  "purpose": "competitive sensing and weekly strategy meeting",
+  "domains": ["ai", "enterprise automation", "competitive risk", "korea", "workflow"],
+  "source_mix": ["company blogs", "market reports", "Korea business", "global VC"],
+  "output_mode": "strategy meeting agenda and Slack update",
+  "lens_team": ["Enterprise Strategist", "Research Librarian", "Korea Business Operator"],
+  "tone": "concise, decision-oriented, risk-aware",
+  "time_window": "this week"
+}
