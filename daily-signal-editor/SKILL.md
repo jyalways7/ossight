@@ -52,8 +52,11 @@ If the user only says "make my daily brief", use this default:
 
 2. Choose sources.
    - Read `references/source-catalog.md` when choosing or explaining source strategy.
+   - Use `mock-data/source-registry.json` as the default source universe.
+   - Run `scripts/plan_sources.py` when the user wants the skill to choose sources automatically for a persona, purpose, or domain.
    - Favor official blogs, RSS feeds, public reports, public APIs, and user-provided links.
    - Include Korean sources when the user cares about Korean business, startups, consumers, policy, or investing.
+   - Rotate sources by persona and day instead of reading the same feed list every time. Keep RSS sources for automatic fetch and non-RSS newsletters, reports, and YouTube channels as watchlist sources.
 
 3. Gather candidate items.
    - Use public source summaries, RSS items, official posts, public reports, or mock data.
@@ -103,6 +106,16 @@ Validate the generated brief:
 
 ```bash
 python3 scripts/validate_digest.py examples/daily-brief.md
+```
+
+Plan sources for a persona before fetching:
+
+```bash
+python3 scripts/plan_sources.py \
+  --registry mock-data/source-registry.json \
+  --profile mock-data/profiles/founder.json \
+  --output examples/founder-source-plan.json \
+  --rss-output /tmp/founder-rss-sources.json
 ```
 
 ## Done When

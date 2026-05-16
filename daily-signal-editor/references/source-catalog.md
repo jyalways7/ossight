@@ -2,6 +2,29 @@
 
 Use this catalog to choose source mixes for daily briefs. Prefer public, official, and read-only sources. Use mock data for reproducible demos and offline validation.
 
+The machine-readable source universe lives in `mock-data/source-registry.json`. Use `scripts/plan_sources.py` to choose a rotating source plan for the user's audience, purpose, domains, and output mode.
+
+## Active Source Rotation
+
+Do not read the same fixed source list every day. Build a source plan first:
+
+1. Match the user's persona and purpose against source `domains`, `personas`, and `geography`.
+2. Prefer Tier 1 official sources for factual claims.
+3. Mix source types: official blogs, VC/operator writing, newsletters, Korea sources, reports, community sources, and YouTube.
+4. Use RSS sources for automatic fetch.
+5. Keep non-RSS newsletters, public reports, and YouTube channels as watchlist sources.
+6. Rotate among similar sources by day or seed so the brief does not become repetitive.
+
+Example:
+
+```bash
+python3 scripts/plan_sources.py \
+  --registry mock-data/source-registry.json \
+  --profile mock-data/profiles/founder.json \
+  --output examples/founder-source-plan.json \
+  --rss-output /tmp/founder-rss-sources.json
+```
+
 ## Source Tiers
 
 ### Tier 1: Official and Primary
@@ -20,6 +43,22 @@ Use these to find narratives and emerging topics.
 - Global: Hacker News, The Information headlines, TechCrunch, Stratechery excerpts when public, Lenny's Newsletter public posts, Latent Space.
 - Korea: GeekNews, Startup Alliance, Platum, Venturesquare, THE VC public pages, Hankyung startup coverage.
 - Investing and wealth: KB, Hana, Shinhan, Woori, Mirae Asset, Samsung Securities, Daishin research pages when publicly accessible.
+
+### Newsletters and Podcasts
+
+Use these for narrative discovery and content angles. Verify important claims with primary sources:
+
+- AI and developer: Latent Space, Import AI, The Batch, Ben's Bites, TLDR AI.
+- Product and startup operations: Lenny's Newsletter, First Round Review.
+- Strategy and markets: Stratechery public posts, Not Boring public posts.
+
+### YouTube and Video
+
+Use video sources as watchlist items unless transcripts are available:
+
+- Y Combinator YouTube for founder education.
+- a16z YouTube for market narrative and interviews.
+- Gartner YouTube for enterprise technology framing.
 
 ### Tier 3: Community and Social Signals
 

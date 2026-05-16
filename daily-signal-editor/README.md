@@ -12,7 +12,8 @@ Daily Signal Editor는 단순한 뉴스 요약 도구가 아니에요. 수많은
 
 Daily Signal Editor는 공개 소스, RSS, 리포트 링크, 사용자가 제공한 URL, 또는 mock data를 바탕으로 다음 일을 합니다.
 
-- 비즈니스/AI/투자/스타트업 관련 후보 소스를 정리합니다.
+- 비즈니스/AI/투자/스타트업 관련 후보 소스를 넓은 registry에서 자동으로 고릅니다.
+- RSS, 뉴스레터, 리포트, 유튜브, 한국 스타트업 소스를 persona에 맞게 갈아끼웁니다.
 - 후보 아이템을 신선도, 출처 신뢰도, 사용자 적합도, 사업적 영향, 독창성, 콘텐츠 잠재력으로 점수화합니다.
 - 상위 신호 3-7개를 골라 "무슨 일이 있었는지"보다 "왜 중요한지"를 설명합니다.
 - 여러 신호를 연결해 "지금 시장이 어느 방향으로 움직이는지"를 합성합니다.
@@ -203,6 +204,8 @@ B2B 팀은 매주 신뢰할 만한 관점이 담긴 콘텐츠를 만들어야 �
 
 기본 원칙은 공개, 읽기 전용, 출처 링크 보존입니다.
 
+소스는 [mock-data/source-registry.json](mock-data/source-registry.json)에 모아두고, [scripts/plan_sources.py](scripts/plan_sources.py)가 사용자의 목적에 맞춰 매번 조합을 고릅니다. RSS가 있는 소스는 자동 fetch 후보가 되고, 뉴스레터/리포트/유튜브처럼 RSS가 없거나 불안정한 소스는 watchlist로 남겨 사용자가 URL을 주거나 나중에 어댑터를 붙일 수 있게 합니다.
+
 글로벌:
 
 - Y Combinator
@@ -223,6 +226,13 @@ B2B 팀은 매주 신뢰할 만한 관점이 담긴 콘텐츠를 만들어야 �
 - DART
 - 한국은행/통계청/KOSIS
 - KB/하나/신한/우리금융 경영연구소 공개 리포트
+
+뉴스레터/유튜브/리포트:
+
+- Latent Space, Import AI, The Batch, Ben's Bites, TLDR AI
+- Lenny's Newsletter, Stratechery, Not Boring
+- McKinsey Insights, Bain Insights, ARK Invest Research
+- Y Combinator YouTube, a16z YouTube, Gartner YouTube
 
 자세한 소스 전략은 [references/source-catalog.md](references/source-catalog.md)에 있습니다.
 
@@ -273,13 +283,19 @@ python3 scripts/score_items.py \
 공개 RSS 소스로 live item을 가져와 테스트합니다. 기본 live demo는 현재 접근 가능한 RSS만 포함합니다. a16z처럼 feed 경로가 바뀌거나 404를 반환하는 소스는 [references/source-catalog.md](references/source-catalog.md)에 후보로 두고, 검증된 feed URL이 있을 때 live source에 추가합니다.
 
 ```bash
+python3 scripts/plan_sources.py \
+  --registry mock-data/source-registry.json \
+  --profile mock-data/profiles/founder.json \
+  --output examples/founder-source-plan.json \
+  --rss-output /tmp/founder-rss-sources.json
+
 python3 scripts/fetch_rss.py \
-  --sources mock-data/live-sources.json \
+  --sources /tmp/founder-rss-sources.json \
   --output /tmp/daily-signal-live-items.json \
   --max-items-per-source 3
 
 python3 scripts/build_digest.py \
-  --sources mock-data/live-sources.json \
+  --sources /tmp/founder-rss-sources.json \
   --items /tmp/daily-signal-live-items.json \
   --profile mock-data/profiles/founder.json \
   --output /tmp/daily-signal-live-founder-brief.md
@@ -309,6 +325,7 @@ python3 scripts/build_digest.py \
 - [ ] Add user-provided URL ingestion.
 - [ ] Add a public-report ingestion path for PDF links.
 - [ ] Add source freshness and duplicate detection.
+- [x] Add rotating source registry and persona-based source planning.
 
 ### Phase 4: Content Workflow
 
