@@ -13,7 +13,9 @@ from score_items import item_list, load_json, score_items
 def content_angle(item: dict) -> str:
     title = item["title"].rstrip(".")
     topics = ", ".join(item.get("topics", [])[:3])
-    return f"What {title.lower()} tells us about {topics}"
+    if topics:
+        return f"{title}: what it changes for {topics}"
+    return f"{title}: what this signal changes"
 
 
 def top_topics(items: list[dict], limit: int = 4) -> list[str]:
@@ -33,11 +35,17 @@ def synthesize_pattern(top: list[dict], profile: dict) -> str:
     if not topics:
         return f"For {audience}, the selected signals need more evidence before a directional pattern is clear."
     topic_text = ", ".join(topics)
+    if "workflow" in topics or "ai" in topics:
+        return (
+            f"Across the selected signals, {topic_text} point to AI moving from broad tools into "
+            f"specific work packets: briefs, plans, reviews, connectors, and team updates. For "
+            f"{audience}, the useful question is not just which model is better, but which workflow "
+            f"will become owned, repeatable, and data-rich."
+        )
     return (
-        f"Across the selected signals, the common pattern is that {topic_text} are converging into "
-        f"repeatable business workflows rather than isolated announcements. For {audience}, this "
-        f"suggests a practical shift: track who owns the workflow, what data loop compounds, and "
-        f"which local market constraints could slow adoption."
+        f"Across the selected signals, {topic_text} appear to be clustering into a directional "
+        f"market theme. For {audience}, treat this as a research lead: useful enough to investigate, "
+        f"but not strong enough to act on without primary-source confirmation."
     )
 
 
@@ -124,7 +132,7 @@ def render_artifacts(profile: dict, top: list[dict]) -> list[str]:
 
 
 def render_digest(profile: dict, scored_items: list[dict], max_signals: int) -> str:
-    top = scored_items[:max_signals]
+    top = select_signals(scored_items, max_signals)
     audience = profile.get("audience", "general business reader")
     purpose = profile.get("purpose", "market research")
     domains = ", ".join(profile.get("domains", []))
@@ -200,6 +208,31 @@ def render_digest(profile: dict, scored_items: list[dict], max_signals: int) -> 
     )
 
     return "\n".join(lines)
+
+
+def select_signals(scored_items: list[dict], max_signals: int, max_per_source: int = 2) -> list[dict]:
+    selected: list[dict] = []
+    per_source: dict[str, int] = {}
+
+    for item in scored_items:
+        source = item.get("source_id", "unknown")
+        if per_source.get(source, 0) >= max_per_source:
+            continue
+        if item.get("topics") == ["general"] and len(scored_items) > max_signals:
+            continue
+        selected.append(item)
+        per_source[source] = per_source.get(source, 0) + 1
+        if len(selected) >= max_signals:
+            return selected
+
+    for item in scored_items:
+        if item in selected:
+            continue
+        selected.append(item)
+        if len(selected) >= max_signals:
+            return selected
+
+    return selected
 
 
 def main() -> int:

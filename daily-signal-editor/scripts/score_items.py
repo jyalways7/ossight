@@ -32,10 +32,38 @@ def normalize_terms(values: list[str] | str | None) -> set[str]:
     return {value.strip().lower() for value in values if value.strip()}
 
 
+def term_tokens(terms: set[str]) -> set[str]:
+    tokens: set[str] = set()
+    stop = {
+        "and",
+        "or",
+        "the",
+        "for",
+        "with",
+        "weekly",
+        "daily",
+        "korean",
+        "team",
+        "teams",
+    }
+    for term in terms:
+        for token in re_split(term):
+            if len(token) >= 3 and token not in stop:
+                tokens.add(token)
+    return tokens
+
+
+def re_split(value: str) -> list[str]:
+    import re
+
+    return [token for token in re.split(r"[^a-z0-9가-힣]+", value.lower()) if token]
+
+
 def audience_fit(item: dict[str, Any], profile: dict[str, Any]) -> float:
     profile_terms = normalize_terms(profile.get("domains"))
     profile_terms |= normalize_terms(profile.get("audience"))
     profile_terms |= normalize_terms(profile.get("purpose"))
+    profile_terms |= normalize_terms(profile.get("output_mode"))
     item_terms = normalize_terms(item.get("topics"))
     text = " ".join(
         str(item.get(key, "")) for key in ("title", "summary", "why_it_matters")
@@ -43,7 +71,9 @@ def audience_fit(item: dict[str, Any], profile: dict[str, Any]) -> float:
 
     matches = len(profile_terms & item_terms)
     text_matches = sum(1 for term in profile_terms if term and term in text)
-    raw = 2.0 + matches * 0.8 + text_matches * 0.35
+    token_matches = sum(1 for token in term_tokens(profile_terms) if token in text)
+    topic_token_matches = len(term_tokens(profile_terms) & item_terms)
+    raw = 1.4 + matches * 0.8 + text_matches * 0.35 + token_matches * 0.18 + topic_token_matches * 0.45
     return min(5.0, raw)
 
 
@@ -57,6 +87,7 @@ def score_items(
 
     for item in items:
         source = source_by_id.get(item.get("source_id"), {})
+        item_terms = normalize_terms(item.get("topics"))
         durability = item.get("signal_durability")
         if durability is None:
             durability = min(
@@ -75,6 +106,10 @@ def score_items(
         weighted = sum(dimensions[key] * WEIGHTS[key] for key in WEIGHTS)
         max_weighted = 5 * sum(WEIGHTS.values())
         total = round((weighted / max_weighted) * 5, 2)
+        if item_terms == {"general"}:
+            total = round(max(0, total - 0.45), 2)
+        if str(item.get("summary", "")).strip().lower() in {"comments", "no summary provided by feed."}:
+            total = round(max(0, total - 0.35), 2)
         scored.append(
             {
                 **item,

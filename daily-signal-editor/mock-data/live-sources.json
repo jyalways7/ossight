@@ -10,16 +10,6 @@
     "quality": 5
   },
   {
-    "id": "a16z",
-    "name": "a16z",
-    "feed_url": "https://a16z.com/feed/",
-    "url": "https://a16z.com",
-    "access": "rss",
-    "tier": 1,
-    "domains": ["vc", "ai", "business", "investment"],
-    "quality": 5
-  },
-  {
     "id": "openai-news",
     "name": "OpenAI News",
     "feed_url": "https://openai.com/news/rss.xml",

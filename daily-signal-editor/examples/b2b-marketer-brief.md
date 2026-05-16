@@ -7,11 +7,11 @@
 
 ## Executive Read
 
-Across the selected signals, the common pattern is that ai, business, vc, agents are converging into repeatable business workflows rather than isolated announcements. For B2B content marketer, this suggests a practical shift: track who owns the workflow, what data loop compounds, and which local market constraints could slow adoption.
+Across the selected signals, ai, business, vc, agents point to AI moving from broad tools into specific work packets: briefs, plans, reviews, connectors, and team updates. For B2B content marketer, the useful question is not just which model is better, but which workflow will become owned, repeatable, and data-rich.
 
 ## Pattern Synthesis
 
-- Directional read: Across the selected signals, the common pattern is that ai, business, vc, agents are converging into repeatable business workflows rather than isolated announcements. For B2B content marketer, this suggests a practical shift: track who owns the workflow, what data loop compounds, and which local market constraints could slow adoption.
+- Directional read: Across the selected signals, ai, business, vc, agents point to AI moving from broad tools into specific work packets: briefs, plans, reviews, connectors, and team updates. For B2B content marketer, the useful question is not just which model is better, but which workflow will become owned, repeatable, and data-rich.
 - Contrarian view: The pattern may still be early: some supporting items are secondary or headline-driven, so look for primary-source confirmation before treating it as a durable market shift.
 - Evidence to verify next: primary-source announcements, customer behavior, funding data, and local-market adoption signals.
 
@@ -20,84 +20,84 @@ Across the selected signals, the common pattern is that ai, business, vc, agents
 ### 1. AI application moats depend on workflow data
 
 - Source: [a16z](https://example.com/a16z-workflow-data)
-- Score: 4.56 / 5
+- Score: 4.53 / 5
 - Signal durability: 5.0 / 5
 - What happened: A VC analysis highlights workflow-specific data and distribution as more defensible than thin model wrappers.
 - Why it matters: It gives founders a concrete test for whether their AI product can become durable.
 - Who cares: B2B content marketer
 - What to watch: Look for repeat evidence from primary sources, customer behavior, funding data, or product launches.
-- Content angle: What ai application moats depend on workflow data tells us about ai, vc, business
+- Content angle: AI application moats depend on workflow data: what it changes for ai, vc, business
 
 ### 2. Agent workflows move from chat to repeatable tasks
 
 - Source: [OpenAI Blog](https://example.com/openai-agent-workflows)
-- Score: 4.54 / 5
+- Score: 4.43 / 5
 - Signal durability: 5.0 / 5
 - What happened: A major AI platform describes new ways for users to turn repeated work into reusable agent procedures.
 - Why it matters: The center of AI product value is shifting from one-off answers to repeatable work loops.
 - Who cares: B2B content marketer
 - What to watch: Look for repeat evidence from primary sources, customer behavior, funding data, or product launches.
-- Content angle: What agent workflows move from chat to repeatable tasks tells us about ai, agents, workflow
+- Content angle: Agent workflows move from chat to repeatable tasks: what it changes for ai, agents, workflow
 
-### 3. Vertical AI companies package service workflows as software
-
-- Source: [a16z](https://example.com/a16z-vertical-ai-services)
-- Score: 4.43 / 5
-- Signal durability: 5.0 / 5
-- What happened: A VC post argues that vertical AI companies can turn labor-heavy service workflows into scalable software-like margins.
-- Why it matters: This creates a market map lens for Korean SMEs, where expert service processes are often still manual.
-- Who cares: B2B content marketer
-- What to watch: Look for repeat evidence from primary sources, customer behavior, funding data, or product launches.
-- Content angle: What vertical ai companies package service workflows as software tells us about ai, vc, vertical-ai
-
-### 4. Founders are using content as a product discovery channel
+### 3. Founders are using content as a product discovery channel
 
 - Source: [Y Combinator](https://example.com/yc-content-discovery)
-- Score: 4.34 / 5
+- Score: 4.42 / 5
 - Signal durability: 4.5 / 5
 - What happened: A startup essay argues that founder-led writing is becoming a practical way to test positioning before building sales teams.
 - Why it matters: For early teams, publishing can become a cheap market-learning loop rather than only a brand activity.
 - Who cares: B2B content marketer
 - What to watch: Look for repeat evidence from primary sources, customer behavior, funding data, or product launches.
-- Content angle: What founders are using content as a product discovery channel tells us about startups, founder, content
+- Content angle: Founders are using content as a product discovery channel: what it changes for startups, founder, content
+
+### 4. Vertical AI companies package service workflows as software
+
+- Source: [a16z](https://example.com/a16z-vertical-ai-services)
+- Score: 4.4 / 5
+- Signal durability: 5.0 / 5
+- What happened: A VC post argues that vertical AI companies can turn labor-heavy service workflows into scalable software-like margins.
+- Why it matters: This creates a market map lens for Korean SMEs, where expert service processes are often still manual.
+- Who cares: B2B content marketer
+- What to watch: Look for repeat evidence from primary sources, customer behavior, funding data, or product launches.
+- Content angle: Vertical AI companies package service workflows as software: what it changes for ai, vc, vertical-ai
 
 ### 5. Korean AI infrastructure startups attract concentrated funding
 
 - Source: [THE VC](https://example.com/thevc-korea-ai-infra)
-- Score: 4.0 / 5
+- Score: 3.92 / 5
 - Signal durability: 4.5 / 5
 - What happened: A Korean startup market update says capital is concentrating around AI infrastructure, semiconductor tooling, and enterprise automation.
 - Why it matters: Korean startup funding may be narrowing, which makes category selection and proof of demand more important.
 - Who cares: B2B content marketer
 - What to watch: Look for repeat evidence from primary sources, customer behavior, funding data, or product launches.
-- Content angle: What korean ai infrastructure startups attract concentrated funding tells us about korea, startup, investment
+- Content angle: Korean AI infrastructure startups attract concentrated funding: what it changes for korea, startup, investment
 
 ## Content Starters
 
-1. Hook: What ai application moats depend on workflow data tells us about ai, vc, business
-   Evidence: a16z item, score 4.56 / 5.
+1. Hook: AI application moats depend on workflow data: what it changes for ai, vc, business
+   Evidence: a16z item, score 4.53 / 5.
    CTA: Ask readers what workflow, market, or product assumption this changes.
 
-2. Hook: What agent workflows move from chat to repeatable tasks tells us about ai, agents, workflow
-   Evidence: OpenAI Blog item, score 4.54 / 5.
+2. Hook: Agent workflows move from chat to repeatable tasks: what it changes for ai, agents, workflow
+   Evidence: OpenAI Blog item, score 4.43 / 5.
    CTA: Ask readers what workflow, market, or product assumption this changes.
 
-3. Hook: What vertical ai companies package service workflows as software tells us about ai, vc, vertical-ai
-   Evidence: a16z item, score 4.43 / 5.
+3. Hook: Founders are using content as a product discovery channel: what it changes for startups, founder, content
+   Evidence: Y Combinator item, score 4.42 / 5.
    CTA: Ask readers what workflow, market, or product assumption this changes.
 
 ## Actionable Artifacts: LinkedIn/Newsletter Hooks
 
-1. Hook: What ai application moats depend on workflow data tells us about ai, vc, business
-   Evidence: a16z item, score 4.56 / 5.
+1. Hook: AI application moats depend on workflow data: what it changes for ai, vc, business
+   Evidence: a16z item, score 4.53 / 5.
    CTA: Ask readers what workflow, market, or product assumption this changes.
 
-2. Hook: What agent workflows move from chat to repeatable tasks tells us about ai, agents, workflow
-   Evidence: OpenAI Blog item, score 4.54 / 5.
+2. Hook: Agent workflows move from chat to repeatable tasks: what it changes for ai, agents, workflow
+   Evidence: OpenAI Blog item, score 4.43 / 5.
    CTA: Ask readers what workflow, market, or product assumption this changes.
 
-3. Hook: What vertical ai companies package service workflows as software tells us about ai, vc, vertical-ai
-   Evidence: a16z item, score 4.43 / 5.
+3. Hook: Founders are using content as a product discovery channel: what it changes for startups, founder, content
+   Evidence: Y Combinator item, score 4.42 / 5.
    CTA: Ask readers what workflow, market, or product assumption this changes.
 
 ## Watch Next
@@ -108,6 +108,6 @@ Across the selected signals, the common pattern is that ai, business, vc, agents
 
 ## Caveats
 
-- This brief uses mock/public-style source metadata for a reproducible local demo.
+- This brief uses mock or public RSS-style source metadata for a reproducible local demo.
 - This is source-backed research and content ideation, not financial advice.
 - Do not copy paid or login-only source text into generated outputs.

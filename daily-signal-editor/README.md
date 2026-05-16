@@ -270,7 +270,7 @@ python3 scripts/score_items.py \
   --profile mock-data/sample-user-profile.json
 ```
 
-공개 RSS 소스로 live item을 가져와 테스트합니다.
+공개 RSS 소스로 live item을 가져와 테스트합니다. 기본 live demo는 현재 접근 가능한 RSS만 포함합니다. a16z처럼 feed 경로가 바뀌거나 404를 반환하는 소스는 [references/source-catalog.md](references/source-catalog.md)에 후보로 두고, 검증된 feed URL이 있을 때 live source에 추가합니다.
 
 ```bash
 python3 scripts/fetch_rss.py \
