@@ -50,7 +50,7 @@
     "tone": "Korean product writing style: short, clear, useful, low-hype, action-oriented",
     "time_window": "today"
   },
-  "seed": 20260517,
+  "seed": 739754,
   "selected_sources": [
     {
       "id": "stratechery",
@@ -76,7 +76,7 @@
       "geography": [
         "global"
       ],
-      "selection_score": 12.28,
+      "selection_score": 12.19,
       "notes": "Use public excerpts/posts only. Excellent for platform strategy lens."
     },
     {
@@ -103,7 +103,7 @@
       "geography": [
         "global"
       ],
-      "selection_score": 11.94,
+      "selection_score": 12.06,
       "notes": "Operator playbooks and tactical founder advice; strong for actionable artifacts."
     },
     {
@@ -129,7 +129,7 @@
       "geography": [
         "global"
       ],
-      "selection_score": 11.9,
+      "selection_score": 12.02,
       "notes": "Narrative-heavy source; useful for content angles but verify claims with primary sources."
     },
     {
@@ -155,7 +155,7 @@
       "geography": [
         "global"
       ],
-      "selection_score": 11.33,
+      "selection_score": 11.24,
       "notes": "Use public posts only. Strong for product/growth practice and content angles."
     },
     {
@@ -183,8 +183,34 @@
       "geography": [
         "korea"
       ],
-      "selection_score": 13.2,
+      "selection_score": 13.11,
       "notes": "Use public consumer trend reports for Korean market context."
+    },
+    {
+      "id": "kosis",
+      "name": "KOSIS",
+      "url": "https://kosis.kr/",
+      "source_type": "public_data",
+      "access": "public_web",
+      "tier": 1,
+      "quality": 5,
+      "cadence": "monthly",
+      "domains": [
+        "korea",
+        "statistics",
+        "macro",
+        "consumer"
+      ],
+      "personas": [
+        "investor-analyst",
+        "corporate-strategist",
+        "creator"
+      ],
+      "geography": [
+        "korea"
+      ],
+      "selection_score": 11.82,
+      "notes": "Primary Korean statistics. Use for grounding narratives in data."
     },
     {
       "id": "bain-insights",
@@ -210,7 +236,7 @@
       "geography": [
         "global"
       ],
-      "selection_score": 11.8,
+      "selection_score": 11.71,
       "notes": "Good for executive framing and industry reports."
     },
     {
@@ -237,34 +263,8 @@
       "geography": [
         "global"
       ],
-      "selection_score": 11.77,
+      "selection_score": 11.68,
       "notes": "Useful for corporate strategy framing; watch for generic claims."
-    },
-    {
-      "id": "kosis",
-      "name": "KOSIS",
-      "url": "https://kosis.kr/",
-      "source_type": "public_data",
-      "access": "public_web",
-      "tier": 1,
-      "quality": 5,
-      "cadence": "monthly",
-      "domains": [
-        "korea",
-        "statistics",
-        "macro",
-        "consumer"
-      ],
-      "personas": [
-        "investor-analyst",
-        "corporate-strategist",
-        "creator"
-      ],
-      "geography": [
-        "korea"
-      ],
-      "selection_score": 11.7,
-      "notes": "Primary Korean statistics. Use for grounding narratives in data."
     },
     {
       "id": "kocca-reports",
@@ -292,7 +292,7 @@
       "geography": [
         "korea"
       ],
-      "selection_score": 13.93,
+      "selection_score": 13.84,
       "notes": "Primary Korean content industry source. Use for IP, games, media, and creator economy context."
     },
     {
@@ -320,7 +320,7 @@
       "geography": [
         "global"
       ],
-      "selection_score": 11.96,
+      "selection_score": 12.08,
       "notes": "Use for platform-level trend analysis and creator economy context."
     },
     {
@@ -348,7 +348,7 @@
       "geography": [
         "korea"
       ],
-      "selection_score": 12.9,
+      "selection_score": 13.02,
       "notes": "Strong Korean developer/startup signal source; verify original links where possible."
     },
     {
@@ -377,7 +377,7 @@
       "geography": [
         "korea"
       ],
-      "selection_score": 12.41,
+      "selection_score": 12.53,
       "notes": "Manual watchlist for Korean YouTube trending videos. Use titles, channels, descriptions, and visible metrics only; verify claims elsewhere."
     },
     {
@@ -406,7 +406,7 @@
       "geography": [
         "korea"
       ],
-      "selection_score": 11.79,
+      "selection_score": 11.7,
       "notes": "Use as public interest signal. Treat as demand discovery, not factual proof."
     },
     {
@@ -432,7 +432,7 @@
       "geography": [
         "global"
       ],
-      "selection_score": 10.0,
+      "selection_score": 9.91,
       "notes": "Use as weak discovery signal; fetch original linked pages for evidence."
     },
     {
@@ -460,7 +460,7 @@
       "geography": [
         "global"
       ],
-      "selection_score": 8.95,
+      "selection_score": 8.86,
       "notes": "Manual weak-signal watchlist for casual conversation shifts. Use user-provided public links or excerpts."
     },
     {
@@ -488,38 +488,8 @@
       "geography": [
         "global"
       ],
-      "selection_score": 8.92,
+      "selection_score": 8.83,
       "notes": "Manual weak-signal watchlist. Do not bypass login or scrape protected content. Use public posts only and verify claims with stronger sources."
-    },
-    {
-      "id": "apple-app-store-top-free-kr",
-      "name": "Apple App Store Top Free Korea",
-      "url": "https://www.apple.com/kr/app-store/",
-      "api_url": "https://rss.applemarketingtools.com/api/v2/kr/apps/top-free/50/apps.json",
-      "source_type": "app_rankings",
-      "source_category": "app_rankings",
-      "access": "public_api",
-      "tier": 2,
-      "quality": 4,
-      "cadence": "daily",
-      "domains": [
-        "apps",
-        "rankings",
-        "consumer",
-        "product",
-        "korea"
-      ],
-      "personas": [
-        "creator",
-        "founder",
-        "b2b-marketer",
-        "investor-analyst"
-      ],
-      "geography": [
-        "korea"
-      ],
-      "selection_score": 13.44,
-      "notes": "Fetchable public ranking source. Use rank movement as product-discovery signal, not proof of revenue."
     },
     {
       "id": "apple-app-store-top-paid-kr",
@@ -548,8 +518,38 @@
       "geography": [
         "korea"
       ],
-      "selection_score": 13.26,
+      "selection_score": 13.38,
       "notes": "Fetchable public paid-app ranking source. Combine with reviews, downloads, and category context before drawing conclusions."
+    },
+    {
+      "id": "apple-app-store-top-free-kr",
+      "name": "Apple App Store Top Free Korea",
+      "url": "https://www.apple.com/kr/app-store/",
+      "api_url": "https://rss.applemarketingtools.com/api/v2/kr/apps/top-free/50/apps.json",
+      "source_type": "app_rankings",
+      "source_category": "app_rankings",
+      "access": "public_api",
+      "tier": 2,
+      "quality": 4,
+      "cadence": "daily",
+      "domains": [
+        "apps",
+        "rankings",
+        "consumer",
+        "product",
+        "korea"
+      ],
+      "personas": [
+        "creator",
+        "founder",
+        "b2b-marketer",
+        "investor-analyst"
+      ],
+      "geography": [
+        "korea"
+      ],
+      "selection_score": 13.35,
+      "notes": "Fetchable public ranking source. Use rank movement as product-discovery signal, not proof of revenue."
     },
     {
       "id": "mobileindex",
@@ -577,7 +577,7 @@
       "geography": [
         "korea"
       ],
-      "selection_score": 13.17,
+      "selection_score": 13.08,
       "notes": "Korean mobile app market watchlist. Use public charts or reports only."
     },
     {
@@ -606,7 +606,7 @@
       "geography": [
         "global"
       ],
-      "selection_score": 12.41,
+      "selection_score": 12.53,
       "notes": "Use for web/app traffic narratives and category movement. Verify with primary app store or company data when possible."
     },
     {
@@ -632,7 +632,7 @@
       "geography": [
         "korea"
       ],
-      "selection_score": 11.1,
+      "selection_score": 11.01,
       "notes": "Primary macroeconomic source for Korea."
     },
     {
@@ -657,7 +657,7 @@
       "geography": [
         "korea"
       ],
-      "selection_score": 10.17,
+      "selection_score": 10.08,
       "notes": "Primary Korean public company filing source. Use for factual evidence."
     },
     {
@@ -682,7 +682,7 @@
       "geography": [
         "global"
       ],
-      "selection_score": 7.9,
+      "selection_score": 8.02,
       "notes": "Use as a thematic source; verify with primary data when making claims."
     },
     {
@@ -708,7 +708,7 @@
       "geography": [
         "korea"
       ],
-      "selection_score": 13.14,
+      "selection_score": 13.26,
       "notes": "Korean startup ecosystem and funding coverage."
     },
     {
@@ -734,7 +734,7 @@
       "geography": [
         "korea"
       ],
-      "selection_score": 13.11,
+      "selection_score": 13.23,
       "notes": "Korean startup news and funding signal."
     },
     {
@@ -760,7 +760,7 @@
       "geography": [
         "korea"
       ],
-      "selection_score": 12.19,
+      "selection_score": 12.1,
       "notes": "Use for ecosystem reports, startup policy, and Korea market context."
     },
     {
@@ -788,7 +788,7 @@
       "geography": [
         "global"
       ],
-      "selection_score": 16.08,
+      "selection_score": 15.99,
       "notes": "Founder and startup signal source; useful for company formation, fundraising, and founder advice."
     },
     {
@@ -817,7 +817,7 @@
       "geography": [
         "global"
       ],
-      "selection_score": 14.64,
+      "selection_score": 14.76,
       "notes": "High-quality narrative and market map source. Feed path changes; keep as watchlist until verified."
     },
     {
@@ -846,7 +846,7 @@
       "geography": [
         "global"
       ],
-      "selection_score": 13.58,
+      "selection_score": 13.7,
       "notes": "High-volume AI startup and product news. Use as discovery; verify strategic claims with primary sources."
     },
     {
@@ -873,7 +873,7 @@
       "geography": [
         "global"
       ],
-      "selection_score": 13.47,
+      "selection_score": 13.59,
       "notes": "Use for category formation, founder strategy, and market timing."
     },
     {
@@ -899,7 +899,7 @@
       "geography": [
         "global"
       ],
-      "selection_score": 12.74,
+      "selection_score": 12.86,
       "notes": "Use as narrative and interview source; verify factual claims with primary links."
     },
     {
@@ -928,7 +928,7 @@
       "geography": [
         "global"
       ],
-      "selection_score": 12.68,
+      "selection_score": 12.59,
       "notes": "Useful for broader technology and AI policy context. Treat as secondary analysis."
     },
     {
@@ -957,7 +957,7 @@
       "geography": [
         "global"
       ],
-      "selection_score": 12.18,
+      "selection_score": 12.09,
       "notes": "Primary source for OpenAI product, research, and workplace AI workflow announcements."
     },
     {
@@ -984,7 +984,7 @@
       "geography": [
         "global"
       ],
-      "selection_score": 11.85,
+      "selection_score": 11.76,
       "notes": "Good for SaaS/cloud benchmarks, market maps, and public/private software narratives."
     },
     {
@@ -1011,33 +1011,35 @@
       "geography": [
         "global"
       ],
-      "selection_score": 11.58,
+      "selection_score": 11.7,
       "notes": "Use for infrastructure, chips, enterprise AI deployment, and ecosystem signals."
     },
     {
-      "id": "thevc",
-      "name": "THE VC",
-      "url": "https://thevc.kr/",
-      "source_type": "database",
+      "id": "kb-research",
+      "name": "KB Research",
+      "url": "https://www.kbfg.com/kbresearch",
+      "source_type": "public_report",
       "access": "public_web",
-      "tier": 2,
+      "tier": 1,
       "quality": 4,
-      "cadence": "daily",
+      "cadence": "monthly",
       "domains": [
         "korea",
-        "startup",
-        "funding",
-        "investment"
+        "wealth",
+        "finance",
+        "consumer",
+        "real-estate"
       ],
       "personas": [
-        "founder",
-        "investor-analyst"
+        "investor-analyst",
+        "creator",
+        "b2b-marketer"
       ],
       "geography": [
         "korea"
       ],
-      "selection_score": 11.52,
-      "notes": "Use public company/funding pages. Good for Korea startup funding context."
+      "selection_score": 11.55,
+      "notes": "Useful for wealth reports, finance, real estate, and Korean consumer/investor behavior."
     }
   ],
   "rss_sources": [
@@ -1066,7 +1068,7 @@
       "geography": [
         "korea"
       ],
-      "selection_score": 12.9,
+      "selection_score": 13.02,
       "notes": "Strong Korean developer/startup signal source; verify original links where possible."
     },
     {
@@ -1092,7 +1094,7 @@
       "geography": [
         "global"
       ],
-      "selection_score": 10.0,
+      "selection_score": 9.91,
       "notes": "Use as weak discovery signal; fetch original linked pages for evidence."
     },
     {
@@ -1120,7 +1122,7 @@
       "geography": [
         "global"
       ],
-      "selection_score": 16.08,
+      "selection_score": 15.99,
       "notes": "Founder and startup signal source; useful for company formation, fundraising, and founder advice."
     },
     {
@@ -1149,7 +1151,7 @@
       "geography": [
         "global"
       ],
-      "selection_score": 13.58,
+      "selection_score": 13.7,
       "notes": "High-volume AI startup and product news. Use as discovery; verify strategic claims with primary sources."
     },
     {
@@ -1178,7 +1180,7 @@
       "geography": [
         "global"
       ],
-      "selection_score": 12.68,
+      "selection_score": 12.59,
       "notes": "Useful for broader technology and AI policy context. Treat as secondary analysis."
     },
     {
@@ -1207,7 +1209,7 @@
       "geography": [
         "global"
       ],
-      "selection_score": 12.18,
+      "selection_score": 12.09,
       "notes": "Primary source for OpenAI product, research, and workplace AI workflow announcements."
     },
     {
@@ -1234,41 +1236,11 @@
       "geography": [
         "global"
       ],
-      "selection_score": 11.58,
+      "selection_score": 11.7,
       "notes": "Use for infrastructure, chips, enterprise AI deployment, and ecosystem signals."
     }
   ],
   "app_ranking_sources": [
-    {
-      "id": "apple-app-store-top-free-kr",
-      "name": "Apple App Store Top Free Korea",
-      "url": "https://www.apple.com/kr/app-store/",
-      "api_url": "https://rss.applemarketingtools.com/api/v2/kr/apps/top-free/50/apps.json",
-      "source_type": "app_rankings",
-      "source_category": "app_rankings",
-      "access": "public_api",
-      "tier": 2,
-      "quality": 4,
-      "cadence": "daily",
-      "domains": [
-        "apps",
-        "rankings",
-        "consumer",
-        "product",
-        "korea"
-      ],
-      "personas": [
-        "creator",
-        "founder",
-        "b2b-marketer",
-        "investor-analyst"
-      ],
-      "geography": [
-        "korea"
-      ],
-      "selection_score": 13.44,
-      "notes": "Fetchable public ranking source. Use rank movement as product-discovery signal, not proof of revenue."
-    },
     {
       "id": "apple-app-store-top-paid-kr",
       "name": "Apple App Store Top Paid Korea",
@@ -1296,8 +1268,38 @@
       "geography": [
         "korea"
       ],
-      "selection_score": 13.26,
+      "selection_score": 13.38,
       "notes": "Fetchable public paid-app ranking source. Combine with reviews, downloads, and category context before drawing conclusions."
+    },
+    {
+      "id": "apple-app-store-top-free-kr",
+      "name": "Apple App Store Top Free Korea",
+      "url": "https://www.apple.com/kr/app-store/",
+      "api_url": "https://rss.applemarketingtools.com/api/v2/kr/apps/top-free/50/apps.json",
+      "source_type": "app_rankings",
+      "source_category": "app_rankings",
+      "access": "public_api",
+      "tier": 2,
+      "quality": 4,
+      "cadence": "daily",
+      "domains": [
+        "apps",
+        "rankings",
+        "consumer",
+        "product",
+        "korea"
+      ],
+      "personas": [
+        "creator",
+        "founder",
+        "b2b-marketer",
+        "investor-analyst"
+      ],
+      "geography": [
+        "korea"
+      ],
+      "selection_score": 13.35,
+      "notes": "Fetchable public ranking source. Use rank movement as product-discovery signal, not proof of revenue."
     }
   ],
   "manual_signal_sources": [
@@ -1326,7 +1328,7 @@
       "geography": [
         "global"
       ],
-      "selection_score": 11.96,
+      "selection_score": 12.08,
       "notes": "Use for platform-level trend analysis and creator economy context."
     },
     {
@@ -1355,7 +1357,7 @@
       "geography": [
         "korea"
       ],
-      "selection_score": 12.41,
+      "selection_score": 12.53,
       "notes": "Manual watchlist for Korean YouTube trending videos. Use titles, channels, descriptions, and visible metrics only; verify claims elsewhere."
     },
     {
@@ -1384,7 +1386,7 @@
       "geography": [
         "korea"
       ],
-      "selection_score": 11.79,
+      "selection_score": 11.7,
       "notes": "Use as public interest signal. Treat as demand discovery, not factual proof."
     },
     {
@@ -1412,7 +1414,7 @@
       "geography": [
         "global"
       ],
-      "selection_score": 8.95,
+      "selection_score": 8.86,
       "notes": "Manual weak-signal watchlist for casual conversation shifts. Use user-provided public links or excerpts."
     },
     {
@@ -1440,7 +1442,7 @@
       "geography": [
         "global"
       ],
-      "selection_score": 8.92,
+      "selection_score": 8.83,
       "notes": "Manual weak-signal watchlist. Do not bypass login or scrape protected content. Use public posts only and verify claims with stronger sources."
     },
     {
@@ -1469,7 +1471,7 @@
       "geography": [
         "korea"
       ],
-      "selection_score": 13.17,
+      "selection_score": 13.08,
       "notes": "Korean mobile app market watchlist. Use public charts or reports only."
     },
     {
@@ -1498,7 +1500,7 @@
       "geography": [
         "global"
       ],
-      "selection_score": 12.41,
+      "selection_score": 12.53,
       "notes": "Use for web/app traffic narratives and category movement. Verify with primary app store or company data when possible."
     },
     {
@@ -1524,7 +1526,7 @@
       "geography": [
         "global"
       ],
-      "selection_score": 12.74,
+      "selection_score": 12.86,
       "notes": "Use as narrative and interview source; verify factual claims with primary links."
     }
   ],
@@ -1553,7 +1555,7 @@
       "geography": [
         "global"
       ],
-      "selection_score": 12.28,
+      "selection_score": 12.19,
       "notes": "Use public excerpts/posts only. Excellent for platform strategy lens."
     },
     {
@@ -1580,7 +1582,7 @@
       "geography": [
         "global"
       ],
-      "selection_score": 11.94,
+      "selection_score": 12.06,
       "notes": "Operator playbooks and tactical founder advice; strong for actionable artifacts."
     },
     {
@@ -1606,7 +1608,7 @@
       "geography": [
         "global"
       ],
-      "selection_score": 11.9,
+      "selection_score": 12.02,
       "notes": "Narrative-heavy source; useful for content angles but verify claims with primary sources."
     },
     {
@@ -1632,7 +1634,7 @@
       "geography": [
         "global"
       ],
-      "selection_score": 11.33,
+      "selection_score": 11.24,
       "notes": "Use public posts only. Strong for product/growth practice and content angles."
     },
     {
@@ -1660,8 +1662,34 @@
       "geography": [
         "korea"
       ],
-      "selection_score": 13.2,
+      "selection_score": 13.11,
       "notes": "Use public consumer trend reports for Korean market context."
+    },
+    {
+      "id": "kosis",
+      "name": "KOSIS",
+      "url": "https://kosis.kr/",
+      "source_type": "public_data",
+      "access": "public_web",
+      "tier": 1,
+      "quality": 5,
+      "cadence": "monthly",
+      "domains": [
+        "korea",
+        "statistics",
+        "macro",
+        "consumer"
+      ],
+      "personas": [
+        "investor-analyst",
+        "corporate-strategist",
+        "creator"
+      ],
+      "geography": [
+        "korea"
+      ],
+      "selection_score": 11.82,
+      "notes": "Primary Korean statistics. Use for grounding narratives in data."
     },
     {
       "id": "bain-insights",
@@ -1687,7 +1715,7 @@
       "geography": [
         "global"
       ],
-      "selection_score": 11.8,
+      "selection_score": 11.71,
       "notes": "Good for executive framing and industry reports."
     },
     {
@@ -1714,34 +1742,8 @@
       "geography": [
         "global"
       ],
-      "selection_score": 11.77,
+      "selection_score": 11.68,
       "notes": "Useful for corporate strategy framing; watch for generic claims."
-    },
-    {
-      "id": "kosis",
-      "name": "KOSIS",
-      "url": "https://kosis.kr/",
-      "source_type": "public_data",
-      "access": "public_web",
-      "tier": 1,
-      "quality": 5,
-      "cadence": "monthly",
-      "domains": [
-        "korea",
-        "statistics",
-        "macro",
-        "consumer"
-      ],
-      "personas": [
-        "investor-analyst",
-        "corporate-strategist",
-        "creator"
-      ],
-      "geography": [
-        "korea"
-      ],
-      "selection_score": 11.7,
-      "notes": "Primary Korean statistics. Use for grounding narratives in data."
     },
     {
       "id": "kocca-reports",
@@ -1769,7 +1771,7 @@
       "geography": [
         "korea"
       ],
-      "selection_score": 13.93,
+      "selection_score": 13.84,
       "notes": "Primary Korean content industry source. Use for IP, games, media, and creator economy context."
     },
     {
@@ -1797,7 +1799,7 @@
       "geography": [
         "global"
       ],
-      "selection_score": 11.96,
+      "selection_score": 12.08,
       "notes": "Use for platform-level trend analysis and creator economy context."
     },
     {
@@ -1826,7 +1828,7 @@
       "geography": [
         "korea"
       ],
-      "selection_score": 12.41,
+      "selection_score": 12.53,
       "notes": "Manual watchlist for Korean YouTube trending videos. Use titles, channels, descriptions, and visible metrics only; verify claims elsewhere."
     },
     {
@@ -1855,7 +1857,7 @@
       "geography": [
         "korea"
       ],
-      "selection_score": 11.79,
+      "selection_score": 11.7,
       "notes": "Use as public interest signal. Treat as demand discovery, not factual proof."
     },
     {
@@ -1883,7 +1885,7 @@
       "geography": [
         "global"
       ],
-      "selection_score": 8.95,
+      "selection_score": 8.86,
       "notes": "Manual weak-signal watchlist for casual conversation shifts. Use user-provided public links or excerpts."
     },
     {
@@ -1911,38 +1913,8 @@
       "geography": [
         "global"
       ],
-      "selection_score": 8.92,
+      "selection_score": 8.83,
       "notes": "Manual weak-signal watchlist. Do not bypass login or scrape protected content. Use public posts only and verify claims with stronger sources."
-    },
-    {
-      "id": "apple-app-store-top-free-kr",
-      "name": "Apple App Store Top Free Korea",
-      "url": "https://www.apple.com/kr/app-store/",
-      "api_url": "https://rss.applemarketingtools.com/api/v2/kr/apps/top-free/50/apps.json",
-      "source_type": "app_rankings",
-      "source_category": "app_rankings",
-      "access": "public_api",
-      "tier": 2,
-      "quality": 4,
-      "cadence": "daily",
-      "domains": [
-        "apps",
-        "rankings",
-        "consumer",
-        "product",
-        "korea"
-      ],
-      "personas": [
-        "creator",
-        "founder",
-        "b2b-marketer",
-        "investor-analyst"
-      ],
-      "geography": [
-        "korea"
-      ],
-      "selection_score": 13.44,
-      "notes": "Fetchable public ranking source. Use rank movement as product-discovery signal, not proof of revenue."
     },
     {
       "id": "apple-app-store-top-paid-kr",
@@ -1971,8 +1943,38 @@
       "geography": [
         "korea"
       ],
-      "selection_score": 13.26,
+      "selection_score": 13.38,
       "notes": "Fetchable public paid-app ranking source. Combine with reviews, downloads, and category context before drawing conclusions."
+    },
+    {
+      "id": "apple-app-store-top-free-kr",
+      "name": "Apple App Store Top Free Korea",
+      "url": "https://www.apple.com/kr/app-store/",
+      "api_url": "https://rss.applemarketingtools.com/api/v2/kr/apps/top-free/50/apps.json",
+      "source_type": "app_rankings",
+      "source_category": "app_rankings",
+      "access": "public_api",
+      "tier": 2,
+      "quality": 4,
+      "cadence": "daily",
+      "domains": [
+        "apps",
+        "rankings",
+        "consumer",
+        "product",
+        "korea"
+      ],
+      "personas": [
+        "creator",
+        "founder",
+        "b2b-marketer",
+        "investor-analyst"
+      ],
+      "geography": [
+        "korea"
+      ],
+      "selection_score": 13.35,
+      "notes": "Fetchable public ranking source. Use rank movement as product-discovery signal, not proof of revenue."
     },
     {
       "id": "mobileindex",
@@ -2000,7 +2002,7 @@
       "geography": [
         "korea"
       ],
-      "selection_score": 13.17,
+      "selection_score": 13.08,
       "notes": "Korean mobile app market watchlist. Use public charts or reports only."
     },
     {
@@ -2029,7 +2031,7 @@
       "geography": [
         "global"
       ],
-      "selection_score": 12.41,
+      "selection_score": 12.53,
       "notes": "Use for web/app traffic narratives and category movement. Verify with primary app store or company data when possible."
     },
     {
@@ -2055,7 +2057,7 @@
       "geography": [
         "korea"
       ],
-      "selection_score": 11.1,
+      "selection_score": 11.01,
       "notes": "Primary macroeconomic source for Korea."
     },
     {
@@ -2080,7 +2082,7 @@
       "geography": [
         "korea"
       ],
-      "selection_score": 10.17,
+      "selection_score": 10.08,
       "notes": "Primary Korean public company filing source. Use for factual evidence."
     },
     {
@@ -2105,7 +2107,7 @@
       "geography": [
         "global"
       ],
-      "selection_score": 7.9,
+      "selection_score": 8.02,
       "notes": "Use as a thematic source; verify with primary data when making claims."
     },
     {
@@ -2131,7 +2133,7 @@
       "geography": [
         "korea"
       ],
-      "selection_score": 13.14,
+      "selection_score": 13.26,
       "notes": "Korean startup ecosystem and funding coverage."
     },
     {
@@ -2157,7 +2159,7 @@
       "geography": [
         "korea"
       ],
-      "selection_score": 13.11,
+      "selection_score": 13.23,
       "notes": "Korean startup news and funding signal."
     },
     {
@@ -2183,7 +2185,7 @@
       "geography": [
         "korea"
       ],
-      "selection_score": 12.19,
+      "selection_score": 12.1,
       "notes": "Use for ecosystem reports, startup policy, and Korea market context."
     },
     {
@@ -2212,7 +2214,7 @@
       "geography": [
         "global"
       ],
-      "selection_score": 14.64,
+      "selection_score": 14.76,
       "notes": "High-quality narrative and market map source. Feed path changes; keep as watchlist until verified."
     },
     {
@@ -2239,7 +2241,7 @@
       "geography": [
         "global"
       ],
-      "selection_score": 13.47,
+      "selection_score": 13.59,
       "notes": "Use for category formation, founder strategy, and market timing."
     },
     {
@@ -2265,7 +2267,7 @@
       "geography": [
         "global"
       ],
-      "selection_score": 12.74,
+      "selection_score": 12.86,
       "notes": "Use as narrative and interview source; verify factual claims with primary links."
     },
     {
@@ -2292,33 +2294,35 @@
       "geography": [
         "global"
       ],
-      "selection_score": 11.85,
+      "selection_score": 11.76,
       "notes": "Good for SaaS/cloud benchmarks, market maps, and public/private software narratives."
     },
     {
-      "id": "thevc",
-      "name": "THE VC",
-      "url": "https://thevc.kr/",
-      "source_type": "database",
+      "id": "kb-research",
+      "name": "KB Research",
+      "url": "https://www.kbfg.com/kbresearch",
+      "source_type": "public_report",
       "access": "public_web",
-      "tier": 2,
+      "tier": 1,
       "quality": 4,
-      "cadence": "daily",
+      "cadence": "monthly",
       "domains": [
         "korea",
-        "startup",
-        "funding",
-        "investment"
+        "wealth",
+        "finance",
+        "consumer",
+        "real-estate"
       ],
       "personas": [
-        "founder",
-        "investor-analyst"
+        "investor-analyst",
+        "creator",
+        "b2b-marketer"
       ],
       "geography": [
         "korea"
       ],
-      "selection_score": 11.52,
-      "notes": "Use public company/funding pages. Good for Korea startup funding context."
+      "selection_score": 11.55,
+      "notes": "Useful for wealth reports, finance, real estate, and Korean consumer/investor behavior."
     }
   ]
 }

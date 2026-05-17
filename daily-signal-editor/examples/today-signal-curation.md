@@ -1,6 +1,6 @@
 # Daily Curated Content Queue
 
-- 날짜: 2026-05-17
+- 날짜: 2026-05-18
 - 대상: 한국 창업자, 투자자, 콘텐츠 에디터
 - 목적: 오늘의 비즈니스, AI, 소비자, 콘텐츠/IP, 앱 순위 신호를 큐레이션하고 실행 가능한 인사이트로 전환
 - 큐레이션 항목: 50 / 107
@@ -11,15 +11,15 @@
 - Apple App Store Top Free Korea: 7
 - OpenAI News: 6
 - NVIDIA Blog: 6
-- Y Combinator Blog: 5
+- Y Combinator Blog: 4
 - YouTube Trending Korea: 3
 - X Explore: 3
 - Threads Search: 3
 - TechCrunch AI: 3
 - MIT Technology Review: 3
 - Google Trends Korea: 2
+- GeekNews: 2
 - YouTube Culture & Trends: 1
-- GeekNews: 1
 
 ## 신호 종류별 큐레이션
 
@@ -34,9 +34,9 @@
 ### 앱 순위
 - [#2 filmhwa (필름화) - 화민 필터 on Apple App Store Top Paid Korea](https://apps.apple.com/kr/app/filmhwa-%ED%95%84%EB%A6%84%ED%99%94-%ED%99%94%EB%AF%BC-%ED%95%84%ED%84%B0/id6443723657) (Apple App Store Top Paid Korea, 4.34 / 5)
 - [#3 GIKA 기카 - 독보적인 올드폰 감성 카메라 on Apple App Store Top Paid Korea](https://apps.apple.com/kr/app/gika-%EA%B8%B0%EC%B9%B4-%EB%8F%85%EB%B3%B4%EC%A0%81%EC%9D%B8-%EC%98%AC%EB%93%9C%ED%8F%B0-%EA%B0%90%EC%84%B1-%EC%B9%B4%EB%A9%94%EB%9D%BC/id6755822636) (Apple App Store Top Paid Korea, 4.34 / 5)
-- [#2 Google Gemini on Apple App Store Top Free Korea](https://apps.apple.com/kr/app/google-gemini/id6477489729) (Apple App Store Top Free Korea, 4.27 / 5)
 - [#1 DayGrid: 그리드 플래너, 위젯, 스케줄 on Apple App Store Top Paid Korea](https://apps.apple.com/kr/app/daygrid-%EA%B7%B8%EB%A6%AC%EB%93%9C-%ED%94%8C%EB%9E%98%EB%84%88-%EC%9C%84%EC%A0%AF-%EC%8A%A4%EC%BC%80%EC%A4%84/id6762279908) (Apple App Store Top Paid Korea, 4.27 / 5)
-- [#1 setlog on Apple App Store Top Free Korea](https://apps.apple.com/kr/app/setlog/id6587576438) (Apple App Store Top Free Korea, 4.24 / 5)
+- [#2 Google Gemini on Apple App Store Top Free Korea](https://apps.apple.com/kr/app/google-gemini/id6477489729) (Apple App Store Top Free Korea, 4.27 / 5)
+- [#3 Claude by Anthropic on Apple App Store Top Free Korea](https://apps.apple.com/kr/app/claude-by-anthropic/id6473753684) (Apple App Store Top Free Korea, 4.27 / 5)
 - 외 9개
 
 ### 소셜 트렌드
@@ -47,16 +47,16 @@
 - [Founders share screenshots of micro-SaaS revenue more often than fundraising news](https://x.com/explore) (X Explore, 4.17 / 5)
 - 외 6개
 
-### 비즈니스
-- [Meesho Goes Public](https://www.ycombinator.com/blog/meesho-goes-public/) (Y Combinator Blog, 3.67 / 5)
-- [Elon Musk’s SpaceXAI has been bleeding staff since its merger](https://techcrunch.com/2026/05/14/elon-musks-spacexai-has-been-bleeding-staff-since-its-merger/) (TechCrunch AI, 3.64 / 5)
-- [BillionToOne Goes Public — The Startup That Made Genetic Testing Universal](https://www.ycombinator.com/blog/billiontoone/) (Y Combinator Blog, 3.44 / 5)
-- [Congratulations to EquipmentShare on Going Public](https://www.ycombinator.com/blog/congratulations-to-equipmentshare/) (Y Combinator Blog, 3.21 / 5)
-
 ### 콘텐츠/IP
 - [Creator-led formats become reusable content franchises](https://www.youtube.com/trends/) (YouTube Culture & Trends, 4.32 / 5)
 - [30년전 RPG (포가튼사가) 소스 포팅 하기](https://news.hada.io/topic?id=29586) (GeekNews, 3.57 / 5)
 - [Linked and Loaded: Gaijin Single Sign-On Now Available on GeForce NOW](https://blogs.nvidia.com/blog/geforce-now-thursday-gaijin-sso/) (NVIDIA Blog, 3.44 / 5)
+- [우리가 세상을 너무 복잡하게 만들었다](https://news.hada.io/topic?id=29590) (GeekNews, 3.35 / 5)
+
+### 비즈니스
+- [Meesho Goes Public](https://www.ycombinator.com/blog/meesho-goes-public/) (Y Combinator Blog, 3.67 / 5)
+- [Elon Musk’s SpaceXAI has been bleeding staff since its merger](https://techcrunch.com/2026/05/14/elon-musks-spacexai-has-been-bleeding-staff-since-its-merger/) (TechCrunch AI, 3.64 / 5)
+- [BillionToOne Goes Public — The Startup That Made Genetic Testing Universal](https://www.ycombinator.com/blog/billiontoone/) (Y Combinator Blog, 3.44 / 5)
 
 ### 소비자 관심
 - [Sea You in the Cloud: ‘Subnautica 2’ Early Access Dives Onto GeForce NOW](https://blogs.nvidia.com/blog/geforce-now-thursday-subnautica-2/) (NVIDIA Blog, 3.83 / 5)
@@ -113,15 +113,7 @@
 - 정리: OpenAI News가 `Databricks brings GPT-5.5 to enterprise agent workflows` 소식을 전했어요. 핵심은 AI, 비즈니스, 업무 흐름 관련 변화가 실제 제품, 고객 접점, 운영 방식으로 이어지고 있다는 점이에요.
 - 왜 중요한가요: 엔터프라이즈 AI 에이전트가 데이터가 많은 업무 환경에서 검증되고 있어요. 이제 중요한 건 채팅 성능보다 신뢰성, 평가, 업무 통합이에요.
 
-#### 6. #2 Google Gemini on Apple App Store Top Free Korea
-- 출처: [Apple App Store Top Free Korea](https://apps.apple.com/kr/app/google-gemini/id6477489729)
-- 발행일: 2026-05-17
-- 점수: 4.27 / 5
-- 주제: 앱 순위, 소비자 관심, product
-- 정리: Google Gemini 앱이 Apple App Store Top Free Korea에서 2위에 올랐어요. 퍼블리셔는 Google, 추정 카테고리는 AI 보조 앱예요.
-- 왜 중요한가요: AI 앱이 상위권에 있다는 건 사용자가 검색이나 브라우저보다 대화형 도구를 더 자주 여는 습관을 만들고 있다는 신호예요. 이제 경쟁은 모델 성능만이 아니라 첫 화면, 저장된 맥락, 모바일 사용 빈도에서 갈려요.
-
-#### 7. #1 DayGrid: 그리드 플래너, 위젯, 스케줄 on Apple App Store Top Paid Korea
+#### 6. #1 DayGrid: 그리드 플래너, 위젯, 스케줄 on Apple App Store Top Paid Korea
 - 출처: [Apple App Store Top Paid Korea](https://apps.apple.com/kr/app/daygrid-%EA%B7%B8%EB%A6%AC%EB%93%9C-%ED%94%8C%EB%9E%98%EB%84%88-%EC%9C%84%EC%A0%AF-%EC%8A%A4%EC%BC%80%EC%A4%84/id6762279908)
 - 발행일: 2026-05-17
 - 점수: 4.27 / 5
@@ -129,7 +121,23 @@
 - 정리: DayGrid: 그리드 플래너, 위젯, 스케줄 앱이 Apple App Store Top Paid Korea에서 1위에 올랐어요. 퍼블리셔는 ho young moon, 추정 카테고리는 개인 생산성/일정예요.
 - 왜 중요한가요: 일정 앱이 유료 상위권에 있다는 건 사용자가 범용 캘린더보다 더 작고 시각적인 루틴 관리에 돈을 낸다는 신호예요. 특히 위젯과 한눈에 보는 화면은 매일 열어야 하는 앱의 방어력이 될 수 있어요.
 
-#### 8. Fan-edited clips make old IP feel new again
+#### 7. #2 Google Gemini on Apple App Store Top Free Korea
+- 출처: [Apple App Store Top Free Korea](https://apps.apple.com/kr/app/google-gemini/id6477489729)
+- 발행일: 2026-05-17
+- 점수: 4.27 / 5
+- 주제: 앱 순위, 소비자 관심, product
+- 정리: Google Gemini 앱이 Apple App Store Top Free Korea에서 2위에 올랐어요. 퍼블리셔는 Google, 추정 카테고리는 AI 보조 앱예요.
+- 왜 중요한가요: AI 앱이 상위권에 있다는 건 사용자가 검색이나 브라우저보다 대화형 도구를 더 자주 여는 습관을 만들고 있다는 신호예요. 이제 경쟁은 모델 성능만이 아니라 첫 화면, 저장된 맥락, 모바일 사용 빈도에서 갈려요.
+
+#### 8. #3 Claude by Anthropic on Apple App Store Top Free Korea
+- 출처: [Apple App Store Top Free Korea](https://apps.apple.com/kr/app/claude-by-anthropic/id6473753684)
+- 발행일: 2026-05-17
+- 점수: 4.27 / 5
+- 주제: 앱 순위, 소비자 관심, product
+- 정리: Claude by Anthropic 앱이 Apple App Store Top Free Korea에서 3위에 올랐어요. 퍼블리셔는 Anthropic PBC, 추정 카테고리는 AI 보조 앱예요.
+- 왜 중요한가요: AI 앱이 상위권에 있다는 건 사용자가 검색이나 브라우저보다 대화형 도구를 더 자주 여는 습관을 만들고 있다는 신호예요. 이제 경쟁은 모델 성능만이 아니라 첫 화면, 저장된 맥락, 모바일 사용 빈도에서 갈려요.
+
+#### 9. Fan-edited clips make old IP feel new again
 - 출처: [YouTube Trending Korea](https://www.youtube.com/feed/trending?gl=KR)
 - 발행일: 2026-05-17
 - 점수: 4.27 / 5
@@ -137,21 +145,13 @@
 - 정리: 오래된 드라마, 애니메이션, 예능 IP가 숏폼 재편집으로 다시 소비된다는 가정의 mock signal입니다.
 - 왜 중요한가요: 오래된 IP도 편집 언어가 바뀌면 다시 유통될 수 있어요. 보유 IP가 많은 회사에는 재가공과 팬 참여형 캠페인 기회가 생겨요.
 
-#### 9. #1 setlog on Apple App Store Top Free Korea
+#### 10. #1 setlog on Apple App Store Top Free Korea
 - 출처: [Apple App Store Top Free Korea](https://apps.apple.com/kr/app/setlog/id6587576438)
 - 발행일: 2026-05-17
 - 점수: 4.24 / 5
 - 주제: 앱 순위, 소비자 관심, product
 - 정리: setlog 앱이 Apple App Store Top Free Korea에서 1위에 올랐어요. 퍼블리셔는 new chat, 추정 카테고리는 무료 소비자 앱예요.
 - 왜 중요한가요: 무료 상위권 앱은 사용자가 지금 당장 시험해볼 만큼 진입 장벽이 낮다는 신호예요. 다만 설치는 관심이고 유지가 검증이므로, 다음에는 리뷰와 재방문 이유를 함께 봐야 해요.
-
-#### 10. #3 패스오더 - 카페 가는 길, 미리주문 on Apple App Store Top Free Korea
-- 출처: [Apple App Store Top Free Korea](https://apps.apple.com/kr/app/%ED%8C%A8%EC%8A%A4%EC%98%A4%EB%8D%94-%EC%B9%B4%ED%8E%98-%EA%B0%80%EB%8A%94-%EA%B8%B8-%EB%AF%B8%EB%A6%AC%EC%A3%BC%EB%AC%B8/id1350702018)
-- 발행일: 2026-05-17
-- 점수: 4.24 / 5
-- 주제: 앱 순위, 소비자 관심, product
-- 정리: 패스오더 - 카페 가는 길, 미리주문 앱이 Apple App Store Top Free Korea에서 3위에 올랐어요. 퍼블리셔는 Paytalab, 추정 카테고리는 로컬 경험/예약예요.
-- 왜 중요한가요: 카페 주문이나 예약 앱이 올라오는 건 사람들이 좋은 장소를 찾는 것만큼 기다리지 않는 경험을 원한다는 뜻이에요. 로컬 비즈니스에서는 결제 전 대기 시간, 재방문 루틴, 픽업 동선이 제품 기회가 돼요.
 
 ### B. 글감으로 좋은 후보
 
@@ -219,21 +219,21 @@
 - 정리: Analog Wedding 앱이 Apple App Store Top Paid Korea에서 5위에 올랐어요. 퍼블리셔는 ordinaryfactory Inc., 추정 카테고리는 카메라/필터예요.
 - 왜 중요한가요: 카메라와 필터 앱이 유료 순위에 반복해서 보이면 소비자가 생성형 AI보다 '내 취향처럼 보이는 결과물'에 바로 지갑을 연다는 뜻이에요. 콘텐츠 도구는 기능 수보다 감성 프리셋, 공유 장면, 팬층이 더 중요해질 수 있어요.
 
-#### 19. #4 Claude by Anthropic on Apple App Store Top Free Korea
-- 출처: [Apple App Store Top Free Korea](https://apps.apple.com/kr/app/claude-by-anthropic/id6473753684)
-- 발행일: 2026-05-17
-- 점수: 4.05 / 5
-- 주제: 앱 순위, 소비자 관심, product
-- 정리: Claude by Anthropic 앱이 Apple App Store Top Free Korea에서 4위에 올랐어요. 퍼블리셔는 Anthropic PBC, 추정 카테고리는 AI 보조 앱예요.
-- 왜 중요한가요: AI 앱이 상위권에 있다는 건 사용자가 검색이나 브라우저보다 대화형 도구를 더 자주 여는 습관을 만들고 있다는 신호예요. 이제 경쟁은 모델 성능만이 아니라 첫 화면, 저장된 맥락, 모바일 사용 빈도에서 갈려요.
-
-#### 20. #5 Vigloo - 숏폼드라마 on Apple App Store Top Free Korea
-- 출처: [Apple App Store Top Free Korea](https://apps.apple.com/kr/app/vigloo-%EC%88%8F%ED%8F%BC%EB%93%9C%EB%9D%BC%EB%A7%88/id6503421271)
+#### 19. #4 패스오더 - 카페 가는 길, 미리주문 on Apple App Store Top Free Korea
+- 출처: [Apple App Store Top Free Korea](https://apps.apple.com/kr/app/%ED%8C%A8%EC%8A%A4%EC%98%A4%EB%8D%94-%EC%B9%B4%ED%8E%98-%EA%B0%80%EB%8A%94-%EA%B8%B8-%EB%AF%B8%EB%A6%AC%EC%A3%BC%EB%AC%B8/id1350702018)
 - 발행일: 2026-05-17
 - 점수: 4.02 / 5
 - 주제: 앱 순위, 소비자 관심, product
-- 정리: Vigloo - 숏폼드라마 앱이 Apple App Store Top Free Korea에서 5위에 올랐어요. 퍼블리셔는 Spoonlabs, Inc., 추정 카테고리는 숏폼/콘텐츠 소비예요.
-- 왜 중요한가요: 숏폼 콘텐츠 앱이 상위권에 있으면 사용자의 여가 시간이 긴 영상보다 짧고 연속적인 서사로 쪼개지고 있다는 신호예요. IP 사업자는 작품 자체보다 회차 구조, 클립 확산, 결제 전환을 같이 봐야 해요.
+- 정리: 패스오더 - 카페 가는 길, 미리주문 앱이 Apple App Store Top Free Korea에서 4위에 올랐어요. 퍼블리셔는 Paytalab, 추정 카테고리는 로컬 경험/예약예요.
+- 왜 중요한가요: 카페 주문이나 예약 앱이 올라오는 건 사람들이 좋은 장소를 찾는 것만큼 기다리지 않는 경험을 원한다는 뜻이에요. 로컬 비즈니스에서는 결제 전 대기 시간, 재방문 루틴, 픽업 동선이 제품 기회가 돼요.
+
+#### 20. #5 N x N: 당신이 사랑한 순간들 on Apple App Store Top Free Korea
+- 출처: [Apple App Store Top Free Korea](https://apps.apple.com/kr/app/n-x-n-%EB%8B%B9%EC%8B%A0%EC%9D%B4-%EC%82%AC%EB%9E%91%ED%95%9C-%EC%88%9C%EA%B0%84%EB%93%A4/id6765649669)
+- 발행일: 2026-05-17
+- 점수: 4.02 / 5
+- 주제: 앱 순위, 소비자 관심, product
+- 정리: N x N: 당신이 사랑한 순간들 앱이 Apple App Store Top Free Korea에서 5위에 올랐어요. 퍼블리셔는 Pepper Factory, 추정 카테고리는 무료 소비자 앱예요.
+- 왜 중요한가요: 무료 상위권 앱은 사용자가 지금 당장 시험해볼 만큼 진입 장벽이 낮다는 신호예요. 다만 설치는 관심이고 유지가 검증이므로, 다음에는 리뷰와 재방문 이유를 함께 봐야 해요.
 
 #### 21. People ask for honest app reviews before trying new paid tools
 - 출처: [Threads Search](https://www.threads.net/search)
@@ -331,15 +331,7 @@
 - 정리: NVIDIA Blog가 `‘Your Career Starts at the Beginning of the AI Revolution,’ NVIDIA CEO Tells Graduates` 소식을 전했어요. 핵심은 AI, 스타트업 관련 변화가 실제 제품, 고객 접점, 운영 방식으로 이어지고 있다는 점이에요.
 - 왜 중요한가요: 후보 신호로는 볼 수 있어요. 다만 전략에 반영하려면 더 강한 1차 출처나 반복 패턴을 확인해야 해요.
 
-#### 33. #9 photoism - 포토이즘 on Apple App Store Top Free Korea
-- 출처: [Apple App Store Top Free Korea](https://apps.apple.com/kr/app/photoism-%ED%8F%AC%ED%86%A0%EC%9D%B4%EC%A6%98/id6747059622)
-- 발행일: 2026-05-17
-- 점수: 3.8 / 5
-- 주제: 앱 순위, 소비자 관심, product
-- 정리: photoism - 포토이즘 앱이 Apple App Store Top Free Korea에서 9위에 올랐어요. 퍼블리셔는 Seobuk, 추정 카테고리는 카메라/필터예요.
-- 왜 중요한가요: 카메라와 필터 앱이 유료 순위에 반복해서 보이면 소비자가 생성형 AI보다 '내 취향처럼 보이는 결과물'에 바로 지갑을 연다는 뜻이에요. 콘텐츠 도구는 기능 수보다 감성 프리셋, 공유 장면, 팬층이 더 중요해질 수 있어요.
-
-#### 34. #7 CHAKK - 스토리 꾸미는 재미, 챡! on Apple App Store Top Paid Korea
+#### 33. #7 CHAKK - 스토리 꾸미는 재미, 챡! on Apple App Store Top Paid Korea
 - 출처: [Apple App Store Top Paid Korea](https://apps.apple.com/kr/app/chakk-%EC%8A%A4%ED%86%A0%EB%A6%AC-%EA%BE%B8%EB%AF%B8%EB%8A%94-%EC%9E%AC%EB%AF%B8-%EC%B1%A1/id6747307749)
 - 발행일: 2026-05-17
 - 점수: 3.8 / 5
@@ -347,12 +339,20 @@
 - 정리: CHAKK - 스토리 꾸미는 재미, 챡! 앱이 Apple App Store Top Paid Korea에서 7위에 올랐어요. 퍼블리셔는 Gaeun Lee, 추정 카테고리는 소셜 콘텐츠 제작예요.
 - 왜 중요한가요: 스토리 꾸미기 앱이 올라온다는 건 사람들의 제작 니즈가 전문 편집보다 빠른 표현과 공유용 템플릿에 가깝다는 신호예요. 크리에이터 툴은 무거운 편집기보다 반복 가능한 포맷을 빨리 제공할 때 퍼질 수 있어요.
 
-#### 35. #8 Analog Paris on Apple App Store Top Paid Korea
+#### 34. #8 Analog Paris on Apple App Store Top Paid Korea
 - 출처: [Apple App Store Top Paid Korea](https://apps.apple.com/kr/app/analog-paris/id1035219562)
 - 발행일: 2026-05-17
 - 점수: 3.8 / 5
 - 주제: 앱 순위, 소비자 관심, product
 - 정리: Analog Paris 앱이 Apple App Store Top Paid Korea에서 8위에 올랐어요. 퍼블리셔는 ordinaryfactory Inc., 추정 카테고리는 카메라/필터예요.
+- 왜 중요한가요: 카메라와 필터 앱이 유료 순위에 반복해서 보이면 소비자가 생성형 AI보다 '내 취향처럼 보이는 결과물'에 바로 지갑을 연다는 뜻이에요. 콘텐츠 도구는 기능 수보다 감성 프리셋, 공유 장면, 팬층이 더 중요해질 수 있어요.
+
+#### 35. #6 photoism - 포토이즘 on Apple App Store Top Free Korea
+- 출처: [Apple App Store Top Free Korea](https://apps.apple.com/kr/app/photoism-%ED%8F%AC%ED%86%A0%EC%9D%B4%EC%A6%98/id6747059622)
+- 발행일: 2026-05-17
+- 점수: 3.8 / 5
+- 주제: 앱 순위, 소비자 관심, product
+- 정리: photoism - 포토이즘 앱이 Apple App Store Top Free Korea에서 6위에 올랐어요. 퍼블리셔는 Seobuk, 추정 카테고리는 카메라/필터예요.
 - 왜 중요한가요: 카메라와 필터 앱이 유료 순위에 반복해서 보이면 소비자가 생성형 AI보다 '내 취향처럼 보이는 결과물'에 바로 지갑을 연다는 뜻이에요. 콘텐츠 도구는 기능 수보다 감성 프리셋, 공유 장면, 팬층이 더 중요해질 수 있어요.
 
 #### 36. How business operations teams use Codex
@@ -461,21 +461,21 @@
 - 정리: NVIDIA Blog가 `Linked and Loaded: Gaijin Single Sign-On Now Available on GeForce NOW` 소식을 전했어요. 핵심은 콘텐츠/IP 관련 변화가 실제 제품, 고객 접점, 운영 방식으로 이어지고 있다는 점이에요.
 - 왜 중요한가요: 콘텐츠와 IP 흐름은 팬덤, 커머스, 게임, 오프라인 경험으로 확장될 수 있어요. 단순 조회수보다 반복 소비와 2차 수익화를 봐야 해요.
 
-#### 49. Meet YC's Newest Visiting Partners
+#### 49. 우리가 세상을 너무 복잡하게 만들었다
+- 출처: [GeekNews](https://news.hada.io/topic?id=29590)
+- 발행일: 2026-05-17
+- 점수: 3.35 / 5
+- 주제: 콘텐츠/IP
+- 정리: 현대의 일상은 이해하기 어려운 기술 , 접근할 수 없는 공간, 통제하기 힘든 법과 국가 안에서 압축된 채 이어짐 복잡성은 환경 피해와 조작, 부패가 주변을 훼손한다는 감각을 만들고, 얕은 호흡과 혈압 상승 같은 스트레스 로 드러남 The Thinking Game은...
+- 왜 중요한가요: 콘텐츠와 IP 흐름은 팬덤, 커머스, 게임, 오프라인 경험으로 확장될 수 있어요. 단순 조회수보다 반복 소비와 2차 수익화를 봐야 해요.
+
+#### 50. Meet YC's Newest Visiting Partners
 - 출처: [Y Combinator Blog](https://www.ycombinator.com/blog/ycs-newest-visiting-partners/)
 - 발행일: 2025-10-14
 - 점수: 3.22 / 5
 - 주제: 스타트업
 - 정리: Y Combinator Blog가 `Meet YC's Newest Visiting Partners` 소식을 전했어요. 핵심은 스타트업 관련 변화가 실제 제품, 고객 접점, 운영 방식으로 이어지고 있다는 점이에요.
 - 왜 중요한가요: 후보 신호로는 볼 수 있어요. 다만 전략에 반영하려면 더 강한 1차 출처나 반복 패턴을 확인해야 해요.
-
-#### 50. Congratulations to EquipmentShare on Going Public
-- 출처: [Y Combinator Blog](https://www.ycombinator.com/blog/congratulations-to-equipmentshare/)
-- 발행일: 2026-01-23
-- 점수: 3.21 / 5
-- 주제: 비즈니스, 스타트업
-- 정리: Y Combinator Blog가 `Congratulations to EquipmentShare on Going Public` 소식을 전했어요. 핵심은 비즈니스, 스타트업 관련 변화가 실제 제품, 고객 접점, 운영 방식으로 이어지고 있다는 점이에요.
-- 왜 중요한가요: 특정 업종의 워크플로 회사가 상장 규모까지 커졌다는 건, 좁은 운영체제가 매일 쓰는 데이터를 잡으면 커질 수 있다는 신호예요.
 
 ## 이렇게 쓰세요
 
