@@ -30,6 +30,7 @@ Collect or infer these inputs before running the workflow:
 - `output_mode`: daily brief, newsletter draft, investment memo, LinkedIn/X post, blog outline, Slack update, meeting agenda, sales talking points, or source map.
 - `time_window`: today, last 24 hours, this week, or a fixed date range.
 - `lens_team`: optional expert lenses or task categories to emphasize.
+- `editorial_inspirations`: optional high-level editorial traits, such as dense market narrative, practical founder questions, operator playbook, and counter-signal discipline. Use traits only; do not imitate a living writer's exact voice.
 
 If the user only says "make my daily brief", use this default:
 
@@ -90,6 +91,7 @@ If the user only says "make my daily brief", use this default:
 7. Produce the output.
    - Read `references/output-formats.md` for format choices.
    - Always include source links, scores, caveats, and next actions.
+   - When the user asks for an editorial insight channel, produce two files: a source-backed curation document and a separate insight memo.
    - Include at least one actionable artifact: Slack update, LinkedIn/X hook, meeting agenda, newsletter intro, research question, or sales talking point.
    - For investing topics, frame as research and education, not investment advice.
    - If the source title is English, keep the title in English but write the body below it in Korean.
@@ -137,7 +139,7 @@ python3 scripts/plan_sources.py \
   --rss-output /tmp/market-rss-sources.json \
   --app-output /tmp/market-app-sources.json \
   --manual-output /tmp/market-manual-sources.json \
-  --max-sources 32 \
+  --max-sources 36 \
   --max-per-type 8
 ```
 
@@ -162,10 +164,31 @@ python3 scripts/build_curated_list.py \
 python3 scripts/validate_curated_list.py examples/founder-curated-50.md --min-items 50
 ```
 
+Build an editorial insight channel with two documents:
+
+```bash
+python3 scripts/build_curated_list.py \
+  --sources examples/market-trend-source-plan.json \
+  --items /tmp/market-merged-items.json \
+  --profile mock-data/profiles/editorial-insight-channel.json \
+  --output examples/today-signal-curation.md \
+  --limit 50 \
+  --max-per-source 7 \
+  --max-per-primary-topic 14
+
+python3 scripts/build_insight_memo.py \
+  --sources examples/market-trend-source-plan.json \
+  --items /tmp/market-merged-items.json \
+  --profile mock-data/profiles/editorial-insight-channel.json \
+  --output examples/today-signal-insights.md \
+  --max-signals 14
+```
+
 ## Done When
 
 - The target audience and purpose are explicit.
 - A broad candidate queue exists when the user asked for daily discovery, ideally up to 50 source-linked items.
+- If the user asked for an insight channel, both the curation document and insight memo exist.
 - The selected signals have source links and scores.
 - The brief explains "why it matters", not only "what happened".
 - The output includes at least one reusable content angle or next action.

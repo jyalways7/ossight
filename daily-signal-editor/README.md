@@ -369,7 +369,7 @@ python3 scripts/plan_sources.py \
   --rss-output /tmp/market-rss-sources.json \
   --app-output /tmp/market-app-sources.json \
   --manual-output /tmp/market-manual-sources.json \
-  --max-sources 32 \
+  --max-sources 36 \
   --max-per-type 8
 
 python3 scripts/fetch_app_rankings.py \
@@ -400,6 +400,30 @@ python3 scripts/build_curated_list.py \
 ```
 
 X, Threads, YouTube 인급동은 로그인 우회나 무단 스크래핑을 하지 않습니다. 공개 링크, 공개 제목/설명, 사용자가 제공한 excerpt를 약한 신호로만 사용하고, 중요한 주장은 리포트나 1차 출처로 다시 확인합니다.
+
+### Editorial insight channel
+
+BZCF, 주간 실리콘밸리, Lenny's Newsletter 같은 채널에서 배울 점은 특정 문체 복제가 아니라, 밀도 높은 시장 해석, 실전 질문, 반대 근거, 바로 쓸 수 있는 콘텐츠 앵글입니다. 이 모드는 두 문서를 만듭니다.
+
+```bash
+python3 scripts/build_curated_list.py \
+  --sources examples/market-trend-source-plan.json \
+  --items /tmp/market-merged-items.json \
+  --profile mock-data/profiles/editorial-insight-channel.json \
+  --output examples/today-signal-curation.md \
+  --limit 50 \
+  --max-per-source 7 \
+  --max-per-primary-topic 14
+
+python3 scripts/build_insight_memo.py \
+  --sources examples/market-trend-source-plan.json \
+  --items /tmp/market-merged-items.json \
+  --profile mock-data/profiles/editorial-insight-channel.json \
+  --output examples/today-signal-insights.md \
+  --max-signals 14
+```
+
+첫 번째 문서는 오늘의 신호를 종류별로 큐레이션합니다. 두 번째 문서는 그 신호를 시장/제품/콘텐츠 인사이트로 바꿉니다.
 
 ## 앞으로 더 똑똑해질 계획이에요
 

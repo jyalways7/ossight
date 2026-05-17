@@ -38,6 +38,40 @@ Date:
 ## 주의사항
 ```
 
+## Editorial Insight Channel
+
+Use this when the user wants a BZCF/weekly Silicon Valley/Lenny-like intelligence channel. Do not copy a living writer's exact voice. Borrow only high-level product traits: dense market narrative, practical operator questions, clear counter-signals, and useful writing angles.
+
+Create two separate files:
+
+```md
+# Daily Curated Content Queue
+
+## 소스 구성
+
+## 신호 종류별 큐레이션
+
+## 우선순위 큐
+
+## 이렇게 쓰세요
+```
+
+```md
+# Daily Insight Memo
+
+## 오늘의 한 줄
+
+## 신호 지도
+
+## 인사이트
+
+## 바로 쓸 수 있는 콘텐츠 앵글
+
+## 반대로 볼 점
+
+## 내일 다시 볼 질문
+```
+
 ## Newsletter Draft
 
 ```md

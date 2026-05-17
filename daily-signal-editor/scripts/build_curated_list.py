@@ -86,6 +86,25 @@ def primary_topic(item: dict) -> str:
     return str(topics[0] or "unknown")
 
 
+def render_kind_groups(queue: list[dict]) -> list[str]:
+    grouped: dict[str, list[dict]] = {}
+    for item in queue:
+        grouped.setdefault(primary_topic(item), []).append(item)
+
+    lines = ["", "## 신호 종류별 큐레이션", ""]
+    for topic, items in sorted(grouped.items(), key=lambda row: (-len(row[1]), topic_label(row[0]))):
+        lines.append(f"### {topic_label(topic)}")
+        for item in items[:5]:
+            lines.append(
+                f"- [{item['title']}]({item.get('url', '')}) "
+                f"({item.get('source_name', item.get('source_id', 'unknown'))}, {item.get('score', 'n/a')} / 5)"
+            )
+        if len(items) > 5:
+            lines.append(f"- 외 {len(items) - 5}개")
+        lines.append("")
+    return lines
+
+
 def select_queue(
     scored_items: list[dict],
     limit: int,
@@ -167,6 +186,8 @@ def render_queue(profile: dict, queue: list[dict], scored_count: int) -> str:
     ]
     for source, count in source_counts.most_common():
         lines.append(f"- {source}: {count}")
+
+    lines.extend(render_kind_groups(queue))
 
     lines.extend(["", "## 우선순위 큐", ""])
     current_tier = ""

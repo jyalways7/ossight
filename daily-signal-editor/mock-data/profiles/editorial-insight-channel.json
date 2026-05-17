@@ -1,0 +1,51 @@
+{
+  "channel_name": "Daily Market Signal Insight",
+  "audience": "한국 창업자, 투자자, 콘텐츠 에디터",
+  "purpose": "오늘의 비즈니스, AI, 소비자, 콘텐츠/IP, 앱 순위 신호를 큐레이션하고 실행 가능한 인사이트로 전환",
+  "domains": [
+    "business",
+    "ai",
+    "consumer",
+    "content_ip",
+    "social_trends",
+    "app_rankings",
+    "startups",
+    "vc",
+    "korea"
+  ],
+  "source_mix": [
+    "global VC",
+    "Korea startup",
+    "public RSS",
+    "app rankings",
+    "social weak signals",
+    "content/IP trends"
+  ],
+  "source_category_mix": {
+    "business": 4,
+    "consumer": 4,
+    "content_ip": 4,
+    "social_trends": 7,
+    "app_rankings": 4,
+    "investing": 3,
+    "korea": 3,
+    "ai": 3
+  },
+  "output_mode": "curation document plus insight memo",
+  "lens_team": [
+    "Market Narrative Editor",
+    "Founder Operator",
+    "Product Strategy Analyst",
+    "Consumer Trend Scout",
+    "Content/IP Strategist",
+    "Korea Business Operator"
+  ],
+  "editorial_inspirations": [
+    "dense market narrative",
+    "practical founder questions",
+    "operator playbook",
+    "counter-signal discipline"
+  ],
+  "tone": "Korean product writing style: short, clear, useful, low-hype, action-oriented",
+  "time_window": "today"
+}
