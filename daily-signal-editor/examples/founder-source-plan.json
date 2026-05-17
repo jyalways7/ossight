@@ -25,7 +25,7 @@
     "tone": "practical, founder-oriented, sharp but not hype-driven",
     "time_window": "last 7 days"
   },
-  "seed": 20260516,
+  "seed": 20260517,
   "selected_sources": [
     {
       "id": "yc-blog",
@@ -52,7 +52,7 @@
       "geography": [
         "global"
       ],
-      "selection_score": 13.83,
+      "selection_score": 13.98,
       "notes": "Founder and startup signal source; useful for company formation, fundraising, and founder advice."
     },
     {
@@ -80,7 +80,7 @@
       "geography": [
         "korea"
       ],
-      "selection_score": 12.18,
+      "selection_score": 12.12,
       "notes": "Strong Korean developer/startup signal source; verify original links where possible."
     },
     {
@@ -109,8 +109,66 @@
       "geography": [
         "global"
       ],
-      "selection_score": 11.73,
+      "selection_score": 11.76,
       "notes": "Primary source for OpenAI product, research, and workplace AI workflow announcements."
+    },
+    {
+      "id": "techcrunch-ai",
+      "name": "TechCrunch AI",
+      "url": "https://techcrunch.com/category/artificial-intelligence/",
+      "feed_url": "https://techcrunch.com/category/artificial-intelligence/feed/",
+      "source_type": "media",
+      "access": "rss",
+      "tier": 2,
+      "quality": 4,
+      "cadence": "daily",
+      "domains": [
+        "ai",
+        "startups",
+        "funding",
+        "business",
+        "product"
+      ],
+      "personas": [
+        "founder",
+        "investor-analyst",
+        "b2b-marketer",
+        "creator"
+      ],
+      "geography": [
+        "global"
+      ],
+      "selection_score": 11.48,
+      "notes": "High-volume AI startup and product news. Use as discovery; verify strategic claims with primary sources."
+    },
+    {
+      "id": "mit-tech-review",
+      "name": "MIT Technology Review",
+      "url": "https://www.technologyreview.com/",
+      "feed_url": "https://www.technologyreview.com/feed/",
+      "source_type": "media",
+      "access": "rss",
+      "tier": 2,
+      "quality": 5,
+      "cadence": "daily",
+      "domains": [
+        "ai",
+        "technology",
+        "policy",
+        "research",
+        "business"
+      ],
+      "personas": [
+        "founder",
+        "investor-analyst",
+        "corporate-strategist",
+        "creator"
+      ],
+      "geography": [
+        "global"
+      ],
+      "selection_score": 11.06,
+      "notes": "Useful for broader technology and AI policy context. Treat as secondary analysis."
     },
     {
       "id": "google-deepmind",
@@ -135,34 +193,8 @@
       "geography": [
         "global"
       ],
-      "selection_score": 11.01,
+      "selection_score": 11.04,
       "notes": "Primary research and model signal source; stronger for technology direction than short-term business ideas."
-    },
-    {
-      "id": "startup-alliance",
-      "name": "Startup Alliance Korea",
-      "url": "https://startupall.kr/",
-      "source_type": "ecosystem_org",
-      "access": "public_web",
-      "tier": 1,
-      "quality": 4,
-      "cadence": "weekly",
-      "domains": [
-        "korea",
-        "startup",
-        "policy",
-        "ecosystem"
-      ],
-      "personas": [
-        "founder",
-        "investor-analyst",
-        "corporate-strategist"
-      ],
-      "geography": [
-        "korea"
-      ],
-      "selection_score": 10.99,
-      "notes": "Use for ecosystem reports, startup policy, and Korea market context."
     },
     {
       "id": "anthropic-news",
@@ -189,8 +221,34 @@
       "geography": [
         "global"
       ],
-      "selection_score": 10.98,
+      "selection_score": 11.01,
       "notes": "Watch for model, agent, enterprise, and safety updates. Use public pages or user-provided URLs."
+    },
+    {
+      "id": "startup-alliance",
+      "name": "Startup Alliance Korea",
+      "url": "https://startupall.kr/",
+      "source_type": "ecosystem_org",
+      "access": "public_web",
+      "tier": 1,
+      "quality": 4,
+      "cadence": "weekly",
+      "domains": [
+        "korea",
+        "startup",
+        "policy",
+        "ecosystem"
+      ],
+      "personas": [
+        "founder",
+        "investor-analyst",
+        "corporate-strategist"
+      ],
+      "geography": [
+        "korea"
+      ],
+      "selection_score": 10.93,
+      "notes": "Use for ecosystem reports, startup policy, and Korea market context."
     },
     {
       "id": "sequoia-articles",
@@ -216,7 +274,7 @@
       "geography": [
         "global"
       ],
-      "selection_score": 10.95,
+      "selection_score": 10.89,
       "notes": "Use for category formation, founder strategy, and market timing."
     },
     {
@@ -245,8 +303,35 @@
       "geography": [
         "global"
       ],
-      "selection_score": 10.92,
+      "selection_score": 10.86,
       "notes": "High-quality narrative and market map source. Feed path changes; keep as watchlist until verified."
+    },
+    {
+      "id": "nvidia-blog",
+      "name": "NVIDIA Blog",
+      "url": "https://blogs.nvidia.com/",
+      "feed_url": "https://blogs.nvidia.com/feed/",
+      "source_type": "official_blog",
+      "access": "rss",
+      "tier": 1,
+      "quality": 5,
+      "cadence": "daily",
+      "domains": [
+        "ai",
+        "semiconductor",
+        "infrastructure",
+        "enterprise"
+      ],
+      "personas": [
+        "founder",
+        "investor-analyst",
+        "corporate-strategist"
+      ],
+      "geography": [
+        "global"
+      ],
+      "selection_score": 10.68,
+      "notes": "Use for infrastructure, chips, enterprise AI deployment, and ecosystem signals."
     },
     {
       "id": "venturesquare",
@@ -271,7 +356,7 @@
       "geography": [
         "korea"
       ],
-      "selection_score": 10.74,
+      "selection_score": 10.68,
       "notes": "Korean startup ecosystem and funding coverage."
     },
     {
@@ -298,7 +383,7 @@
       "geography": [
         "global"
       ],
-      "selection_score": 10.74,
+      "selection_score": 10.68,
       "notes": "Operator playbooks and tactical founder advice; strong for actionable artifacts."
     },
     {
@@ -324,7 +409,7 @@
       "geography": [
         "korea"
       ],
-      "selection_score": 10.71,
+      "selection_score": 10.65,
       "notes": "Korean startup news and funding signal."
     },
     {
@@ -349,8 +434,249 @@
       "geography": [
         "korea"
       ],
-      "selection_score": 10.32,
+      "selection_score": 10.26,
       "notes": "Use public company/funding pages. Good for Korea startup funding context."
+    },
+    {
+      "id": "latent-space",
+      "name": "Latent Space",
+      "url": "https://www.latent.space/",
+      "source_type": "newsletter_podcast",
+      "access": "public_web",
+      "tier": 2,
+      "quality": 5,
+      "cadence": "weekly",
+      "domains": [
+        "ai",
+        "developer",
+        "agents",
+        "models"
+      ],
+      "personas": [
+        "founder",
+        "creator",
+        "corporate-strategist"
+      ],
+      "geography": [
+        "global"
+      ],
+      "selection_score": 10.19,
+      "notes": "Strong AI engineer/operator source. Use public posts, podcast pages, and transcripts when available."
+    },
+    {
+      "id": "ycombinator-youtube",
+      "name": "Y Combinator YouTube",
+      "url": "https://www.youtube.com/@ycombinator",
+      "source_type": "youtube",
+      "access": "public_web",
+      "tier": 2,
+      "quality": 4,
+      "cadence": "weekly",
+      "domains": [
+        "founder",
+        "startup",
+        "ai",
+        "fundraising"
+      ],
+      "personas": [
+        "founder",
+        "creator"
+      ],
+      "geography": [
+        "global"
+      ],
+      "selection_score": 10.1,
+      "notes": "Founder education videos; use public titles/descriptions/transcripts when available."
+    },
+    {
+      "id": "lenny-newsletter",
+      "name": "Lenny's Newsletter",
+      "url": "https://www.lennysnewsletter.com/",
+      "source_type": "newsletter",
+      "access": "public_web",
+      "tier": 2,
+      "quality": 5,
+      "cadence": "weekly",
+      "domains": [
+        "product",
+        "growth",
+        "startup",
+        "operator"
+      ],
+      "personas": [
+        "founder",
+        "b2b-marketer",
+        "creator"
+      ],
+      "geography": [
+        "global"
+      ],
+      "selection_score": 10.07,
+      "notes": "Use public posts only. Strong for product/growth practice and content angles."
+    },
+    {
+      "id": "the-decoder",
+      "name": "The Decoder",
+      "url": "https://the-decoder.com/",
+      "feed_url": "https://the-decoder.com/feed/",
+      "source_type": "media",
+      "access": "rss",
+      "tier": 2,
+      "quality": 4,
+      "cadence": "daily",
+      "domains": [
+        "ai",
+        "models",
+        "agents",
+        "developer",
+        "research"
+      ],
+      "personas": [
+        "founder",
+        "creator",
+        "corporate-strategist",
+        "investor-analyst"
+      ],
+      "geography": [
+        "global"
+      ],
+      "selection_score": 9.89,
+      "notes": "High-volume AI industry news; use for discovery and cross-check with official announcements."
+    },
+    {
+      "id": "bank-of-korea",
+      "name": "Bank of Korea",
+      "url": "https://www.bok.or.kr/",
+      "source_type": "public_report",
+      "access": "public_web",
+      "tier": 1,
+      "quality": 5,
+      "cadence": "weekly",
+      "domains": [
+        "korea",
+        "macro",
+        "finance",
+        "economy"
+      ],
+      "personas": [
+        "investor-analyst",
+        "corporate-strategist",
+        "creator"
+      ],
+      "geography": [
+        "korea"
+      ],
+      "selection_score": 9.84,
+      "notes": "Primary macroeconomic source for Korea."
+    },
+    {
+      "id": "venturebeat-ai",
+      "name": "VentureBeat AI",
+      "url": "https://venturebeat.com/category/ai/",
+      "feed_url": "https://venturebeat.com/category/ai/feed",
+      "source_type": "media",
+      "access": "rss",
+      "tier": 2,
+      "quality": 4,
+      "cadence": "daily",
+      "domains": [
+        "ai",
+        "enterprise",
+        "business",
+        "developer",
+        "models"
+      ],
+      "personas": [
+        "founder",
+        "b2b-marketer",
+        "corporate-strategist",
+        "investor-analyst"
+      ],
+      "geography": [
+        "global"
+      ],
+      "selection_score": 9.83,
+      "notes": "Good for enterprise AI, model launches, and applied AI market news."
+    },
+    {
+      "id": "stratechery",
+      "name": "Stratechery",
+      "url": "https://stratechery.com/",
+      "source_type": "newsletter",
+      "access": "mixed_public_paid",
+      "tier": 1,
+      "quality": 5,
+      "cadence": "daily",
+      "domains": [
+        "strategy",
+        "platforms",
+        "technology",
+        "business"
+      ],
+      "personas": [
+        "founder",
+        "investor-analyst",
+        "corporate-strategist",
+        "creator"
+      ],
+      "geography": [
+        "global"
+      ],
+      "selection_score": 9.82,
+      "notes": "Use public excerpts/posts only. Excellent for platform strategy lens."
+    },
+    {
+      "id": "bessemer-atlas",
+      "name": "Bessemer Atlas",
+      "url": "https://www.bvp.com/atlas",
+      "source_type": "vc_blog",
+      "access": "public_web",
+      "tier": 1,
+      "quality": 4,
+      "cadence": "weekly",
+      "domains": [
+        "saas",
+        "cloud",
+        "ai",
+        "vc",
+        "market"
+      ],
+      "personas": [
+        "founder",
+        "investor-analyst",
+        "b2b-marketer"
+      ],
+      "geography": [
+        "global"
+      ],
+      "selection_score": 9.75,
+      "notes": "Good for SaaS/cloud benchmarks, market maps, and public/private software narratives."
+    },
+    {
+      "id": "not-boring",
+      "name": "Not Boring",
+      "url": "https://www.notboring.co/",
+      "source_type": "newsletter",
+      "access": "public_web",
+      "tier": 2,
+      "quality": 4,
+      "cadence": "weekly",
+      "domains": [
+        "startups",
+        "markets",
+        "deeptech",
+        "business"
+      ],
+      "personas": [
+        "founder",
+        "investor-analyst",
+        "creator"
+      ],
+      "geography": [
+        "global"
+      ],
+      "selection_score": 9.44,
+      "notes": "Narrative-heavy source; useful for content angles but verify claims with primary sources."
     }
   ],
   "rss_sources": [
@@ -379,7 +705,7 @@
       "geography": [
         "global"
       ],
-      "selection_score": 13.83,
+      "selection_score": 13.98,
       "notes": "Founder and startup signal source; useful for company formation, fundraising, and founder advice."
     },
     {
@@ -407,7 +733,7 @@
       "geography": [
         "korea"
       ],
-      "selection_score": 12.18,
+      "selection_score": 12.12,
       "notes": "Strong Korean developer/startup signal source; verify original links where possible."
     },
     {
@@ -436,8 +762,151 @@
       "geography": [
         "global"
       ],
-      "selection_score": 11.73,
+      "selection_score": 11.76,
       "notes": "Primary source for OpenAI product, research, and workplace AI workflow announcements."
+    },
+    {
+      "id": "techcrunch-ai",
+      "name": "TechCrunch AI",
+      "url": "https://techcrunch.com/category/artificial-intelligence/",
+      "feed_url": "https://techcrunch.com/category/artificial-intelligence/feed/",
+      "source_type": "media",
+      "access": "rss",
+      "tier": 2,
+      "quality": 4,
+      "cadence": "daily",
+      "domains": [
+        "ai",
+        "startups",
+        "funding",
+        "business",
+        "product"
+      ],
+      "personas": [
+        "founder",
+        "investor-analyst",
+        "b2b-marketer",
+        "creator"
+      ],
+      "geography": [
+        "global"
+      ],
+      "selection_score": 11.48,
+      "notes": "High-volume AI startup and product news. Use as discovery; verify strategic claims with primary sources."
+    },
+    {
+      "id": "mit-tech-review",
+      "name": "MIT Technology Review",
+      "url": "https://www.technologyreview.com/",
+      "feed_url": "https://www.technologyreview.com/feed/",
+      "source_type": "media",
+      "access": "rss",
+      "tier": 2,
+      "quality": 5,
+      "cadence": "daily",
+      "domains": [
+        "ai",
+        "technology",
+        "policy",
+        "research",
+        "business"
+      ],
+      "personas": [
+        "founder",
+        "investor-analyst",
+        "corporate-strategist",
+        "creator"
+      ],
+      "geography": [
+        "global"
+      ],
+      "selection_score": 11.06,
+      "notes": "Useful for broader technology and AI policy context. Treat as secondary analysis."
+    },
+    {
+      "id": "nvidia-blog",
+      "name": "NVIDIA Blog",
+      "url": "https://blogs.nvidia.com/",
+      "feed_url": "https://blogs.nvidia.com/feed/",
+      "source_type": "official_blog",
+      "access": "rss",
+      "tier": 1,
+      "quality": 5,
+      "cadence": "daily",
+      "domains": [
+        "ai",
+        "semiconductor",
+        "infrastructure",
+        "enterprise"
+      ],
+      "personas": [
+        "founder",
+        "investor-analyst",
+        "corporate-strategist"
+      ],
+      "geography": [
+        "global"
+      ],
+      "selection_score": 10.68,
+      "notes": "Use for infrastructure, chips, enterprise AI deployment, and ecosystem signals."
+    },
+    {
+      "id": "the-decoder",
+      "name": "The Decoder",
+      "url": "https://the-decoder.com/",
+      "feed_url": "https://the-decoder.com/feed/",
+      "source_type": "media",
+      "access": "rss",
+      "tier": 2,
+      "quality": 4,
+      "cadence": "daily",
+      "domains": [
+        "ai",
+        "models",
+        "agents",
+        "developer",
+        "research"
+      ],
+      "personas": [
+        "founder",
+        "creator",
+        "corporate-strategist",
+        "investor-analyst"
+      ],
+      "geography": [
+        "global"
+      ],
+      "selection_score": 9.89,
+      "notes": "High-volume AI industry news; use for discovery and cross-check with official announcements."
+    },
+    {
+      "id": "venturebeat-ai",
+      "name": "VentureBeat AI",
+      "url": "https://venturebeat.com/category/ai/",
+      "feed_url": "https://venturebeat.com/category/ai/feed",
+      "source_type": "media",
+      "access": "rss",
+      "tier": 2,
+      "quality": 4,
+      "cadence": "daily",
+      "domains": [
+        "ai",
+        "enterprise",
+        "business",
+        "developer",
+        "models"
+      ],
+      "personas": [
+        "founder",
+        "b2b-marketer",
+        "corporate-strategist",
+        "investor-analyst"
+      ],
+      "geography": [
+        "global"
+      ],
+      "selection_score": 9.83,
+      "notes": "Good for enterprise AI, model launches, and applied AI market news."
     }
   ],
   "watchlist_sources": [
@@ -464,34 +933,8 @@
       "geography": [
         "global"
       ],
-      "selection_score": 11.01,
+      "selection_score": 11.04,
       "notes": "Primary research and model signal source; stronger for technology direction than short-term business ideas."
-    },
-    {
-      "id": "startup-alliance",
-      "name": "Startup Alliance Korea",
-      "url": "https://startupall.kr/",
-      "source_type": "ecosystem_org",
-      "access": "public_web",
-      "tier": 1,
-      "quality": 4,
-      "cadence": "weekly",
-      "domains": [
-        "korea",
-        "startup",
-        "policy",
-        "ecosystem"
-      ],
-      "personas": [
-        "founder",
-        "investor-analyst",
-        "corporate-strategist"
-      ],
-      "geography": [
-        "korea"
-      ],
-      "selection_score": 10.99,
-      "notes": "Use for ecosystem reports, startup policy, and Korea market context."
     },
     {
       "id": "anthropic-news",
@@ -518,8 +961,34 @@
       "geography": [
         "global"
       ],
-      "selection_score": 10.98,
+      "selection_score": 11.01,
       "notes": "Watch for model, agent, enterprise, and safety updates. Use public pages or user-provided URLs."
+    },
+    {
+      "id": "startup-alliance",
+      "name": "Startup Alliance Korea",
+      "url": "https://startupall.kr/",
+      "source_type": "ecosystem_org",
+      "access": "public_web",
+      "tier": 1,
+      "quality": 4,
+      "cadence": "weekly",
+      "domains": [
+        "korea",
+        "startup",
+        "policy",
+        "ecosystem"
+      ],
+      "personas": [
+        "founder",
+        "investor-analyst",
+        "corporate-strategist"
+      ],
+      "geography": [
+        "korea"
+      ],
+      "selection_score": 10.93,
+      "notes": "Use for ecosystem reports, startup policy, and Korea market context."
     },
     {
       "id": "sequoia-articles",
@@ -545,7 +1014,7 @@
       "geography": [
         "global"
       ],
-      "selection_score": 10.95,
+      "selection_score": 10.89,
       "notes": "Use for category formation, founder strategy, and market timing."
     },
     {
@@ -574,7 +1043,7 @@
       "geography": [
         "global"
       ],
-      "selection_score": 10.92,
+      "selection_score": 10.86,
       "notes": "High-quality narrative and market map source. Feed path changes; keep as watchlist until verified."
     },
     {
@@ -600,7 +1069,7 @@
       "geography": [
         "korea"
       ],
-      "selection_score": 10.74,
+      "selection_score": 10.68,
       "notes": "Korean startup ecosystem and funding coverage."
     },
     {
@@ -627,7 +1096,7 @@
       "geography": [
         "global"
       ],
-      "selection_score": 10.74,
+      "selection_score": 10.68,
       "notes": "Operator playbooks and tactical founder advice; strong for actionable artifacts."
     },
     {
@@ -653,7 +1122,7 @@
       "geography": [
         "korea"
       ],
-      "selection_score": 10.71,
+      "selection_score": 10.65,
       "notes": "Korean startup news and funding signal."
     },
     {
@@ -678,8 +1147,191 @@
       "geography": [
         "korea"
       ],
-      "selection_score": 10.32,
+      "selection_score": 10.26,
       "notes": "Use public company/funding pages. Good for Korea startup funding context."
+    },
+    {
+      "id": "latent-space",
+      "name": "Latent Space",
+      "url": "https://www.latent.space/",
+      "source_type": "newsletter_podcast",
+      "access": "public_web",
+      "tier": 2,
+      "quality": 5,
+      "cadence": "weekly",
+      "domains": [
+        "ai",
+        "developer",
+        "agents",
+        "models"
+      ],
+      "personas": [
+        "founder",
+        "creator",
+        "corporate-strategist"
+      ],
+      "geography": [
+        "global"
+      ],
+      "selection_score": 10.19,
+      "notes": "Strong AI engineer/operator source. Use public posts, podcast pages, and transcripts when available."
+    },
+    {
+      "id": "ycombinator-youtube",
+      "name": "Y Combinator YouTube",
+      "url": "https://www.youtube.com/@ycombinator",
+      "source_type": "youtube",
+      "access": "public_web",
+      "tier": 2,
+      "quality": 4,
+      "cadence": "weekly",
+      "domains": [
+        "founder",
+        "startup",
+        "ai",
+        "fundraising"
+      ],
+      "personas": [
+        "founder",
+        "creator"
+      ],
+      "geography": [
+        "global"
+      ],
+      "selection_score": 10.1,
+      "notes": "Founder education videos; use public titles/descriptions/transcripts when available."
+    },
+    {
+      "id": "lenny-newsletter",
+      "name": "Lenny's Newsletter",
+      "url": "https://www.lennysnewsletter.com/",
+      "source_type": "newsletter",
+      "access": "public_web",
+      "tier": 2,
+      "quality": 5,
+      "cadence": "weekly",
+      "domains": [
+        "product",
+        "growth",
+        "startup",
+        "operator"
+      ],
+      "personas": [
+        "founder",
+        "b2b-marketer",
+        "creator"
+      ],
+      "geography": [
+        "global"
+      ],
+      "selection_score": 10.07,
+      "notes": "Use public posts only. Strong for product/growth practice and content angles."
+    },
+    {
+      "id": "bank-of-korea",
+      "name": "Bank of Korea",
+      "url": "https://www.bok.or.kr/",
+      "source_type": "public_report",
+      "access": "public_web",
+      "tier": 1,
+      "quality": 5,
+      "cadence": "weekly",
+      "domains": [
+        "korea",
+        "macro",
+        "finance",
+        "economy"
+      ],
+      "personas": [
+        "investor-analyst",
+        "corporate-strategist",
+        "creator"
+      ],
+      "geography": [
+        "korea"
+      ],
+      "selection_score": 9.84,
+      "notes": "Primary macroeconomic source for Korea."
+    },
+    {
+      "id": "stratechery",
+      "name": "Stratechery",
+      "url": "https://stratechery.com/",
+      "source_type": "newsletter",
+      "access": "mixed_public_paid",
+      "tier": 1,
+      "quality": 5,
+      "cadence": "daily",
+      "domains": [
+        "strategy",
+        "platforms",
+        "technology",
+        "business"
+      ],
+      "personas": [
+        "founder",
+        "investor-analyst",
+        "corporate-strategist",
+        "creator"
+      ],
+      "geography": [
+        "global"
+      ],
+      "selection_score": 9.82,
+      "notes": "Use public excerpts/posts only. Excellent for platform strategy lens."
+    },
+    {
+      "id": "bessemer-atlas",
+      "name": "Bessemer Atlas",
+      "url": "https://www.bvp.com/atlas",
+      "source_type": "vc_blog",
+      "access": "public_web",
+      "tier": 1,
+      "quality": 4,
+      "cadence": "weekly",
+      "domains": [
+        "saas",
+        "cloud",
+        "ai",
+        "vc",
+        "market"
+      ],
+      "personas": [
+        "founder",
+        "investor-analyst",
+        "b2b-marketer"
+      ],
+      "geography": [
+        "global"
+      ],
+      "selection_score": 9.75,
+      "notes": "Good for SaaS/cloud benchmarks, market maps, and public/private software narratives."
+    },
+    {
+      "id": "not-boring",
+      "name": "Not Boring",
+      "url": "https://www.notboring.co/",
+      "source_type": "newsletter",
+      "access": "public_web",
+      "tier": 2,
+      "quality": 4,
+      "cadence": "weekly",
+      "domains": [
+        "startups",
+        "markets",
+        "deeptech",
+        "business"
+      ],
+      "personas": [
+        "founder",
+        "investor-analyst",
+        "creator"
+      ],
+      "geography": [
+        "global"
+      ],
+      "selection_score": 9.44,
+      "notes": "Narrative-heavy source; useful for content angles but verify claims with primary sources."
     }
   ]
 }

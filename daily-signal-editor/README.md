@@ -14,6 +14,7 @@ Daily Signal Editor는 공개 소스, RSS, 리포트 링크, 사용자가 제공
 
 - 비즈니스/AI/투자/스타트업 관련 후보 소스를 넓은 registry에서 자동으로 고릅니다.
 - RSS, 뉴스레터, 리포트, 유튜브, 한국 스타트업 소스를 persona에 맞게 갈아끼웁니다.
+- 매일 최대 50개의 읽을거리 후보를 A/B/C tier로 큐레이션합니다.
 - 후보 아이템을 신선도, 출처 신뢰도, 사용자 적합도, 사업적 영향, 독창성, 콘텐츠 잠재력으로 점수화합니다.
 - 상위 신호 3-7개를 골라 "무슨 일이 있었는지"보다 "왜 중요한지"를 설명합니다.
 - 여러 신호를 연결해 "지금 시장이 어느 방향으로 움직이는지"를 합성합니다.
@@ -301,6 +302,35 @@ python3 scripts/build_digest.py \
   --output /tmp/daily-signal-live-founder-brief.md
 ```
 
+매일 50개 정도의 넓은 후보 큐를 먼저 만들고, 그중 A-tier만 브리프로 승격할 수도 있습니다. 이 흐름은 "좋은 뉴스레터를 받는 느낌"에 더 가깝습니다.
+
+```bash
+python3 scripts/plan_sources.py \
+  --registry mock-data/source-registry.json \
+  --profile mock-data/profiles/founder.json \
+  --output examples/founder-source-plan.json \
+  --rss-output /tmp/founder-rss-sources.json \
+  --max-sources 24 \
+  --max-per-type 8
+
+python3 scripts/fetch_rss.py \
+  --sources /tmp/founder-rss-sources.json \
+  --output /tmp/daily-signal-live-items.json \
+  --max-items-per-source 10 \
+  --no-enrich-pages
+
+python3 scripts/build_curated_list.py \
+  --sources /tmp/founder-rss-sources.json \
+  --items /tmp/daily-signal-live-items.json \
+  --profile mock-data/profiles/founder.json \
+  --output examples/founder-curated-50.md \
+  --limit 50
+
+python3 scripts/validate_curated_list.py examples/founder-curated-50.md --min-items 50
+```
+
+예시 결과물은 [examples/founder-curated-50.md](examples/founder-curated-50.md)에 있습니다. A-tier는 오늘 바로 읽고 쓸 신호, B-tier는 콘텐츠/회의 준비 후보, C-tier는 추가 확인이 필요한 watchlist로 봅니다.
+
 ## 앞으로 더 똑똑해질 계획이에요
 
 ### Phase 1: Reproducible local demo
@@ -321,7 +351,8 @@ python3 scripts/build_digest.py \
 
 ### Phase 3: Live public source adapters
 
-- [ ] Add RSS ingestion for GeekNews and selected official blogs.
+- [x] Add RSS ingestion for GeekNews and selected official blogs.
+- [x] Add a Daily 50 curated queue with A/B/C tiers and validation.
 - [ ] Add user-provided URL ingestion.
 - [ ] Add a public-report ingestion path for PDF links.
 - [ ] Add source freshness and duplicate detection.

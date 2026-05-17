@@ -61,13 +61,15 @@ If the user only says "make my daily brief", use this default:
 3. Gather candidate items.
    - Use public source summaries, RSS items, official posts, public reports, or mock data.
    - Preserve title, URL, source, date, summary, and topic tags.
+   - For a daily operating workflow, gather a broad candidate pool first. A good target is 50 curated items from 20-30 planned sources, with 8-12 RSS sources when available.
    - Do not copy paid or full copyrighted articles. Summarize short snippets and link to the source.
 
 4. Score and select.
    - Read `references/scoring-rubric.md` for scoring criteria.
    - Score candidates on freshness, source quality, audience fit, business impact, novelty, signal durability, and content potential.
    - Remove duplicates and cluster related items.
-   - Select the top 3-7 signals.
+   - When the user wants breadth, run `scripts/build_curated_list.py` to create a Daily 50 queue with A/B/C tiers.
+   - Select the top 3-7 A-tier signals for the final brief or content draft.
 
 5. Pattern-match and synthesize.
    - Read `references/editorial-rubric.md` for the editorial lens.
@@ -118,9 +120,29 @@ python3 scripts/plan_sources.py \
   --rss-output /tmp/founder-rss-sources.json
 ```
 
+Build a broad Daily 50 queue before narrowing into a brief:
+
+```bash
+python3 scripts/fetch_rss.py \
+  --sources /tmp/founder-rss-sources.json \
+  --output /tmp/daily-signal-live-items.json \
+  --max-items-per-source 10 \
+  --no-enrich-pages
+
+python3 scripts/build_curated_list.py \
+  --sources /tmp/founder-rss-sources.json \
+  --items /tmp/daily-signal-live-items.json \
+  --profile mock-data/profiles/founder.json \
+  --output examples/founder-curated-50.md \
+  --limit 50
+
+python3 scripts/validate_curated_list.py examples/founder-curated-50.md --min-items 50
+```
+
 ## Done When
 
 - The target audience and purpose are explicit.
+- A broad candidate queue exists when the user asked for daily discovery, ideally up to 50 source-linked items.
 - The selected signals have source links and scores.
 - The brief explains "why it matters", not only "what happened".
 - The output includes at least one reusable content angle or next action.

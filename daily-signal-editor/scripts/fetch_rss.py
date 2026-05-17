@@ -18,12 +18,47 @@ from score_items import load_json
 
 
 TOPIC_KEYWORDS = {
-    "ai": ["ai", "agent", "agents", "llm", "model", "openai", "anthropic", "automation", "claude", "codex"],
+    "ai": [
+        "ai",
+        "agent",
+        "agents",
+        "llm",
+        "model",
+        "openai",
+        "anthropic",
+        "automation",
+        "claude",
+        "codex",
+        "grok",
+        "deepfake",
+        "world model",
+        "self-improving",
+        "artificial intelligence",
+        "모델",
+        "인공지능",
+    ],
     "workflow": ["workflow", "workflows", "brief", "briefs", "packet", "packets", "plan", "plans", "diagnosis", "updates"],
     "startups": ["startup", "startups", "founder", "founders", "yc", "seed", "growth"],
     "vc": ["vc", "venture", "funding", "investment", "investor"],
-    "business": ["business", "market", "revenue", "pricing", "sales", "enterprise", "operations", "pipeline"],
-    "developer": ["developer", "developers", "code", "github", "open source", "api", "data science"],
+    "business": [
+        "business",
+        "market",
+        "revenue",
+        "pricing",
+        "sales",
+        "enterprise",
+        "operations",
+        "pipeline",
+        "ipo",
+        "goes public",
+        "funding",
+        "retention",
+        "customer",
+        "고객",
+        "시장",
+        "투자",
+    ],
+    "developer": ["developer", "developers", "code", "github", "open source", "api", "data science", "코드", "개발"],
     "security": ["ctf", "security", "vulnerability", "privacy"],
     "legal": ["legal", "law", "privacy", "regulatory", "governance", "compliance", "법률", "규제"],
     "korea": ["korea", "korean", "한국", "국내", "스타트업"],
@@ -162,9 +197,27 @@ def novelty_hint(text: str) -> int:
 def why_it_matters(text: str, topics: list[str]) -> str:
     lowered = text.lower()
     topic_set = set(topics)
+    legal_signal = any(
+        has_keyword(lowered, term)
+        for term in ["legal", "law", "privacy", "regulatory", "governance", "compliance", "법률", "규제"]
+    )
     if "databricks" in lowered and "agent" in lowered:
         return "Enterprise AI agents are being tested inside data-heavy work environments, which makes reliability, evaluation, and workflow integration more important than generic chat capability."
-    if "legal" in topic_set and "ai" in topic_set:
+    if "coding model" in lowered or "coding agent" in lowered or "claude code" in lowered:
+        return "Coding agents are becoming a distribution wedge for developer platforms, with pricing, open-source alternatives, and workflow lock-in all becoming strategic variables."
+    if "cloud" in lowered and ("infrastructure" in lowered or "aws" in lowered):
+        return "AI-native cloud demand is pushing infrastructure startups to compete on developer speed, deployment simplicity, and workload fit rather than only raw compute scale."
+    if "customer interview" in lowered or "listen labs" in lowered:
+        return "Customer discovery is becoming a software workflow that can be repeated, analyzed, and packaged, which creates new product surfaces around PMF learning loops."
+    if "slackbot" in lowered or "workplace ai" in lowered:
+        return "Enterprise collaboration tools are turning assistants into embedded agents, which shifts competition toward data access, permissions, and daily workflow ownership."
+    if "self-improving" in lowered or "world model" in lowered:
+        return "Frontier AI companies are moving from demo capability toward productized research loops, which raises the bar for defensibility and commercialization speed."
+    if "hiring" in lowered or "talent" in lowered:
+        return "AI startups are competing through talent-market storytelling as much as product launches, making recruiting strategy part of the category narrative."
+    if "legal action" in lowered and ("apple" in lowered or "platform" in lowered):
+        return "AI distribution is becoming a platform power negotiation, so product teams should watch which channels control placement, user context, and monetization."
+    if legal_signal and "ai" in topic_set:
         return "Domain-specific AI agents are moving into regulated professional workflows, which makes trust, data access, and review loops central product questions."
     if "sales" in lowered and ("codex" in lowered or "ai" in topic_set):
         return "AI work assistants are expanding from engineering into revenue workflows, creating concrete B2B SaaS use cases around account research, pipeline review, and meeting prep."
@@ -217,7 +270,8 @@ def fetch_feed(
                 page_context = ""
         if len(summary) < 80 and page_context:
             summary = page_context
-        text = f"{title} {summary}"
+        summary_for_signal = summary[:600]
+        text = f"{title} {summary_for_signal}"
         topics = infer_topics(text, source.get("domains", []))
         freshness = freshness_score(published)
         impact = score_hint(text, 3)

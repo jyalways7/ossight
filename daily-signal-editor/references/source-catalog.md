@@ -15,6 +15,8 @@ Do not read the same fixed source list every day. Build a source plan first:
 5. Keep non-RSS newsletters, public reports, and YouTube channels as watchlist sources.
 6. Rotate among similar sources by day or seed so the brief does not become repetitive.
 
+For a Daily 50 workflow, plan 20-30 sources, fetch 5-10 items from each RSS source, then rank the combined pool. The 50-item queue is a discovery surface, not the final brief: promote only the top A-tier items into synthesis or content drafts.
+
 Example:
 
 ```bash
@@ -22,7 +24,9 @@ python3 scripts/plan_sources.py \
   --registry mock-data/source-registry.json \
   --profile mock-data/profiles/founder.json \
   --output examples/founder-source-plan.json \
-  --rss-output /tmp/founder-rss-sources.json
+  --rss-output /tmp/founder-rss-sources.json \
+  --max-sources 24 \
+  --max-per-type 8
 ```
 
 ## Source Tiers

@@ -62,6 +62,11 @@ def contrarian_view(top: list[dict]) -> str:
     )
 
 
+def is_actionable_signal(item: dict) -> bool:
+    why = str(item.get("why_it_matters", "")).lower()
+    return "needs a stronger primary-source pattern" not in why
+
+
 def artifact_label(profile: dict) -> str:
     mode = str(profile.get("output_mode", "")).lower()
     purpose = str(profile.get("purpose", "")).lower()
@@ -214,7 +219,7 @@ def select_signals(scored_items: list[dict], max_signals: int, max_per_source: i
     selected: list[dict] = []
     per_source: dict[str, int] = {}
 
-    for item in scored_items:
+    for item in [row for row in scored_items if is_actionable_signal(row)]:
         source = item.get("source_id", "unknown")
         if per_source.get(source, 0) >= max_per_source:
             continue
@@ -228,7 +233,11 @@ def select_signals(scored_items: list[dict], max_signals: int, max_per_source: i
     for item in scored_items:
         if item in selected:
             continue
+        source = item.get("source_id", "unknown")
+        if per_source.get(source, 0) >= max_per_source:
+            continue
         selected.append(item)
+        per_source[source] = per_source.get(source, 0) + 1
         if len(selected) >= max_signals:
             return selected
 
