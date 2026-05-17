@@ -22,6 +22,69 @@ Daily Signal Editor는 공개 소스, RSS, 리포트 링크, 사용자가 제공
 - 브리프, 뉴스레터 초안, 콘텐츠 앵글, 리서치 메모, Slack 팀 업데이트, 전략 회의 안건 형태로 바꿉니다.
 - 출처 링크, 저작권, paywall, 투자 조언 리스크를 함께 확인합니다.
 
+## 2분 Quickstart
+
+처음이라면 mock data로 먼저 감을 잡으세요. 네트워크 없이 바로 실행됩니다.
+
+```bash
+python3 scripts/build_digest.py \
+  --sources mock-data/sample-sources.json \
+  --items mock-data/sample-items.json \
+  --profile mock-data/sample-user-profile.json \
+  --output /tmp/daily-signal-brief.md
+
+python3 scripts/validate_digest.py /tmp/daily-signal-brief.md
+```
+
+오늘의 실제 공개 RSS와 앱 순위를 섞어 큐레이션/인사이트 채널을 만들고 싶다면 아래 순서로 실행합니다.
+
+```bash
+python3 scripts/plan_sources.py \
+  --registry mock-data/source-registry.json \
+  --profile mock-data/profiles/editorial-insight-channel.json \
+  --output /tmp/source-plan.json \
+  --rss-output /tmp/rss-sources.json \
+  --app-output /tmp/app-sources.json \
+  --manual-output /tmp/manual-sources.json \
+  --max-sources 36 \
+  --max-per-type 8
+
+python3 scripts/fetch_rss.py \
+  --sources /tmp/rss-sources.json \
+  --output /tmp/rss-items.json \
+  --max-items-per-source 8 \
+  --no-enrich-pages
+
+python3 scripts/fetch_app_rankings.py \
+  --sources /tmp/app-sources.json \
+  --output /tmp/app-items.json \
+  --max-items-per-source 8
+
+python3 scripts/merge_items.py \
+  --output /tmp/merged-items.json \
+  /tmp/rss-items.json \
+  /tmp/app-items.json \
+  mock-data/manual-social-signals.json
+
+python3 scripts/build_curated_list.py \
+  --sources /tmp/source-plan.json \
+  --items /tmp/merged-items.json \
+  --profile mock-data/profiles/editorial-insight-channel.json \
+  --output /tmp/today-signal-curation.md \
+  --limit 50 \
+  --max-per-source 7 \
+  --max-per-primary-topic 14
+
+python3 scripts/build_insight_memo.py \
+  --sources /tmp/source-plan.json \
+  --items /tmp/merged-items.json \
+  --profile mock-data/profiles/editorial-insight-channel.json \
+  --output /tmp/today-signal-insights.md \
+  --max-signals 14
+```
+
+결과물은 두 개입니다. `/tmp/today-signal-curation.md`는 오늘의 신호 큐레이션, `/tmp/today-signal-insights.md`는 그 신호에서 뽑은 인사이트 메모입니다.
+
 ## 매일 쏟아지는 정보, 정작 내 사업에 쓸 건 없나요?
 
 정보가 부족해서가 아니라, **정리할 시간이 부족해서** 놓치는 기회가 너무 많으니까요.

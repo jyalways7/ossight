@@ -88,7 +88,7 @@ def group_by_topic(items: list[dict]) -> dict[str, list[dict]]:
 
 def strongest_title(items: list[dict], topic: str) -> str:
     for item in items:
-        if primary_topic(item) == topic:
+        if topic in (item.get("topics") or []):
             return item["title"]
     return items[0]["title"] if items else "오늘의 신호"
 
@@ -130,7 +130,7 @@ def derive_insights(items: list[dict]) -> list[tuple[str, str, str, str]]:
                 "한국 시장에서는 유통과 신뢰가 신호의 강도를 바꿔요",
                 "글로벌 트렌드가 바로 한국 기회가 되지는 않아요. 결제, 규제, 커뮤니티, 기업 구매 방식이 채택 속도를 정해요.",
                 "해외 신호를 가져올 때는 한국에서 누가 먼저 돈을 내고 반복 사용할지까지 붙여야 설득력이 생겨요.",
-                strongest_title(items, "business"),
+                strongest_title(items, "korea"),
             )
         )
 

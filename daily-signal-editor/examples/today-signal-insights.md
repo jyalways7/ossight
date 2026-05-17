@@ -1,6 +1,6 @@
 # Daily Insight Memo
 
-- 날짜: 2026-05-17
+- 날짜: 2026-05-18
 - 채널: Daily Market Signal Insight
 - 대상: 한국 창업자, 투자자, 콘텐츠 에디터
 - 목적: 오늘의 비즈니스, AI, 소비자, 콘텐츠/IP, 앱 순위 신호를 큐레이션하고 실행 가능한 인사이트로 전환
@@ -47,7 +47,7 @@
 ### 1. 포맷이 IP가 되고 있어요
 - 관찰: 콘텐츠의 힘이 작품 하나가 아니라 반복 가능한 포맷, 팬 편집, 챌린지 구조에서 나오고 있어요.
 - 의미: 브랜드와 스타트업은 캠페인을 한 번의 노출로 끝내기보다, 사람들이 다시 만들 수 있는 형식을 설계해야 해요.
-- 근거 신호: `Creator-led formats become reusable content franchises`
+- 근거 신호: `Korean searches cluster around pop-up stores and limited merch`
 - 다음 확인: 같은 흐름이 다른 출처, 고객 행동, 실제 제품 출시에서도 반복되는지 보세요.
 
 ### 2. 소비자는 거대한 플랫폼보다 작은 해결책에 반응해요
@@ -65,7 +65,7 @@
 ### 4. 한국 시장에서는 유통과 신뢰가 신호의 강도를 바꿔요
 - 관찰: 글로벌 트렌드가 바로 한국 기회가 되지는 않아요. 결제, 규제, 커뮤니티, 기업 구매 방식이 채택 속도를 정해요.
 - 의미: 해외 신호를 가져올 때는 한국에서 누가 먼저 돈을 내고 반복 사용할지까지 붙여야 설득력이 생겨요.
-- 근거 신호: `#2 filmhwa (필름화) - 화민 필터 on Apple App Store Top Paid Korea`
+- 근거 신호: `Korean searches cluster around pop-up stores and limited merch`
 - 다음 확인: 같은 흐름이 다른 출처, 고객 행동, 실제 제품 출시에서도 반복되는지 보세요.
 
 ## 바로 쓸 수 있는 콘텐츠 앵글
