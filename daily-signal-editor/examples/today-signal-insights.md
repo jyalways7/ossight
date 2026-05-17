@@ -8,7 +8,7 @@
 
 ## 오늘의 한 줄
 
-오늘 신호는 소비자 관심, 콘텐츠/IP, AI, 앱 순위 쪽으로 모여요. 핵심은 화제성보다 반복 행동, 지불 의향, 콘텐츠화 가능성을 같이 보는 거예요.
+오늘 신호는 소비자 관심, 앱 순위, 콘텐츠/IP, AI 쪽으로 모여요. 핵심은 화제성보다 반복 행동, 지불 의향, 콘텐츠화 가능성을 같이 보는 거예요.
 
 ## 신호 지도
 
@@ -25,10 +25,10 @@
 - 왜 중요한가요: 사람들은 물건만 사는 게 아니라 인증할 만한 경험을 사요. IP와 브랜드는 오프라인 경험을 콘텐츠화할수록 강해져요.
 
 ### 앱 순위
-- 대표 신호: [#1 DayGrid: 그리드 플래너, 위젯, 스케줄 on Apple App Store Top Paid Korea](https://apps.apple.com/kr/app/daygrid-%EA%B7%B8%EB%A6%AC%EB%93%9C-%ED%94%8C%EB%9E%98%EB%84%88-%EC%9C%84%EC%A0%AF-%EC%8A%A4%EC%BC%80%EC%A4%84/id6762279908)
-- 출처: Apple App Store Top Paid Korea / 점수 4.3 / 5
-- 해석: DayGrid: 그리드 플래너, 위젯, 스케줄 앱이 Apple App Store Top Paid Korea에서 1위에 올랐어요. 퍼블리셔는 ho young moon, 카테고리는 확인 필요예요.
-- 왜 중요한가요: 앱 순위 변화는 사람들이 실제로 설치하고 써보는 관심사를 보여줘요. 제품 아이디어, 카테고리 경쟁, 콘텐츠 훅을 찾을 때 좋은 초기 신호예요.
+- 대표 신호: [#2 filmhwa (필름화) - 화민 필터 on Apple App Store Top Paid Korea](https://apps.apple.com/kr/app/filmhwa-%ED%95%84%EB%A6%84%ED%99%94-%ED%99%94%EB%AF%BC-%ED%95%84%ED%84%B0/id6443723657)
+- 출처: Apple App Store Top Paid Korea / 점수 4.34 / 5
+- 해석: filmhwa (필름화) - 화민 필터 앱이 Apple App Store Top Paid Korea에서 2위에 올랐어요. 퍼블리셔는 ARTTIC CO., LTD., 추정 카테고리는 카메라/필터예요.
+- 왜 중요한가요: 카메라와 필터 앱이 유료 순위에 반복해서 보이면 소비자가 생성형 AI보다 '내 취향처럼 보이는 결과물'에 바로 지갑을 연다는 뜻이에요. 콘텐츠 도구는 기능 수보다 감성 프리셋, 공유 장면, 팬층이 더 중요해질 수 있어요.
 
 ### 소비자 관심
 - 대표 신호: [Sea You in the Cloud: ‘Subnautica 2’ Early Access Dives Onto GeForce NOW](https://blogs.nvidia.com/blog/geforce-now-thursday-subnautica-2/)
@@ -53,7 +53,7 @@
 ### 2. 소비자는 거대한 플랫폼보다 작은 해결책에 반응해요
 - 관찰: 앱 순위와 소비자 신호는 사람들이 당장 불편한 한 가지 일을 해결해주는 제품에 빠르게 움직인다는 점을 보여줘요.
 - 의미: 제품 아이디어를 찾을 때는 큰 카테고리보다 '오늘 바로 설치할 이유'가 있는 작은 일을 먼저 보세요.
-- 근거 신호: `#1 DayGrid: 그리드 플래너, 위젯, 스케줄 on Apple App Store Top Paid Korea`
+- 근거 신호: `#2 filmhwa (필름화) - 화민 필터 on Apple App Store Top Paid Korea`
 - 다음 확인: 같은 흐름이 다른 출처, 고객 행동, 실제 제품 출시에서도 반복되는지 보세요.
 
 ### 3. AI는 기능이 아니라 업무 루틴으로 내려오고 있어요
@@ -65,30 +65,30 @@
 ### 4. 한국 시장에서는 유통과 신뢰가 신호의 강도를 바꿔요
 - 관찰: 글로벌 트렌드가 바로 한국 기회가 되지는 않아요. 결제, 규제, 커뮤니티, 기업 구매 방식이 채택 속도를 정해요.
 - 의미: 해외 신호를 가져올 때는 한국에서 누가 먼저 돈을 내고 반복 사용할지까지 붙여야 설득력이 생겨요.
-- 근거 신호: `Korean searches cluster around pop-up stores and limited merch`
+- 근거 신호: `#2 filmhwa (필름화) - 화민 필터 on Apple App Store Top Paid Korea`
 - 다음 확인: 같은 흐름이 다른 출처, 고객 행동, 실제 제품 출시에서도 반복되는지 보세요.
 
 ## 바로 쓸 수 있는 콘텐츠 앵글
 
-1. `Korean searches cluster around pop-up stores and limited merch`로 보는 소셜 트렌드, 콘텐츠/IP, 소비자 관심, 한국 시장 변화
+1. `#2 filmhwa (필름화) - 화민 필터 on Apple App Store Top Paid Korea`로 보는 앱 순위, 소비자 관심, 제품 변화
+   - 독자 질문: 이 신호가 내 일, 제품, 투자 가정을 어떻게 바꾸나요?
+   - 근거: [Apple App Store Top Paid Korea](https://apps.apple.com/kr/app/filmhwa-%ED%95%84%EB%A6%84%ED%99%94-%ED%99%94%EB%AF%BC-%ED%95%84%ED%84%B0/id6443723657)
+
+2. `#3 GIKA 기카 - 독보적인 올드폰 감성 카메라 on Apple App Store Top Paid Korea`로 보는 앱 순위, 소비자 관심, 제품 변화
+   - 독자 질문: 이 신호가 내 일, 제품, 투자 가정을 어떻게 바꾸나요?
+   - 근거: [Apple App Store Top Paid Korea](https://apps.apple.com/kr/app/gika-%EA%B8%B0%EC%B9%B4-%EB%8F%85%EB%B3%B4%EC%A0%81%EC%9D%B8-%EC%98%AC%EB%93%9C%ED%8F%B0-%EA%B0%90%EC%84%B1-%EC%B9%B4%EB%A9%94%EB%9D%BC/id6755822636)
+
+3. `Korean searches cluster around pop-up stores and limited merch`로 보는 소셜 트렌드, 콘텐츠/IP, 소비자 관심, 한국 시장 변화
    - 독자 질문: 이 신호가 내 일, 제품, 투자 가정을 어떻게 바꾸나요?
    - 근거: [Google Trends Korea](https://trends.google.com/trends/trendingsearches/daily?geo=KR)
 
-2. `Creator-led formats become reusable content franchises`로 보는 콘텐츠/IP, 크리에이터, 비즈니스 변화
+4. `Creator-led formats become reusable content franchises`로 보는 콘텐츠/IP, 크리에이터, 비즈니스 변화
    - 독자 질문: 이 신호가 내 일, 제품, 투자 가정을 어떻게 바꾸나요?
    - 근거: [YouTube Culture & Trends](https://www.youtube.com/trends/)
 
-3. `Databricks brings GPT-5.5 to enterprise agent workflows`로 보는 AI, 비즈니스, 업무 흐름 변화
+5. `Databricks brings GPT-5.5 to enterprise agent workflows`로 보는 AI, 비즈니스, 업무 흐름 변화
    - 독자 질문: 이 신호가 내 일, 제품, 투자 가정을 어떻게 바꾸나요?
    - 근거: [OpenAI News](https://openai.com/index/databricks)
-
-4. `#1 DayGrid: 그리드 플래너, 위젯, 스케줄 on Apple App Store Top Paid Korea`로 보는 앱 순위, 소비자 관심, 제품 변화
-   - 독자 질문: 이 신호가 내 일, 제품, 투자 가정을 어떻게 바꾸나요?
-   - 근거: [Apple App Store Top Paid Korea](https://apps.apple.com/kr/app/daygrid-%EA%B7%B8%EB%A6%AC%EB%93%9C-%ED%94%8C%EB%9E%98%EB%84%88-%EC%9C%84%EC%A0%AF-%EC%8A%A4%EC%BC%80%EC%A4%84/id6762279908)
-
-5. `#2 filmhwa (필름화) - 화민 필터 on Apple App Store Top Paid Korea`로 보는 앱 순위, 소비자 관심, 제품 변화
-   - 독자 질문: 이 신호가 내 일, 제품, 투자 가정을 어떻게 바꾸나요?
-   - 근거: [Apple App Store Top Paid Korea](https://apps.apple.com/kr/app/filmhwa-%ED%95%84%EB%A6%84%ED%99%94-%ED%99%94%EB%AF%BC-%ED%95%84%ED%84%B0/id6443723657)
 
 ## 반대로 볼 점
 

@@ -61,6 +61,7 @@ If the user only says "make my daily brief", use this default:
    - Rotate sources by persona and day instead of reading the same feed list every time. Keep RSS sources for automatic fetch and non-RSS newsletters, reports, and YouTube channels as watchlist sources.
    - For broad market trend work, use `mock-data/profiles/market-trend-editor.json` and preserve category diversity. Do not let AI sources fill the whole queue.
    - Treat X, Threads, YouTube trending, Google Trends, and app rankings as weak signals. Use them for interest discovery, product ideas, and content hooks; verify factual claims with stronger sources.
+   - For app rankings, explain the likely user behavior behind each app's rise. Use app name, rank, free/paid context, and inferred category instead of repeating a generic "app rankings show interest" sentence.
 
 3. Gather candidate items.
    - Use public source summaries, RSS items, official posts, public reports, or mock data.

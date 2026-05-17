@@ -7,11 +7,11 @@
 
 ## 오늘 이것만은 꼭
 
-오늘 신호는 콘텐츠/IP, 소비자 관심, 한국 시장 쪽으로 모이고 있어요. 바로 결론 내리기보다는, 다음 리서치에서 먼저 확인할 만한 가설로 보는 게 좋아요.
+오늘 신호는 콘텐츠/IP, 소비자 관심, AI가 범용 도구에서 실제 업무 단위로 내려오고 있다는 쪽에 가까워요. 한국 창업자 겸 콘텐츠 에디터에게 중요한 질문은 '어떤 모델이 더 좋은가'보다 '어떤 업무 흐름을 반복 가능하게 만들 수 있는가'예요.
 
 ## 흐름 읽기
 
-- 방향성: 오늘 신호는 콘텐츠/IP, 소비자 관심, 한국 시장 쪽으로 모이고 있어요. 바로 결론 내리기보다는, 다음 리서치에서 먼저 확인할 만한 가설로 보는 게 좋아요.
+- 방향성: 오늘 신호는 콘텐츠/IP, 소비자 관심, AI가 범용 도구에서 실제 업무 단위로 내려오고 있다는 쪽에 가까워요. 한국 창업자 겸 콘텐츠 에디터에게 중요한 질문은 '어떤 모델이 더 좋은가'보다 '어떤 업무 흐름을 반복 가능하게 만들 수 있는가'예요.
 - 반대로 볼 점: 아직은 이른 신호일 수 있어요. 일부 항목은 2차 출처나 헤드라인 중심이라, 중요한 판단 전에는 원문 발표나 고객 행동 데이터를 더 확인하세요.
 - 다음에 확인할 근거: 원문 발표, 고객 행동, 투자 데이터, 한국 시장 도입 사례
 
@@ -61,38 +61,38 @@
 - 다음에 볼 것: 원문 발표, 고객 행동, 후속 투자, 실제 제품 출시가 반복되는지 확인하세요.
 - 콘텐츠 각도: `The Download: China’s AI drama factory and the WHO’s missing health targets`로 보는 AI, 콘텐츠/IP 변화
 
-### 5. #1 DayGrid: 그리드 플래너, 위젯, 스케줄 on Apple App Store Top Paid Korea
+### 5. Databricks brings GPT-5.5 to enterprise agent workflows
 
-- 출처: [Apple App Store Top Paid Korea](https://apps.apple.com/kr/app/daygrid-%EA%B7%B8%EB%A6%AC%EB%93%9C-%ED%94%8C%EB%9E%98%EB%84%88-%EC%9C%84%EC%A0%AF-%EC%8A%A4%EC%BC%80%EC%A4%84/id6762279908)
-- 점수: 4.21 / 5
+- 출처: [OpenAI News](https://openai.com/index/databricks)
+- 점수: 4.3 / 5
 - 신호 지속성: 4.5 / 5
-- 무슨 일이 있었나요: DayGrid: 그리드 플래너, 위젯, 스케줄 앱이 Apple App Store Top Paid Korea에서 1위에 올랐어요. 퍼블리셔는 ho young moon, 카테고리는 확인 필요예요.
-- 왜 중요한가요: 앱 순위 변화는 사람들이 실제로 설치하고 써보는 관심사를 보여줘요. 제품 아이디어, 카테고리 경쟁, 콘텐츠 훅을 찾을 때 좋은 초기 신호예요.
+- 무슨 일이 있었나요: OpenAI News가 `Databricks brings GPT-5.5 to enterprise agent workflows` 소식을 전했어요. 핵심은 AI, 비즈니스, 업무 흐름 관련 변화가 실제 제품, 고객 접점, 운영 방식으로 이어지고 있다는 점이에요.
+- 왜 중요한가요: 엔터프라이즈 AI 에이전트가 데이터가 많은 업무 환경에서 검증되고 있어요. 이제 중요한 건 채팅 성능보다 신뢰성, 평가, 업무 통합이에요.
 - 누가 봐야 하나요: 한국 창업자 겸 콘텐츠 에디터
 - 다음에 볼 것: 원문 발표, 고객 행동, 후속 투자, 실제 제품 출시가 반복되는지 확인하세요.
-- 콘텐츠 각도: `#1 DayGrid: 그리드 플래너, 위젯, 스케줄 on Apple App Store Top Paid Korea`로 보는 앱 순위, 소비자 관심, product 변화
+- 콘텐츠 각도: `Databricks brings GPT-5.5 to enterprise agent workflows`로 보는 AI, 비즈니스, 업무 흐름 변화
 
 ### 6. #2 filmhwa (필름화) - 화민 필터 on Apple App Store Top Paid Korea
 
 - 출처: [Apple App Store Top Paid Korea](https://apps.apple.com/kr/app/filmhwa-%ED%95%84%EB%A6%84%ED%99%94-%ED%99%94%EB%AF%BC-%ED%95%84%ED%84%B0/id6443723657)
 - 점수: 4.21 / 5
 - 신호 지속성: 4.5 / 5
-- 무슨 일이 있었나요: filmhwa (필름화) - 화민 필터 앱이 Apple App Store Top Paid Korea에서 2위에 올랐어요. 퍼블리셔는 ARTTIC CO., LTD., 카테고리는 확인 필요예요.
-- 왜 중요한가요: 앱 순위 변화는 사람들이 실제로 설치하고 써보는 관심사를 보여줘요. 제품 아이디어, 카테고리 경쟁, 콘텐츠 훅을 찾을 때 좋은 초기 신호예요.
+- 무슨 일이 있었나요: filmhwa (필름화) - 화민 필터 앱이 Apple App Store Top Paid Korea에서 2위에 올랐어요. 퍼블리셔는 ARTTIC CO., LTD., 추정 카테고리는 카메라/필터예요.
+- 왜 중요한가요: 카메라와 필터 앱이 유료 순위에 반복해서 보이면 소비자가 생성형 AI보다 '내 취향처럼 보이는 결과물'에 바로 지갑을 연다는 뜻이에요. 콘텐츠 도구는 기능 수보다 감성 프리셋, 공유 장면, 팬층이 더 중요해질 수 있어요.
 - 누가 봐야 하나요: 한국 창업자 겸 콘텐츠 에디터
 - 다음에 볼 것: 원문 발표, 고객 행동, 후속 투자, 실제 제품 출시가 반복되는지 확인하세요.
 - 콘텐츠 각도: `#2 filmhwa (필름화) - 화민 필터 on Apple App Store Top Paid Korea`로 보는 앱 순위, 소비자 관심, product 변화
 
-### 7. Challenge formats turn local places into repeatable media assets
+### 7. #3 GIKA 기카 - 독보적인 올드폰 감성 카메라 on Apple App Store Top Paid Korea
 
-- 출처: [YouTube Trending Korea](https://www.youtube.com/feed/trending?gl=KR)
-- 점수: 4.17 / 5
-- 신호 지속성: 4.0 / 5
-- 무슨 일이 있었나요: 방문 챌린지, 비교 챌린지, 랭킹형 영상이 로컬 장소를 반복 가능한 콘텐츠 자산으로 만든다는 가정의 mock signal입니다.
-- 왜 중요한가요: 로컬 비즈니스도 콘텐츠 포맷을 가지면 반복 노출을 만들 수 있어요. 장소, 메뉴, 경험을 IP처럼 운영할 수 있다는 신호예요.
+- 출처: [Apple App Store Top Paid Korea](https://apps.apple.com/kr/app/gika-%EA%B8%B0%EC%B9%B4-%EB%8F%85%EB%B3%B4%EC%A0%81%EC%9D%B8-%EC%98%AC%EB%93%9C%ED%8F%B0-%EA%B0%90%EC%84%B1-%EC%B9%B4%EB%A9%94%EB%9D%BC/id6755822636)
+- 점수: 4.21 / 5
+- 신호 지속성: 4.5 / 5
+- 무슨 일이 있었나요: GIKA 기카 - 독보적인 올드폰 감성 카메라 앱이 Apple App Store Top Paid Korea에서 3위에 올랐어요. 퍼블리셔는 Noahproject Inc., 추정 카테고리는 카메라/필터예요.
+- 왜 중요한가요: 카메라와 필터 앱이 유료 순위에 반복해서 보이면 소비자가 생성형 AI보다 '내 취향처럼 보이는 결과물'에 바로 지갑을 연다는 뜻이에요. 콘텐츠 도구는 기능 수보다 감성 프리셋, 공유 장면, 팬층이 더 중요해질 수 있어요.
 - 누가 봐야 하나요: 한국 창업자 겸 콘텐츠 에디터
 - 다음에 볼 것: 원문 발표, 고객 행동, 후속 투자, 실제 제품 출시가 반복되는지 확인하세요.
-- 콘텐츠 각도: `Challenge formats turn local places into repeatable media assets`로 보는 소셜 트렌드, 콘텐츠/IP, 소비자 관심 변화
+- 콘텐츠 각도: `#3 GIKA 기카 - 독보적인 올드폰 감성 카메라 on Apple App Store Top Paid Korea`로 보는 앱 순위, 소비자 관심, product 변화
 
 ## 바로 쓸 수 있는 글감
 
