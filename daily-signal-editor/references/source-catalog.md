@@ -17,6 +17,23 @@ Do not read the same fixed source list every day. Build a source plan first:
 
 For a Daily 50 workflow, plan 20-30 sources, fetch 5-10 items from each RSS source, then rank the combined pool. The 50-item queue is a discovery surface, not the final brief: promote only the top A-tier items into synthesis or content drafts.
 
+For broad trend work, enforce category diversity instead of letting AI dominate. Use `source_category_mix` in the profile. Recommended mix:
+
+- `business`: general company, strategy, retail, platform, and market-model shifts.
+- `consumer`: consumer behavior, lifestyle, shopping, brand, and survey reports.
+- `content_ip`: creator economy, YouTube, games, entertainment, fandom, and IP extensions.
+- `social_trends`: X, Threads, YouTube trending, Google Trends, Reddit, and community weak signals.
+- `app_rankings`: app store charts, mobile rankings, traffic/ranking reports.
+- `investing`: wealth, macro, public markets, and funding narratives.
+- `korea`: local market, policy, startup, and community context.
+- `ai`: keep as one category, not the whole brief.
+
+Planner outputs are separated by collection method:
+
+- `rss_sources`: fetch automatically with `scripts/fetch_rss.py`.
+- `app_ranking_sources`: fetch with `scripts/fetch_app_rankings.py` when an `api_url` exists.
+- `manual_signal_sources`: inspect manually or use user-provided public links/excerpts. This includes X, Threads, and YouTube trending.
+
 Example:
 
 ```bash
@@ -63,6 +80,23 @@ Use video sources as watchlist items unless transcripts are available:
 - Y Combinator YouTube for founder education.
 - a16z YouTube for market narrative and interviews.
 - Gartner YouTube for enterprise technology framing.
+- YouTube Trending Korea for fast public-interest signals. Treat titles and visible metrics as weak signals, not proof.
+
+### Social, Search, and App Ranking Signals
+
+Use these as early indicators of attention, language, and product demand:
+
+- X Explore and Threads Search: public posts only, no login bypass, no scraping protected content.
+- Google Trends Korea: search interest and rising queries.
+- Apple App Store rankings: app category movement and product idea discovery.
+- Similarweb, Sensor Tower, Mobile Index: public ranking reports and app/web traffic narratives.
+
+When these sources produce a signal, ask:
+
+- Which segment is paying attention?
+- Is the interest rising, recurring, or just a one-day spike?
+- Does the signal imply a product idea, content hook, distribution channel, or IP extension?
+- What stronger source would confirm it?
 
 ### Tier 3: Community and Social Signals
 
@@ -70,6 +104,7 @@ Use these as weak signals only. Verify with Tier 1 or Tier 2 before making stron
 
 - Reddit, X, LinkedIn, YouTube descriptions, community newsletters, comments.
 - Treat these as narrative evidence, not factual proof.
+- Mark social/app ranking items as weak signals unless supported by primary sources, app store data, or repeated observations.
 
 ## Suggested Source Mixes
 

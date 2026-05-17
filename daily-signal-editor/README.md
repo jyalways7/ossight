@@ -14,6 +14,7 @@ Daily Signal Editor는 공개 소스, RSS, 리포트 링크, 사용자가 제공
 
 - 비즈니스/AI/투자/스타트업 관련 후보 소스를 넓은 registry에서 자동으로 고릅니다.
 - RSS, 뉴스레터, 리포트, 유튜브, 한국 스타트업 소스를 persona에 맞게 갈아끼웁니다.
+- X, Threads, YouTube 인급동, Google Trends, 앱 순위 같은 약한 신호를 별도 레이어로 다룹니다.
 - 매일 최대 50개의 읽을거리 후보를 A/B/C tier로 큐레이션합니다.
 - 후보 아이템을 신선도, 출처 신뢰도, 사용자 적합도, 사업적 영향, 독창성, 콘텐츠 잠재력으로 점수화합니다.
 - 상위 신호 3-7개를 골라 "무슨 일이 있었는지"보다 "왜 중요한지"를 설명합니다.
@@ -52,6 +53,8 @@ Daily Signal Editor가 이 모든 반복적인 업무를 대신해 드릴게요.
 - "이번 주 뉴스레터에 쓸 만한 B2B SaaS 글감 찾아줘"
 - "AI 인프라 섹터 리서치 메모 초안 만들어줘"
 - "부자 리포트와 VC 콘텐츠를 참고해서 콘텐츠 앵글을 뽑아줘"
+- "X, Threads, YouTube 인급동, 앱 순위를 보고 대중 관심과 제품 아이디어를 찾아줘"
+- "요즘 뜨는 앱과 콘텐츠/IP 트렌드를 한국 시장 관점으로 정리해줘"
 - "이번 주 전략 회의에 올릴 AI 경쟁사/시장 안건을 만들어줘"
 - "B2B 영업팀이 고객에게 보낼 산업 변화 Slack 업데이트를 만들어줘"
 
@@ -101,6 +104,27 @@ Daily Signal Editor가 이 모든 반복적인 업무를 대신해 드릴게요.
   "purpose": "sector monitoring and research memo",
   "domains": ["AI infrastructure", "vertical AI", "Korea funding", "enterprise automation"],
   "output_mode": "research memo"
+}
+```
+
+대중 관심과 앱/콘텐츠/IP 트렌드를 넓게 보고 싶다면 이런 preset을 씁니다.
+
+```json
+{
+  "audience": "한국 창업자 겸 콘텐츠 에디터",
+  "purpose": "비즈니스 트렌드, 대중 관심, 앱 순위, 콘텐츠/IP 기회 발굴",
+  "domains": ["business", "consumer", "content_ip", "social", "apps", "investing", "korea", "ai"],
+  "source_category_mix": {
+    "business": 4,
+    "consumer": 4,
+    "content_ip": 4,
+    "social_trends": 4,
+    "app_rankings": 4,
+    "investing": 3,
+    "korea": 3,
+    "ai": 2
+  },
+  "output_mode": "daily 50 queue plus product ideas and newsletter angles"
 }
 ```
 
@@ -326,12 +350,56 @@ python3 scripts/build_curated_list.py \
   --items /tmp/daily-signal-live-items.json \
   --profile mock-data/profiles/founder.json \
   --output examples/founder-curated-50.md \
-  --limit 50
+  --limit 50 \
+  --max-per-source 7 \
+  --max-per-primary-topic 14
 
 python3 scripts/validate_curated_list.py examples/founder-curated-50.md --min-items 50
 ```
 
 예시 결과물은 [examples/founder-curated-50.md](examples/founder-curated-50.md)에 있습니다. A-tier는 오늘 바로 읽고 쓸 신호, B-tier는 콘텐츠/회의 준비 후보, C-tier는 추가 확인이 필요한 watchlist로 봅니다.
+
+소셜/앱/콘텐츠 트렌드를 섞는 broad mode는 소스 수집 방식을 나눕니다.
+
+```bash
+python3 scripts/plan_sources.py \
+  --registry mock-data/source-registry.json \
+  --profile mock-data/profiles/market-trend-editor.json \
+  --output examples/market-trend-source-plan.json \
+  --rss-output /tmp/market-rss-sources.json \
+  --app-output /tmp/market-app-sources.json \
+  --manual-output /tmp/market-manual-sources.json \
+  --max-sources 32 \
+  --max-per-type 8
+
+python3 scripts/fetch_app_rankings.py \
+  --sources /tmp/market-app-sources.json \
+  --output /tmp/market-app-items.json \
+  --max-items-per-source 25
+
+python3 scripts/fetch_rss.py \
+  --sources /tmp/market-rss-sources.json \
+  --output /tmp/market-rss-items.json \
+  --max-items-per-source 10 \
+  --no-enrich-pages
+
+python3 scripts/merge_items.py \
+  --output /tmp/market-merged-items.json \
+  /tmp/market-rss-items.json \
+  /tmp/market-app-items.json \
+  mock-data/manual-social-signals.json
+
+python3 scripts/build_curated_list.py \
+  --sources examples/market-trend-source-plan.json \
+  --items /tmp/market-merged-items.json \
+  --profile mock-data/profiles/market-trend-editor.json \
+  --output examples/market-trend-curated-50.md \
+  --limit 50 \
+  --max-per-source 7 \
+  --max-per-primary-topic 14
+```
+
+X, Threads, YouTube 인급동은 로그인 우회나 무단 스크래핑을 하지 않습니다. 공개 링크, 공개 제목/설명, 사용자가 제공한 excerpt를 약한 신호로만 사용하고, 중요한 주장은 리포트나 1차 출처로 다시 확인합니다.
 
 ## 앞으로 더 똑똑해질 계획이에요
 

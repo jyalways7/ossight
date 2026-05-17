@@ -1,0 +1,46 @@
+{
+  "audience": "한국 창업자 겸 콘텐츠 에디터",
+  "purpose": "비즈니스 트렌드, 대중 관심, 앱 순위, 콘텐츠/IP 기회 발굴",
+  "domains": [
+    "business",
+    "consumer",
+    "content_ip",
+    "creator",
+    "social",
+    "apps",
+    "rankings",
+    "investing",
+    "korea",
+    "ai"
+  ],
+  "source_mix": [
+    "business media",
+    "consumer trend",
+    "social trends",
+    "youtube trending",
+    "app rankings",
+    "content industry",
+    "market reports",
+    "korea community"
+  ],
+  "source_category_mix": {
+    "business": 4,
+    "consumer": 4,
+    "content_ip": 4,
+    "social_trends": 5,
+    "app_rankings": 4,
+    "investing": 3,
+    "korea": 3,
+    "ai": 2
+  },
+  "output_mode": "daily 50 queue plus product ideas and newsletter angles",
+  "lens_team": [
+    "Consumer Trend Editor",
+    "Content IP Strategist",
+    "App Ranking Analyst",
+    "Founder Insight Editor",
+    "Korea Business Operator"
+  ],
+  "tone": "Korean product writing style: short, clear, useful, low-hype, action-oriented",
+  "time_window": "last 7 days"
+}

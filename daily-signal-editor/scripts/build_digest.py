@@ -7,7 +7,7 @@ import argparse
 from datetime import date
 from pathlib import Path
 
-from score_items import item_list, load_json, score_items
+from score_items import item_list, load_json, score_items, source_list
 
 
 TOPIC_LABELS = {
@@ -20,6 +20,13 @@ TOPIC_LABELS = {
     "security": "보안",
     "legal": "규제",
     "korea": "한국 시장",
+    "consumer": "소비자 관심",
+    "content_ip": "콘텐츠/IP",
+    "app_rankings": "앱 순위",
+    "social_trends": "소셜 트렌드",
+    "creator": "크리에이터",
+    "apps": "앱",
+    "rankings": "순위",
 }
 
 
@@ -308,7 +315,7 @@ def main() -> int:
 
     scored = score_items(
         item_list(load_json(args.items)),
-        load_json(args.sources),
+        source_list(load_json(args.sources)),
         load_json(args.profile),
     )
     digest = render_digest(load_json(args.profile), scored, args.max_signals)

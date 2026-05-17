@@ -26,6 +26,7 @@ Collect or infer these inputs before running the workflow:
 - `purpose`: market research, content ideation, newsletter drafting, investment research, product strategy, or competitive sensing.
 - `domains`: business, AI, startups, VC, public markets, consumer trends, Korea business, or a custom niche.
 - `source_mix`: global VC, Korea startup, AI research, market data, financial reports, community sources.
+- `source_category_mix`: optional category quotas for broad trend work, such as business, consumer, content_ip, social_trends, app_rankings, investing, korea, and ai.
 - `output_mode`: daily brief, newsletter draft, investment memo, LinkedIn/X post, blog outline, Slack update, meeting agenda, sales talking points, or source map.
 - `time_window`: today, last 24 hours, this week, or a fixed date range.
 - `lens_team`: optional expert lenses or task categories to emphasize.
@@ -57,6 +58,8 @@ If the user only says "make my daily brief", use this default:
    - Favor official blogs, RSS feeds, public reports, public APIs, and user-provided links.
    - Include Korean sources when the user cares about Korean business, startups, consumers, policy, or investing.
    - Rotate sources by persona and day instead of reading the same feed list every time. Keep RSS sources for automatic fetch and non-RSS newsletters, reports, and YouTube channels as watchlist sources.
+   - For broad market trend work, use `mock-data/profiles/market-trend-editor.json` and preserve category diversity. Do not let AI sources fill the whole queue.
+   - Treat X, Threads, YouTube trending, Google Trends, and app rankings as weak signals. Use them for interest discovery, product ideas, and content hooks; verify factual claims with stronger sources.
 
 3. Gather candidate items.
    - Use public source summaries, RSS items, official posts, public reports, or mock data.
@@ -124,6 +127,20 @@ python3 scripts/plan_sources.py \
   --rss-output /tmp/founder-rss-sources.json
 ```
 
+For broad social/app/content trend work, also output app ranking and manual-signal source lists:
+
+```bash
+python3 scripts/plan_sources.py \
+  --registry mock-data/source-registry.json \
+  --profile mock-data/profiles/market-trend-editor.json \
+  --output examples/market-trend-source-plan.json \
+  --rss-output /tmp/market-rss-sources.json \
+  --app-output /tmp/market-app-sources.json \
+  --manual-output /tmp/market-manual-sources.json \
+  --max-sources 32 \
+  --max-per-type 8
+```
+
 Build a broad Daily 50 queue before narrowing into a brief:
 
 ```bash
@@ -138,7 +155,9 @@ python3 scripts/build_curated_list.py \
   --items /tmp/daily-signal-live-items.json \
   --profile mock-data/profiles/founder.json \
   --output examples/founder-curated-50.md \
-  --limit 50
+  --limit 50 \
+  --max-per-source 7 \
+  --max-per-primary-topic 14
 
 python3 scripts/validate_curated_list.py examples/founder-curated-50.md --min-items 50
 ```

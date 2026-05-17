@@ -8,7 +8,7 @@ from collections import Counter
 from datetime import date
 from pathlib import Path
 
-from score_items import item_list, load_json, score_items
+from score_items import item_list, load_json, score_items, source_list
 
 
 TOPIC_LABELS = {
@@ -21,6 +21,13 @@ TOPIC_LABELS = {
     "security": "보안",
     "legal": "규제",
     "korea": "한국 시장",
+    "consumer": "소비자 관심",
+    "content_ip": "콘텐츠/IP",
+    "app_rankings": "앱 순위",
+    "social_trends": "소셜 트렌드",
+    "creator": "크리에이터",
+    "apps": "앱",
+    "rankings": "순위",
 }
 
 
@@ -74,15 +81,22 @@ def is_allowed_item(item: dict) -> bool:
     return not any(term in text for term in BLOCKED_CONTENT_TERMS)
 
 
+def primary_topic(item: dict) -> str:
+    topics = item.get("topics") or ["unknown"]
+    return str(topics[0] or "unknown")
+
+
 def select_queue(
     scored_items: list[dict],
     limit: int,
     max_per_source: int,
+    max_per_primary_topic: int,
     min_score: float,
     min_audience_fit: float,
 ) -> list[dict]:
     selected: list[dict] = []
     per_source: Counter[str] = Counter()
+    per_topic: Counter[str] = Counter()
 
     for item in scored_items:
         if item.get("score", 0) < min_score:
@@ -94,8 +108,12 @@ def select_queue(
         source = item.get("source_id", "unknown")
         if per_source[source] >= max_per_source:
             continue
+        topic = primary_topic(item)
+        if per_topic[topic] >= max_per_primary_topic:
+            continue
         selected.append(item)
         per_source[source] += 1
+        per_topic[topic] += 1
         if len(selected) >= limit:
             return selected
 
@@ -108,7 +126,11 @@ def select_queue(
             continue
         if not is_allowed_item(item):
             continue
+        source = item.get("source_id", "unknown")
+        if per_source[source] >= max_per_source:
+            continue
         selected.append(item)
+        per_source[source] += 1
         if len(selected) >= limit:
             break
     return selected
@@ -194,6 +216,7 @@ def main() -> int:
     parser.add_argument("--output", required=True)
     parser.add_argument("--limit", type=int, default=50)
     parser.add_argument("--max-per-source", type=int, default=8)
+    parser.add_argument("--max-per-primary-topic", type=int, default=14)
     parser.add_argument("--min-score", type=float, default=2.8)
     parser.add_argument("--min-audience-fit", type=float, default=2.0)
     args = parser.parse_args()
@@ -201,10 +224,17 @@ def main() -> int:
     profile = load_json(args.profile)
     scored = score_items(
         item_list(load_json(args.items)),
-        load_json(args.sources),
+        source_list(load_json(args.sources)),
         profile,
     )
-    queue = select_queue(scored, args.limit, args.max_per_source, args.min_score, args.min_audience_fit)
+    queue = select_queue(
+        scored,
+        args.limit,
+        args.max_per_source,
+        args.max_per_primary_topic,
+        args.min_score,
+        args.min_audience_fit,
+    )
     output = render_queue(profile, queue, len(scored))
     Path(args.output).write_text(output, encoding="utf-8")
     print(f"Wrote {len(queue)} curated items to {args.output}")

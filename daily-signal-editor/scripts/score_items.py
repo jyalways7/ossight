@@ -123,6 +123,14 @@ def score_items(
     return sorted(scored, key=lambda row: row["score"], reverse=True)
 
 
+def source_list(payload: Any) -> list[dict[str, Any]]:
+    if isinstance(payload, dict) and isinstance(payload.get("selected_sources"), list):
+        return payload["selected_sources"]
+    if isinstance(payload, list):
+        return payload
+    raise TypeError("sources input must be a list or an object with a 'selected_sources' list")
+
+
 def item_list(payload: Any) -> list[dict[str, Any]]:
     if isinstance(payload, dict) and isinstance(payload.get("items"), list):
         return payload["items"]
@@ -141,7 +149,7 @@ def main() -> int:
 
     scored = score_items(
         item_list(load_json(args.items)),
-        load_json(args.sources),
+        source_list(load_json(args.sources)),
         load_json(args.profile),
     )
     if args.limit:

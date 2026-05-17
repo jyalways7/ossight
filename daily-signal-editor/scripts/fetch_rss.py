@@ -59,6 +59,10 @@ TOPIC_KEYWORDS = {
         "투자",
     ],
     "developer": ["developer", "developers", "code", "github", "open source", "api", "data science", "코드", "개발"],
+    "consumer": ["consumer", "shopping", "retail", "brand", "commerce", "lifestyle", "trend", "소비", "쇼핑", "브랜드", "라이프스타일"],
+    "content_ip": ["creator", "creators", "content", "ip", "streaming", "youtube", "gaming", "game", "entertainment", "fan", "콘텐츠", "크리에이터", "팬덤", "게임", "엔터"],
+    "app_rankings": ["app", "apps", "mobile app", "app store", "ranking", "rankings", "앱", "모바일", "순위"],
+    "social_trends": ["trend", "trending", "viral", "meme", "x.com", "threads", "youtube", "shorts", "틱톡", "인급동", "밈", "바이럴"],
     "security": ["ctf", "security", "vulnerability", "privacy"],
     "legal": ["legal", "law", "privacy", "regulatory", "governance", "compliance", "법률", "규제"],
     "korea": ["korea", "korean", "한국", "국내", "스타트업"],
@@ -177,7 +181,7 @@ def has_keyword(text: str, keyword: str) -> bool:
 
 def score_hint(text: str, base: int = 3) -> int:
     lowered = text.lower()
-    strong_terms = ["ai", "agent", "startup", "market", "workflow", "funding", "enterprise"]
+    strong_terms = ["ai", "agent", "startup", "market", "workflow", "funding", "enterprise", "consumer", "creator", "ranking", "app", "content", "brand"]
     weak_terms = ["joins", "welcome", "congratulations", "podcast", "event"]
     score = base + sum(1 for term in strong_terms if has_keyword(lowered, term)) // 2
     if any(has_keyword(lowered, term) for term in weak_terms):
@@ -233,6 +237,14 @@ def why_it_matters(text: str, topics: list[str]) -> str:
         return "VC의 파트너 영입은 앞으로 어떤 창업자 배경, 섹터, 네트워크를 중요하게 볼지 보여주는 신호가 될 수 있어요."
     if "security" in topic_set:
         return "개발자 커뮤니티의 보안 습관 변화는 도구, 채용, 교육 수요의 초기 신호가 될 수 있어요."
+    if "app_rankings" in topic_set:
+        return "앱 순위는 사람들이 실제로 설치하고 써보는 관심사를 보여줘요. 제품 아이디어와 카테고리 변화를 찾을 때 좋은 초기 신호예요."
+    if "content_ip" in topic_set:
+        return "콘텐츠와 IP 흐름은 팬덤, 커머스, 게임, 오프라인 경험으로 확장될 수 있어요. 단순 조회수보다 반복 소비와 2차 수익화를 봐야 해요."
+    if "consumer" in topic_set:
+        return "소비자 관심의 변화는 가격, 채널, 브랜드 메시지를 바꿔요. 사람들이 실제로 시간과 돈을 쓰는 이유를 확인해야 해요."
+    if "social_trends" in topic_set:
+        return "소셜 트렌드는 빠르게 식을 수 있지만 대중의 언어와 관심사를 빨리 보여줘요. 제품 훅이나 콘텐츠 가설을 만들 때 유용해요."
     return "후보 신호로는 볼 수 있어요. 다만 전략에 반영하려면 더 강한 1차 출처나 반복 패턴을 확인해야 해요."
 
 
