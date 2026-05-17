@@ -80,12 +80,16 @@ If the user only says "make my daily brief", use this default:
 6. Synthesize individual signals.
    - For each signal, explain why it matters, who is affected, what changes if it is true, and what to watch next.
    - Separate evidence from interpretation.
+   - Preserve original source titles as-is, even when they are English.
+   - Write all explanation, summary, implications, caveats, and next actions in Korean by default.
+   - Use a concise Korean product-writing style: short sentences, clear user benefit, no hype, no ornamental wording, and practical verbs.
 
 7. Produce the output.
    - Read `references/output-formats.md` for format choices.
    - Always include source links, scores, caveats, and next actions.
    - Include at least one actionable artifact: Slack update, LinkedIn/X hook, meeting agenda, newsletter intro, research question, or sales talking point.
    - For investing topics, frame as research and education, not investment advice.
+   - If the source title is English, keep the title in English but write the body below it in Korean.
 
 8. Validate.
    - Read `references/safety-and-copyright.md` before publishing or sharing.

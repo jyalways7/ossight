@@ -11,12 +11,13 @@ from pathlib import Path
 REQUIRED_SECTION_ALIASES = {
     "title": ["# Daily Signal Brief", "Daily Signal Brief)"],
     "executive": ["## Executive Read", "### Executive Read", "오늘 이것만은 꼭"],
-    "pattern": ["## Pattern Synthesis", "### Pattern Synthesis", "정보들 사이의 숨은 그림 찾기"],
-    "top_signals": ["## Top Signals", "### Top Signals", "깊이 읽어볼 뉴스"],
+    "pattern": ["## Pattern Synthesis", "### Pattern Synthesis", "정보들 사이의 숨은 그림 찾기", "## 흐름 읽기"],
+    "top_signals": ["## Top Signals", "### Top Signals", "깊이 읽어볼 뉴스", "## 오늘의 상위 신호"],
     "actionable": [
         "## Actionable Artifacts",
         "Actionable Artifacts",
         "Strategy Meeting Agenda",
+        "바로 쓸 수 있는 결과물",
         "바로 써먹는 콘텐츠",
         "지금 팀원들과 공유",
         "지금 팀원들에게 공유",

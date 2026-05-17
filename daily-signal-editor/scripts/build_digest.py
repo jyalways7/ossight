@@ -10,12 +10,62 @@ from pathlib import Path
 from score_items import item_list, load_json, score_items
 
 
+TOPIC_LABELS = {
+    "ai": "AI",
+    "business": "비즈니스",
+    "developer": "개발자 워크플로",
+    "workflow": "업무 흐름",
+    "startups": "스타트업",
+    "vc": "투자",
+    "security": "보안",
+    "legal": "규제",
+    "korea": "한국 시장",
+}
+
+
+def topic_label(topic: str) -> str:
+    return TOPIC_LABELS.get(topic, topic)
+
+
+def topic_text(topics: list[str]) -> str:
+    labels = [topic_label(topic) for topic in topics[:3]]
+    return ", ".join(labels) if labels else "시장 변화"
+
+
+def audience_label(value: str) -> str:
+    labels = {
+        "Korean B2B SaaS founder": "한국 B2B SaaS 창업자",
+        "Korean founder-investor": "한국 창업자 겸 투자자",
+        "general business reader": "비즈니스 독자",
+    }
+    return labels.get(value, value)
+
+
+def purpose_label(value: str) -> str:
+    labels = {
+        "product strategy and weekly founder newsletter": "제품 전략과 창업자 뉴스레터",
+        "market research and content ideation": "시장 리서치와 콘텐츠 기획",
+        "market research": "시장 리서치",
+    }
+    return labels.get(value, value)
+
+
 def content_angle(item: dict) -> str:
     title = item["title"].rstrip(".")
-    topics = ", ".join(item.get("topics", [])[:3])
-    if topics:
-        return f"{title}: what it changes for {topics}"
-    return f"{title}: what this signal changes"
+    return f"`{title}`로 보는 {topic_text(item.get('topics', []))} 변화"
+
+
+def signal_summary(item: dict) -> str:
+    source = item.get("source_name", "출처")
+    title = item.get("title", "이 신호")
+    topics = topic_text(item.get("topics", []))
+    summary = str(item.get("summary", "")).strip()
+    if any("\uac00" <= char <= "\ud7a3" for char in summary):
+        return summary[:220]
+    return (
+        f"{source}가 `{title}` 소식을 전했어요. 핵심은 {topics} 관련 변화가 "
+        "실제 제품, 고객 접점, 운영 방식으로 이어지고 있다는 점이에요."
+    )
 
 
 def top_topics(items: list[dict], limit: int = 4) -> list[str]:
@@ -31,21 +81,19 @@ def top_topics(items: list[dict], limit: int = 4) -> list[str]:
 
 def synthesize_pattern(top: list[dict], profile: dict) -> str:
     topics = top_topics(top)
-    audience = profile.get("audience", "the target audience")
+    audience = audience_label(profile.get("audience", "이 사용자의 업무"))
     if not topics:
-        return f"For {audience}, the selected signals need more evidence before a directional pattern is clear."
-    topic_text = ", ".join(topics)
+        return f"{audience} 관점에서는 아직 방향성을 말하기에 근거가 부족해요. 더 좋은 출처를 먼저 확인해야 해요."
+    topics_kr = topic_text(topics)
     if "workflow" in topics or "ai" in topics:
         return (
-            f"Across the selected signals, {topic_text} point to AI moving from broad tools into "
-            f"specific work packets: briefs, plans, reviews, connectors, and team updates. For "
-            f"{audience}, the useful question is not just which model is better, but which workflow "
-            f"will become owned, repeatable, and data-rich."
+            f"오늘 신호는 {topics_kr}가 범용 도구에서 실제 업무 단위로 내려오고 있다는 쪽에 가까워요. "
+            f"{audience}에게 중요한 질문은 '어떤 모델이 더 좋은가'보다 "
+            "'어떤 업무 흐름을 반복 가능하게 만들 수 있는가'예요."
         )
     return (
-        f"Across the selected signals, {topic_text} appear to be clustering into a directional "
-        f"market theme. For {audience}, treat this as a research lead: useful enough to investigate, "
-        f"but not strong enough to act on without primary-source confirmation."
+        f"오늘 신호는 {topics_kr} 쪽으로 모이고 있어요. 바로 결론 내리기보다는, "
+        "다음 리서치에서 먼저 확인할 만한 가설로 보는 게 좋아요."
     )
 
 
@@ -53,18 +101,23 @@ def contrarian_view(top: list[dict]) -> str:
     weaker = [item for item in top if item.get("score", 0) < 4.3]
     if weaker:
         return (
-            "The pattern may still be early: some supporting items are secondary or headline-driven, "
-            "so look for primary-source confirmation before treating it as a durable market shift."
+            "아직은 이른 신호일 수 있어요. 일부 항목은 2차 출처나 헤드라인 중심이라, "
+            "중요한 판단 전에는 원문 발표나 고객 행동 데이터를 더 확인하세요."
         )
     return (
-        "The biggest counterpoint is that high-quality sources can still reinforce the same narrative; "
-        "validate with customer behavior, adoption data, or funding follow-through."
+        "좋은 출처가 같은 이야기를 반복해도 실제 채택과는 다를 수 있어요. "
+        "고객 행동, 도입 사례, 후속 투자 흐름으로 확인하세요."
     )
 
 
 def is_actionable_signal(item: dict) -> bool:
     why = str(item.get("why_it_matters", "")).lower()
-    return "needs a stronger primary-source pattern" not in why
+    blocked = [
+        "needs a stronger primary-source pattern",
+        "더 강한 1차 출처",
+        "반복 패턴을 확인",
+    ]
+    return not any(phrase in why for phrase in blocked)
 
 
 def artifact_label(profile: dict) -> str:
@@ -72,95 +125,95 @@ def artifact_label(profile: dict) -> str:
     purpose = str(profile.get("purpose", "")).lower()
     audience = str(profile.get("audience", "")).lower()
     if "slack" in mode or "team" in mode or "corporate" in audience:
-        return "Slack Team Update"
+        return "팀 공유용 Slack 업데이트"
     if "meeting" in mode or "strategy" in purpose:
-        return "Strategy Meeting Agenda"
+        return "전략 회의 안건"
     if "sales" in mode or "sales" in audience:
-        return "Sales Talking Points"
+        return "세일즈 대화 포인트"
     if "linkedin" in mode or "content" in purpose or "newsletter" in mode:
-        return "LinkedIn/Newsletter Hooks"
+        return "뉴스레터/LinkedIn 훅"
     if "investment" in purpose or "investor" in audience:
-        return "Research Memo Questions"
-    return "Next Actions"
+        return "리서치 메모 질문"
+    return "다음 액션"
 
 
 def render_artifacts(profile: dict, top: list[dict]) -> list[str]:
     label = artifact_label(profile)
-    lines = [f"## Actionable Artifacts: {label}", ""]
-    if label == "Slack Team Update":
+    lines = [f"## 바로 쓸 수 있는 결과물: {label}", ""]
+    if label == "팀 공유용 Slack 업데이트":
         lines.extend(
             [
-                "*Today’s signal read*",
+                "*오늘의 신호*",
                 "",
-                f"- Main pattern: {synthesize_pattern(top, profile)}",
-                f"- Discuss: {top[0]['title']} and what it changes for our roadmap.",
-                f"- Source to read first: [{top[0]['source_name']}]({top[0]['url']})",
-                "- Open question: What customer behavior would prove this is more than narrative?",
-                "",
-            ]
-        )
-    elif label == "Strategy Meeting Agenda":
-        lines.extend(
-            [
-                "1. What market assumption should we update?",
-                f"2. What does `{top[0]['title']}` imply for our positioning?",
-                "3. What evidence would make us change roadmap, hiring, or partnership priorities?",
-                "4. What should we monitor next week?",
+                f"- 핵심 흐름: {synthesize_pattern(top, profile)}",
+                f"- 같이 볼 것: `{top[0]['title']}`가 우리 로드맵에 주는 의미",
+                f"- 먼저 읽을 출처: [{top[0]['source_name']}]({top[0]['url']})",
+                "- 확인할 질문: 이게 단순한 화제가 아니라는 걸 어떤 고객 행동으로 확인할 수 있을까요?",
                 "",
             ]
         )
-    elif label == "Sales Talking Points":
+    elif label == "전략 회의 안건":
         lines.extend(
             [
-                f"- Customer hook: Teams in this market are reacting to {top[0]['title'].lower()}.",
-                "- Discovery question: Where is this workflow still manual or expensive for your team?",
-                "- Proof point: Use the top source link as a non-salesy reason to start the conversation.",
+                "1. 지금 바꿔야 할 시장 가정이 있나요?",
+                f"2. `{top[0]['title']}`는 우리 포지셔닝에 어떤 의미가 있나요?",
+                "3. 로드맵, 채용, 파트너십을 바꿀 만큼 강한 근거는 무엇인가요?",
+                "4. 다음 주에 다시 볼 지표나 출처는 무엇인가요?",
                 "",
             ]
         )
-    elif label == "Research Memo Questions":
+    elif label == "세일즈 대화 포인트":
         lines.extend(
             [
-                "- Thesis candidate: Workflow-specific data and distribution may matter more than thin AI wrappers.",
-                "- Counter-signal to check: Are customers paying, or is the theme mostly investor narrative?",
-                "- Follow-up evidence: funding rounds, product launches, customer case studies, and regulatory changes.",
+                f"- 대화 시작점: `{top[0]['title']}` 같은 변화가 고객 업무에도 영향을 줄 수 있어요.",
+                "- 질문: 이 업무는 아직 어디에서 수동으로 처리되고 있나요?",
+                "- 근거: 상위 출처 링크를 먼저 공유하고, 영업보다 문제 확인에 초점을 맞추세요.",
+                "",
+            ]
+        )
+    elif label == "리서치 메모 질문":
+        lines.extend(
+            [
+                "- 가설: 얇은 AI 기능보다, 특정 업무의 데이터와 유통 경로를 잡는 제품이 더 오래갈 수 있어요.",
+                "- 반대 근거: 고객이 실제로 돈을 내고 있나요, 아니면 투자자 내러티브에 가깝나요?",
+                "- 다음 근거: 후속 투자, 제품 출시, 고객 사례, 규제 변화를 확인하세요.",
                 "",
             ]
         )
     else:
         for index, item in enumerate(top[:3], start=1):
-            lines.append(f"{index}. Hook: {content_angle(item)}")
-            lines.append(f"   Evidence: {item['source_name']} item, score {item['score']} / 5.")
-            lines.append("   CTA: Ask readers what workflow, market, or product assumption this changes.")
+            lines.append(f"{index}. 훅: {content_angle(item)}")
+            lines.append(f"   근거: {item['source_name']} 항목, 점수 {item['score']} / 5")
+            lines.append("   독자에게 물을 것: 이 변화가 어떤 업무나 시장 가정을 바꾸나요?")
             lines.append("")
     return lines
 
 
 def render_digest(profile: dict, scored_items: list[dict], max_signals: int) -> str:
     top = select_signals(scored_items, max_signals)
-    audience = profile.get("audience", "general business reader")
-    purpose = profile.get("purpose", "market research")
-    domains = ", ".join(profile.get("domains", []))
+    audience = audience_label(profile.get("audience", "일반 비즈니스 독자"))
+    purpose = purpose_label(profile.get("purpose", "시장 리서치"))
+    domains = ", ".join(topic_label(domain) for domain in profile.get("domains", []))
 
     lines: list[str] = [
         "# Daily Signal Brief",
         "",
-        f"- Date: {date.today().isoformat()}",
-        f"- Audience: {audience}",
-        f"- Purpose: {purpose}",
-        f"- Domains: {domains}",
+        f"- 날짜: {date.today().isoformat()}",
+        f"- 대상: {audience}",
+        f"- 목적: {purpose}",
+        f"- 관심 영역: {domains}",
         "",
-        "## Executive Read",
+        "## 오늘 이것만은 꼭",
         "",
         synthesize_pattern(top, profile),
         "",
-        "## Pattern Synthesis",
+        "## 흐름 읽기",
         "",
-        f"- Directional read: {synthesize_pattern(top, profile)}",
-        f"- Contrarian view: {contrarian_view(top)}",
-        "- Evidence to verify next: primary-source announcements, customer behavior, funding data, and local-market adoption signals.",
+        f"- 방향성: {synthesize_pattern(top, profile)}",
+        f"- 반대로 볼 점: {contrarian_view(top)}",
+        "- 다음에 확인할 근거: 원문 발표, 고객 행동, 투자 데이터, 한국 시장 도입 사례",
         "",
-        "## Top Signals",
+        "## 오늘의 상위 신호",
         "",
     ]
 
@@ -169,45 +222,45 @@ def render_digest(profile: dict, scored_items: list[dict], max_signals: int) -> 
             [
                 f"### {index}. {item['title']}",
                 "",
-                f"- Source: [{item['source_name']}]({item['url']})",
-                f"- Score: {item['score']} / 5",
-                f"- Signal durability: {item['score_dimensions'].get('signal_durability', 'n/a')} / 5",
-                f"- What happened: {item['summary']}",
-                f"- Why it matters: {item.get('why_it_matters', 'This may affect the target audience.')}",
-                f"- Who cares: {audience}",
-                "- What to watch: Look for repeat evidence from primary sources, customer behavior, funding data, or product launches.",
-                f"- Content angle: {content_angle(item)}",
+                f"- 출처: [{item['source_name']}]({item['url']})",
+                f"- 점수: {item['score']} / 5",
+                f"- 신호 지속성: {item['score_dimensions'].get('signal_durability', 'n/a')} / 5",
+                f"- 무슨 일이 있었나요: {signal_summary(item)}",
+                f"- 왜 중요한가요: {item.get('why_it_matters', '아직 판단하려면 근거가 더 필요해요.')}",
+                f"- 누가 봐야 하나요: {audience}",
+                "- 다음에 볼 것: 원문 발표, 고객 행동, 후속 투자, 실제 제품 출시가 반복되는지 확인하세요.",
+                f"- 콘텐츠 각도: {content_angle(item)}",
                 "",
             ]
         )
 
     lines.extend(
         [
-            "## Content Starters",
+            "## 바로 쓸 수 있는 글감",
             "",
         ]
     )
     for index, item in enumerate(top[:3], start=1):
-        lines.append(f"{index}. Hook: {content_angle(item)}")
-        lines.append(f"   Evidence: {item['source_name']} item, score {item['score']} / 5.")
-        lines.append("   CTA: Ask readers what workflow, market, or product assumption this changes.")
+        lines.append(f"{index}. 훅: {content_angle(item)}")
+        lines.append(f"   근거: {item['source_name']} 항목, 점수 {item['score']} / 5")
+        lines.append("   독자에게 물을 것: 이 변화가 어떤 업무나 시장 가정을 바꾸나요?")
         lines.append("")
 
     lines.extend(render_artifacts(profile, top))
 
     lines.extend(
         [
-            "## Watch Next",
+            "## 다음에 볼 것",
             "",
-            "- Confirm whether the same theme appears in at least one primary source.",
-            "- Track Korean localization: regulation, distribution, payments, trust, and enterprise buying behavior.",
-            "- Turn the strongest signal into one long-form memo and two short-form posts.",
+            "- 같은 흐름이 1차 출처에서도 반복되는지 확인하세요.",
+            "- 한국 시장에서는 규제, 유통, 결제, 신뢰, 기업 구매 방식을 같이 보세요.",
+            "- 가장 강한 신호 하나를 긴 글 1개와 짧은 글 2개로 바꿔보세요.",
             "",
-            "## Caveats",
+            "## 주의사항",
             "",
-            "- This brief uses mock or public RSS-style source metadata for a reproducible local demo.",
-            "- This is source-backed research and content ideation, not financial advice.",
-            "- Do not copy paid or login-only source text into generated outputs.",
+            "- 이 브리프는 공개 RSS와 공개 출처 메타데이터를 바탕으로 만든 리서치 초안이에요.",
+            "- 투자 판단이 아니라 리서치와 콘텐츠 기획을 돕기 위한 자료예요.",
+            "- 유료 또는 로그인 기반 원문을 그대로 복사하지 마세요.",
             "",
         ]
     )

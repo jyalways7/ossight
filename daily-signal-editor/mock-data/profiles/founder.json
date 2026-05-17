@@ -5,6 +5,6 @@
   "source_mix": ["global VC", "AI research", "Korea startup", "developer community"],
   "output_mode": "daily brief plus newsletter draft",
   "lens_team": ["AI Workflow Architect", "Founder Insight Editor", "Korea Business Operator", "Content Strategist"],
-  "tone": "practical, founder-oriented, sharp but not hype-driven",
+  "tone": "Korean product writing style: short, clear, useful, low-hype, action-oriented",
   "time_window": "last 7 days"
 }

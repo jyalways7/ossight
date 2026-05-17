@@ -11,12 +11,60 @@ from pathlib import Path
 from score_items import item_list, load_json, score_items
 
 
+TOPIC_LABELS = {
+    "ai": "AI",
+    "business": "비즈니스",
+    "developer": "개발자 워크플로",
+    "workflow": "업무 흐름",
+    "startups": "스타트업",
+    "vc": "투자",
+    "security": "보안",
+    "legal": "규제",
+    "korea": "한국 시장",
+}
+
+
 BLOCKED_CONTENT_TERMS = [
     "porn",
     "smutty",
     "sexual",
     "bedroom",
 ]
+
+
+def topic_label(topic: str) -> str:
+    return TOPIC_LABELS.get(topic, topic)
+
+
+def audience_label(value: str) -> str:
+    labels = {
+        "Korean B2B SaaS founder": "한국 B2B SaaS 창업자",
+        "Korean founder-investor": "한국 창업자 겸 투자자",
+        "general reader": "일반 독자",
+    }
+    return labels.get(value, value)
+
+
+def purpose_label(value: str) -> str:
+    labels = {
+        "product strategy and weekly founder newsletter": "제품 전략과 창업자 뉴스레터",
+        "market research and content ideation": "시장 리서치와 콘텐츠 기획",
+        "daily research": "데일리 리서치",
+    }
+    return labels.get(value, value)
+
+
+def signal_summary(item: dict) -> str:
+    source = item.get("source_name", "출처")
+    title = item.get("title", "이 신호")
+    topics = format_topics(item)
+    summary = str(item.get("summary", "")).strip()
+    if any("\uac00" <= char <= "\ud7a3" for char in summary):
+        return summary[:220]
+    return (
+        f"{source}가 `{title}` 소식을 전했어요. 핵심은 {topics} 관련 변화가 "
+        "실제 제품, 고객 접점, 운영 방식으로 이어지고 있다는 점이에요."
+    )
 
 
 def is_allowed_item(item: dict) -> bool:
@@ -68,37 +116,37 @@ def select_queue(
 
 def tier_label(score: float) -> str:
     if score >= 4.2:
-        return "A. Lead Signals"
+        return "A. 오늘 바로 볼 신호"
     if score >= 3.6:
-        return "B. Strong Candidates"
-    return "C. Watchlist"
+        return "B. 글감으로 좋은 후보"
+    return "C. 더 확인할 후보"
 
 
 def format_topics(item: dict) -> str:
     topics = item.get("topics") or []
-    return ", ".join(topics[:5]) if topics else "general"
+    return ", ".join(topic_label(topic) for topic in topics[:5]) if topics else "일반"
 
 
 def render_queue(profile: dict, queue: list[dict], scored_count: int) -> str:
-    audience = profile.get("audience", "general reader")
-    purpose = profile.get("purpose", "daily research")
+    audience = audience_label(profile.get("audience", "general reader"))
+    purpose = purpose_label(profile.get("purpose", "daily research"))
     source_counts = Counter(item.get("source_name", item.get("source_id", "unknown")) for item in queue)
 
     lines = [
         "# Daily Curated Content Queue",
         "",
-        f"- Date: {date.today().isoformat()}",
-        f"- Audience: {audience}",
-        f"- Purpose: {purpose}",
-        f"- Curated items: {len(queue)} / {scored_count}",
+        f"- 날짜: {date.today().isoformat()}",
+        f"- 대상: {audience}",
+        f"- 목적: {purpose}",
+        f"- 큐레이션 항목: {len(queue)} / {scored_count}",
         "",
-        "## Source Mix",
+        "## 소스 구성",
         "",
     ]
     for source, count in source_counts.most_common():
         lines.append(f"- {source}: {count}")
 
-    lines.extend(["", "## Ranked Queue", ""])
+    lines.extend(["", "## 우선순위 큐", ""])
     current_tier = ""
     for index, item in enumerate(queue, start=1):
         tier = tier_label(float(item.get("score", 0)))
@@ -108,30 +156,30 @@ def render_queue(profile: dict, queue: list[dict], scored_count: int) -> str:
         lines.extend(
             [
                 f"#### {index}. {item['title']}",
-                f"- Source: [{item.get('source_name', item.get('source_id', 'unknown'))}]({item.get('url', '')})",
-                f"- Published: {item.get('published', 'unknown')}",
-                f"- Score: {item.get('score', 'n/a')} / 5",
-                f"- Topics: {format_topics(item)}",
-                f"- Summary: {item.get('summary', 'No summary available.')}",
-                f"- Why it matters: {item.get('why_it_matters', 'Needs more evidence before use.')}",
+                f"- 출처: [{item.get('source_name', item.get('source_id', 'unknown'))}]({item.get('url', '')})",
+                f"- 발행일: {item.get('published', 'unknown')}",
+                f"- 점수: {item.get('score', 'n/a')} / 5",
+                f"- 주제: {format_topics(item)}",
+                f"- 정리: {signal_summary(item)}",
+                f"- 왜 중요한가요: {item.get('why_it_matters', '아직 판단하려면 근거가 더 필요해요.')}",
                 "",
             ]
         )
 
     lines.extend(
         [
-            "## How To Use This Queue",
+            "## 이렇게 쓰세요",
             "",
-            "- Use A-tier items for the daily brief and strategic synthesis.",
-            "- Use B-tier items for content ideas, meeting prep, and follow-up reading.",
-            "- Use C-tier items as weak signals unless confirmed by stronger primary sources.",
-            "- Promote an item only when it has source evidence, audience fit, and a clear next action.",
+            "- A-tier는 오늘 브리프와 전략 해석에 바로 쓰세요.",
+            "- B-tier는 콘텐츠 아이디어, 회의 준비, 추가 리서치 후보로 두세요.",
+            "- C-tier는 더 강한 1차 출처가 나오기 전까지 약한 신호로 보세요.",
+            "- 출처, 대상 적합도, 다음 행동이 모두 분명할 때만 최종 브리프로 올리세요.",
             "",
-            "## Caveats",
+            "## 주의사항",
             "",
-            "- This queue is source-backed curation, not investment advice.",
-            "- Public RSS summaries can be incomplete; verify high-impact claims with the original source.",
-            "- Do not copy paid or login-only source text into generated outputs.",
+            "- 이 큐는 출처 기반 리서치 초안이에요. 투자 조언이 아니에요.",
+            "- 공개 RSS 요약은 불완전할 수 있어요. 중요한 내용은 원문에서 다시 확인하세요.",
+            "- 유료 또는 로그인 기반 원문을 그대로 복사하지 마세요.",
             "",
         ]
     )

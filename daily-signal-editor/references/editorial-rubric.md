@@ -46,3 +46,7 @@ Ask what could make the selected pattern wrong. Look for base rates, incentives,
 - Avoid pretending that one article proves a market.
 - Favor "this suggests" over "this proves" unless the source is direct evidence.
 - Make the output useful enough that the user can act, write, or decide what to research next.
+- Preserve source titles in their original language.
+- If a title is English, keep the title in English and write the summary, implication, caveat, and next action in Korean.
+- Use a Toss-inspired Korean UX writing style: short sentences, concrete benefits, plain words, low hype, and clear next actions.
+- Prefer "무엇이 달라졌는지", "왜 봐야 하는지", "다음에 볼 것" over abstract labels.

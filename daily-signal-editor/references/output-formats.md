@@ -2,6 +2,13 @@
 
 Choose the format that matches the user's purpose.
 
+Default language rule:
+
+- Keep source titles as written by the source.
+- If the title is English, do not translate the title.
+- Write the body in Korean: summary, interpretation, caveat, and next action.
+- Use short, direct, product-like Korean. Make the user benefit obvious.
+
 ## Daily Brief
 
 ```md
@@ -11,24 +18,24 @@ Audience:
 Purpose:
 Date:
 
-## Executive Read
+## 오늘 이것만은 꼭
 
 ## Top Signals
 
 ### 1. Signal title
-- Source:
-- Score:
-- What happened:
-- Why it matters:
-- Who cares:
-- What to watch:
-- Content angle:
+- 출처:
+- 점수:
+- 무슨 일이 있었나요:
+- 왜 중요한가요:
+- 누가 봐야 하나요:
+- 다음에 볼 것:
+- 콘텐츠 각도:
 
-## Content Starters
+## 바로 쓸 수 있는 글감
 
-## Watch Next
+## 다음에 볼 것
 
-## Caveats
+## 주의사항
 ```
 
 ## Newsletter Draft

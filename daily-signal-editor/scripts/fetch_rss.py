@@ -202,38 +202,38 @@ def why_it_matters(text: str, topics: list[str]) -> str:
         for term in ["legal", "law", "privacy", "regulatory", "governance", "compliance", "법률", "규제"]
     )
     if "databricks" in lowered and "agent" in lowered:
-        return "Enterprise AI agents are being tested inside data-heavy work environments, which makes reliability, evaluation, and workflow integration more important than generic chat capability."
+        return "엔터프라이즈 AI 에이전트가 데이터가 많은 업무 환경에서 검증되고 있어요. 이제 중요한 건 채팅 성능보다 신뢰성, 평가, 업무 통합이에요."
     if "coding model" in lowered or "coding agent" in lowered or "claude code" in lowered:
-        return "Coding agents are becoming a distribution wedge for developer platforms, with pricing, open-source alternatives, and workflow lock-in all becoming strategic variables."
+        return "코딩 에이전트가 개발자 플랫폼의 진입점이 되고 있어요. 가격, 오픈소스 대안, 워크플로 락인이 모두 전략 변수가 돼요."
     if "cloud" in lowered and ("infrastructure" in lowered or "aws" in lowered):
-        return "AI-native cloud demand is pushing infrastructure startups to compete on developer speed, deployment simplicity, and workload fit rather than only raw compute scale."
+        return "AI 네이티브 클라우드 수요가 커지면서 인프라 스타트업의 경쟁 기준이 바뀌고 있어요. 단순 성능보다 개발 속도와 배포 경험이 중요해져요."
     if "customer interview" in lowered or "listen labs" in lowered:
-        return "Customer discovery is becoming a software workflow that can be repeated, analyzed, and packaged, which creates new product surfaces around PMF learning loops."
+        return "고객 인터뷰와 PMF 학습이 반복 가능한 소프트웨어 업무로 바뀌고 있어요. 창업자에게는 리서치 자동화 제품의 기회가 생겨요."
     if "slackbot" in lowered or "workplace ai" in lowered:
-        return "Enterprise collaboration tools are turning assistants into embedded agents, which shifts competition toward data access, permissions, and daily workflow ownership."
+        return "협업 도구 안의 AI가 단순 도우미에서 업무 에이전트로 바뀌고 있어요. 데이터 접근권, 권한 관리, 일상 업무 점유가 경쟁력이 돼요."
     if "self-improving" in lowered or "world model" in lowered:
-        return "Frontier AI companies are moving from demo capability toward productized research loops, which raises the bar for defensibility and commercialization speed."
+        return "프런티어 AI 기업들이 데모를 넘어 제품화된 연구 루프를 만들고 있어요. 방어력과 상용화 속도를 함께 봐야 해요."
     if "hiring" in lowered or "talent" in lowered:
-        return "AI startups are competing through talent-market storytelling as much as product launches, making recruiting strategy part of the category narrative."
+        return "AI 스타트업은 제품만큼 채용 내러티브로도 경쟁하고 있어요. 좋은 인재를 끌어오는 방식 자체가 카테고리 신호가 돼요."
     if "legal action" in lowered and ("apple" in lowered or "platform" in lowered):
-        return "AI distribution is becoming a platform power negotiation, so product teams should watch which channels control placement, user context, and monetization."
+        return "AI 유통은 플랫폼 협상력이 좌우하는 시장이 되고 있어요. 노출 위치, 사용자 맥락, 수익화를 누가 쥐는지 봐야 해요."
     if legal_signal and "ai" in topic_set:
-        return "Domain-specific AI agents are moving into regulated professional workflows, which makes trust, data access, and review loops central product questions."
+        return "도메인 특화 AI 에이전트가 규제 산업으로 들어가고 있어요. 신뢰, 데이터 접근, 검토 절차가 제품의 핵심 질문이 돼요."
     if "sales" in lowered and ("codex" in lowered or "ai" in topic_set):
-        return "AI work assistants are expanding from engineering into revenue workflows, creating concrete B2B SaaS use cases around account research, pipeline review, and meeting prep."
+        return "AI 업무 도구가 개발을 넘어 매출 조직으로 확장되고 있어요. 계정 리서치, 파이프라인 점검, 미팅 준비가 B2B SaaS 유스케이스가 돼요."
     if "operations" in lowered and ("codex" in lowered or "ai" in topic_set):
-        return "Operational teams are being offered AI-generated decision packets and status updates, which points to workflow software shifting from dashboards to prepared judgment artifacts."
+        return "운영팀은 대시보드보다 바로 판단할 수 있는 브리프와 업데이트를 원해요. 업무 소프트웨어의 중심이 준비된 판단 자료로 이동하고 있어요."
     if "data science" in lowered and ("codex" in lowered or "ai" in topic_set):
-        return "AI coding agents are being packaged for analytical workflows, suggesting demand for tools that turn messy work inputs into root-cause briefs and dashboard specs."
+        return "AI 코딩 에이전트가 분석 업무용으로 포장되고 있어요. 복잡한 업무 입력을 원인 분석과 대시보드 기획으로 바꾸는 도구 수요가 보여요."
     if "goes public" in lowered or "operating system" in lowered:
-        return "A vertical workflow company reaching public-market scale is evidence that narrow operating systems can compound when they own daily work data."
+        return "특정 업종의 워크플로 회사가 상장 규모까지 커졌다는 건, 좁은 운영체제가 매일 쓰는 데이터를 잡으면 커질 수 있다는 신호예요."
     if "incorporation" in lowered:
-        return "Changes in accepted incorporation paths affect where founders can start and scale, which can shift cross-border startup formation and investor access."
+        return "법인 설립 경로가 바뀌면 창업자가 어디에서 시작하고 투자받을지도 달라져요. 국경을 넘는 스타트업 형성에 영향을 줄 수 있어요."
     if "general partner" in lowered:
-        return "A platform investor's partner hire can reveal which founder backgrounds, sectors, or networks the platform expects to matter next."
+        return "VC의 파트너 영입은 앞으로 어떤 창업자 배경, 섹터, 네트워크를 중요하게 볼지 보여주는 신호가 될 수 있어요."
     if "security" in topic_set:
-        return "Developer community shifts in security practice can become early signals for tooling, hiring, and education demand."
-    return "This item is a candidate signal, but it needs a stronger primary-source pattern before it should drive strategy."
+        return "개발자 커뮤니티의 보안 습관 변화는 도구, 채용, 교육 수요의 초기 신호가 될 수 있어요."
+    return "후보 신호로는 볼 수 있어요. 다만 전략에 반영하려면 더 강한 1차 출처나 반복 패턴을 확인해야 해요."
 
 
 def fetch_feed(

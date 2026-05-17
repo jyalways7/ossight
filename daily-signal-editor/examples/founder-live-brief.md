@@ -1,106 +1,106 @@
 # Daily Signal Brief
 
-- Date: 2026-05-17
-- Audience: Korean B2B SaaS founder
-- Purpose: product strategy and weekly founder newsletter
-- Domains: ai, b2b saas, startups, workflow, korea
+- 날짜: 2026-05-17
+- 대상: 한국 B2B SaaS 창업자
+- 목적: 제품 전략과 창업자 뉴스레터
+- 관심 영역: AI, b2b saas, 스타트업, 업무 흐름, 한국 시장
 
-## Executive Read
+## 오늘 이것만은 꼭
 
-Across the selected signals, ai, business, developer, startups point to AI moving from broad tools into specific work packets: briefs, plans, reviews, connectors, and team updates. For Korean B2B SaaS founder, the useful question is not just which model is better, but which workflow will become owned, repeatable, and data-rich.
+오늘 신호는 AI, 업무 흐름, 비즈니스가 범용 도구에서 실제 업무 단위로 내려오고 있다는 쪽에 가까워요. 한국 B2B SaaS 창업자에게 중요한 질문은 '어떤 모델이 더 좋은가'보다 '어떤 업무 흐름을 반복 가능하게 만들 수 있는가'예요.
 
-## Pattern Synthesis
+## 흐름 읽기
 
-- Directional read: Across the selected signals, ai, business, developer, startups point to AI moving from broad tools into specific work packets: briefs, plans, reviews, connectors, and team updates. For Korean B2B SaaS founder, the useful question is not just which model is better, but which workflow will become owned, repeatable, and data-rich.
-- Contrarian view: The pattern may still be early: some supporting items are secondary or headline-driven, so look for primary-source confirmation before treating it as a durable market shift.
-- Evidence to verify next: primary-source announcements, customer behavior, funding data, and local-market adoption signals.
+- 방향성: 오늘 신호는 AI, 업무 흐름, 비즈니스가 범용 도구에서 실제 업무 단위로 내려오고 있다는 쪽에 가까워요. 한국 B2B SaaS 창업자에게 중요한 질문은 '어떤 모델이 더 좋은가'보다 '어떤 업무 흐름을 반복 가능하게 만들 수 있는가'예요.
+- 반대로 볼 점: 아직은 이른 신호일 수 있어요. 일부 항목은 2차 출처나 헤드라인 중심이라, 중요한 판단 전에는 원문 발표나 고객 행동 데이터를 더 확인하세요.
+- 다음에 확인할 근거: 원문 발표, 고객 행동, 투자 데이터, 한국 시장 도입 사례
 
-## Top Signals
+## 오늘의 상위 신호
 
 ### 1. Databricks brings GPT-5.5 to enterprise agent workflows
 
-- Source: [OpenAI News](https://openai.com/index/databricks)
-- Score: 4.39 / 5
-- Signal durability: 4.5 / 5
-- What happened: Databricks uses GPT-5.5 for enterprise agent workflows after the model set a new state of the art on the OfficeQA Pro benchmark.
-- Why it matters: Enterprise AI agents are being tested inside data-heavy work environments, which makes reliability, evaluation, and workflow integration more important than generic chat capability.
-- Who cares: Korean B2B SaaS founder
-- What to watch: Look for repeat evidence from primary sources, customer behavior, funding data, or product launches.
-- Content angle: Databricks brings GPT-5.5 to enterprise agent workflows: what it changes for ai, business, workflow
+- 출처: [OpenAI News](https://openai.com/index/databricks)
+- 점수: 4.39 / 5
+- 신호 지속성: 4.5 / 5
+- 무슨 일이 있었나요: OpenAI News가 `Databricks brings GPT-5.5 to enterprise agent workflows` 소식을 전했어요. 핵심은 AI, 비즈니스, 업무 흐름 관련 변화가 실제 제품, 고객 접점, 운영 방식으로 이어지고 있다는 점이에요.
+- 왜 중요한가요: 엔터프라이즈 AI 에이전트가 데이터가 많은 업무 환경에서 검증되고 있어요. 이제 중요한 건 채팅 성능보다 신뢰성, 평가, 업무 통합이에요.
+- 누가 봐야 하나요: 한국 B2B SaaS 창업자
+- 다음에 볼 것: 원문 발표, 고객 행동, 후속 투자, 실제 제품 출시가 반복되는지 확인하세요.
+- 콘텐츠 각도: `Databricks brings GPT-5.5 to enterprise agent workflows`로 보는 AI, 비즈니스, 업무 흐름 변화
 
 ### 2. Runway started by helping filmmakers — now it wants to beat Google at AI
 
-- Source: [TechCrunch AI](https://techcrunch.com/2026/05/15/runway-started-by-helping-filmmakers-now-it-wants-to-beat-google-at-ai/)
-- Score: 4.0 / 5
-- Signal durability: 4.0 / 5
-- What happened: AI video-generation startup Runway is betting that video generation is the path to world models. And that being an AI outsider is an advantage, not a liability.
-- Why it matters: Frontier AI companies are moving from demo capability toward productized research loops, which raises the bar for defensibility and commercialization speed.
-- Who cares: Korean B2B SaaS founder
-- What to watch: Look for repeat evidence from primary sources, customer behavior, funding data, or product launches.
-- Content angle: Runway started by helping filmmakers — now it wants to beat Google at AI: what it changes for ai, startups
+- 출처: [TechCrunch AI](https://techcrunch.com/2026/05/15/runway-started-by-helping-filmmakers-now-it-wants-to-beat-google-at-ai/)
+- 점수: 3.96 / 5
+- 신호 지속성: 4.0 / 5
+- 무슨 일이 있었나요: TechCrunch AI가 `Runway started by helping filmmakers — now it wants to beat Google at AI` 소식을 전했어요. 핵심은 AI, 스타트업 관련 변화가 실제 제품, 고객 접점, 운영 방식으로 이어지고 있다는 점이에요.
+- 왜 중요한가요: 프런티어 AI 기업들이 데모를 넘어 제품화된 연구 루프를 만들고 있어요. 방어력과 상용화 속도를 함께 봐야 해요.
+- 누가 봐야 하나요: 한국 B2B SaaS 창업자
+- 다음에 볼 것: 원문 발표, 고객 행동, 후속 투자, 실제 제품 출시가 반복되는지 확인하세요.
+- 콘텐츠 각도: `Runway started by helping filmmakers — now it wants to beat Google at AI`로 보는 AI, 스타트업 변화
 
 ### 3. Hermes Unlocks Self-Improving AI Agents, Powered by NVIDIA RTX PCs and DGX Spark
 
-- Source: [NVIDIA Blog](https://blogs.nvidia.com/blog/rtx-ai-garage-hermes-agent-dgx-spark/)
-- Score: 3.98 / 5
-- Signal durability: 4.5 / 5
-- What happened: Agentic AI is changing the way users get work done. Following the success of OpenClaw, the community is embracing new open source agentic frameworks. The latest is Hermes Agent, which crossed 140,000 GitHub stars in under three months.
-- Why it matters: Frontier AI companies are moving from demo capability toward productized research loops, which raises the bar for defensibility and commercialization speed.
-- Who cares: Korean B2B SaaS founder
-- What to watch: Look for repeat evidence from primary sources, customer behavior, funding data, or product launches.
-- Content angle: Hermes Unlocks Self-Improving AI Agents, Powered by NVIDIA RTX PCs and DGX Spark: what it changes for ai, developer
+- 출처: [NVIDIA Blog](https://blogs.nvidia.com/blog/rtx-ai-garage-hermes-agent-dgx-spark/)
+- 점수: 3.94 / 5
+- 신호 지속성: 4.5 / 5
+- 무슨 일이 있었나요: NVIDIA Blog가 `Hermes Unlocks Self-Improving AI Agents, Powered by NVIDIA RTX PCs and DGX Spark` 소식을 전했어요. 핵심은 AI, 개발자 워크플로 관련 변화가 실제 제품, 고객 접점, 운영 방식으로 이어지고 있다는 점이에요.
+- 왜 중요한가요: 프런티어 AI 기업들이 데모를 넘어 제품화된 연구 루프를 만들고 있어요. 방어력과 상용화 속도를 함께 봐야 해요.
+- 누가 봐야 하나요: 한국 B2B SaaS 창업자
+- 다음에 볼 것: 원문 발표, 고객 행동, 후속 투자, 실제 제품 출시가 반복되는지 확인하세요.
+- 콘텐츠 각도: `Hermes Unlocks Self-Improving AI Agents, Powered by NVIDIA RTX PCs and DGX Spark`로 보는 AI, 개발자 워크플로 변화
 
 ### 4. How sales teams use Codex
 
-- Source: [OpenAI News](https://openai.com/academy/codex-for-work/how-sales-teams-use-codex)
-- Score: 3.97 / 5
-- Signal durability: 3.5 / 5
-- What happened: See how sales teams can use Codex to create pipeline briefs, meeting prep packets, forecast reviews, account plans, and stalled-deal diagnoses from real work inputs.
-- Why it matters: AI work assistants are expanding from engineering into revenue workflows, creating concrete B2B SaaS use cases around account research, pipeline review, and meeting prep.
-- Who cares: Korean B2B SaaS founder
-- What to watch: Look for repeat evidence from primary sources, customer behavior, funding data, or product launches.
-- Content angle: How sales teams use Codex: what it changes for ai, business, workflow
+- 출처: [OpenAI News](https://openai.com/academy/codex-for-work/how-sales-teams-use-codex)
+- 점수: 3.92 / 5
+- 신호 지속성: 3.5 / 5
+- 무슨 일이 있었나요: OpenAI News가 `How sales teams use Codex` 소식을 전했어요. 핵심은 AI, 비즈니스, 업무 흐름 관련 변화가 실제 제품, 고객 접점, 운영 방식으로 이어지고 있다는 점이에요.
+- 왜 중요한가요: AI 업무 도구가 개발을 넘어 매출 조직으로 확장되고 있어요. 계정 리서치, 파이프라인 점검, 미팅 준비가 B2B SaaS 유스케이스가 돼요.
+- 누가 봐야 하나요: 한국 B2B SaaS 창업자
+- 다음에 볼 것: 원문 발표, 고객 행동, 후속 투자, 실제 제품 출시가 반복되는지 확인하세요.
+- 콘텐츠 각도: `How sales teams use Codex`로 보는 AI, 비즈니스, 업무 흐름 변화
 
-### 5. Railway secures $100 million to challenge AWS with AI-native cloud infrastructure
+### 5. The creator of Claude Code just revealed his workflow, and developers are losing their minds
 
-- Source: [VentureBeat AI](https://venturebeat.com/infrastructure/railway-secures-usd100-million-to-challenge-aws-with-ai-native-cloud)
-- Score: 3.85 / 5
-- Signal durability: 4.5 / 5
-- What happened: Railway , a San Francisco-based cloud platform that has quietly amassed two million developers without spending a dollar on marketing, announced Thursday that it raised $100 million in a Series B funding round, as surging demand for artificial intelligence applications exposes the limitations of legacy cloud infrastructure. TQ Ventures led the round, with participation from FPV Ventures , Redpoint , and Unusual Ventu
-- Why it matters: AI-native cloud demand is pushing infrastructure startups to compete on developer speed, deployment simplicity, and workload fit rather than only raw compute scale.
-- Who cares: Korean B2B SaaS founder
-- What to watch: Look for repeat evidence from primary sources, customer behavior, funding data, or product launches.
-- Content angle: Railway secures $100 million to challenge AWS with AI-native cloud infrastructure: what it changes for ai, business, developer
+- 출처: [VentureBeat AI](https://venturebeat.com/technology/the-creator-of-claude-code-just-revealed-his-workflow-and-developers-are)
+- 점수: 3.79 / 5
+- 신호 지속성: 4.0 / 5
+- 무슨 일이 있었나요: VentureBeat AI가 `The creator of Claude Code just revealed his workflow, and developers are losing their minds` 소식을 전했어요. 핵심은 AI, 개발자 워크플로, 스타트업 관련 변화가 실제 제품, 고객 접점, 운영 방식으로 이어지고 있다는 점이에요.
+- 왜 중요한가요: 코딩 에이전트가 개발자 플랫폼의 진입점이 되고 있어요. 가격, 오픈소스 대안, 워크플로 락인이 모두 전략 변수가 돼요.
+- 누가 봐야 하나요: 한국 B2B SaaS 창업자
+- 다음에 볼 것: 원문 발표, 고객 행동, 후속 투자, 실제 제품 출시가 반복되는지 확인하세요.
+- 콘텐츠 각도: `The creator of Claude Code just revealed his workflow, and developers are losing their minds`로 보는 AI, 개발자 워크플로, 스타트업 변화
 
-## Content Starters
+## 바로 쓸 수 있는 글감
 
-1. Hook: Databricks brings GPT-5.5 to enterprise agent workflows: what it changes for ai, business, workflow
-   Evidence: OpenAI News item, score 4.39 / 5.
-   CTA: Ask readers what workflow, market, or product assumption this changes.
+1. 훅: `Databricks brings GPT-5.5 to enterprise agent workflows`로 보는 AI, 비즈니스, 업무 흐름 변화
+   근거: OpenAI News 항목, 점수 4.39 / 5
+   독자에게 물을 것: 이 변화가 어떤 업무나 시장 가정을 바꾸나요?
 
-2. Hook: Runway started by helping filmmakers — now it wants to beat Google at AI: what it changes for ai, startups
-   Evidence: TechCrunch AI item, score 4.0 / 5.
-   CTA: Ask readers what workflow, market, or product assumption this changes.
+2. 훅: `Runway started by helping filmmakers — now it wants to beat Google at AI`로 보는 AI, 스타트업 변화
+   근거: TechCrunch AI 항목, 점수 3.96 / 5
+   독자에게 물을 것: 이 변화가 어떤 업무나 시장 가정을 바꾸나요?
 
-3. Hook: Hermes Unlocks Self-Improving AI Agents, Powered by NVIDIA RTX PCs and DGX Spark: what it changes for ai, developer
-   Evidence: NVIDIA Blog item, score 3.98 / 5.
-   CTA: Ask readers what workflow, market, or product assumption this changes.
+3. 훅: `Hermes Unlocks Self-Improving AI Agents, Powered by NVIDIA RTX PCs and DGX Spark`로 보는 AI, 개발자 워크플로 변화
+   근거: NVIDIA Blog 항목, 점수 3.94 / 5
+   독자에게 물을 것: 이 변화가 어떤 업무나 시장 가정을 바꾸나요?
 
-## Actionable Artifacts: Strategy Meeting Agenda
+## 바로 쓸 수 있는 결과물: 전략 회의 안건
 
-1. What market assumption should we update?
-2. What does `Databricks brings GPT-5.5 to enterprise agent workflows` imply for our positioning?
-3. What evidence would make us change roadmap, hiring, or partnership priorities?
-4. What should we monitor next week?
+1. 지금 바꿔야 할 시장 가정이 있나요?
+2. `Databricks brings GPT-5.5 to enterprise agent workflows`는 우리 포지셔닝에 어떤 의미가 있나요?
+3. 로드맵, 채용, 파트너십을 바꿀 만큼 강한 근거는 무엇인가요?
+4. 다음 주에 다시 볼 지표나 출처는 무엇인가요?
 
-## Watch Next
+## 다음에 볼 것
 
-- Confirm whether the same theme appears in at least one primary source.
-- Track Korean localization: regulation, distribution, payments, trust, and enterprise buying behavior.
-- Turn the strongest signal into one long-form memo and two short-form posts.
+- 같은 흐름이 1차 출처에서도 반복되는지 확인하세요.
+- 한국 시장에서는 규제, 유통, 결제, 신뢰, 기업 구매 방식을 같이 보세요.
+- 가장 강한 신호 하나를 긴 글 1개와 짧은 글 2개로 바꿔보세요.
 
-## Caveats
+## 주의사항
 
-- This brief uses mock or public RSS-style source metadata for a reproducible local demo.
-- This is source-backed research and content ideation, not financial advice.
-- Do not copy paid or login-only source text into generated outputs.
+- 이 브리프는 공개 RSS와 공개 출처 메타데이터를 바탕으로 만든 리서치 초안이에요.
+- 투자 판단이 아니라 리서치와 콘텐츠 기획을 돕기 위한 자료예요.
+- 유료 또는 로그인 기반 원문을 그대로 복사하지 마세요.

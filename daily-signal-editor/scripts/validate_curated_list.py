@@ -22,10 +22,10 @@ def validate(text: str, min_items: int) -> list[str]:
     errors: list[str] = []
     if "# Daily Curated Content Queue" not in text:
         errors.append("Missing title: # Daily Curated Content Queue")
-    if "## Ranked Queue" not in text:
-        errors.append("Missing section: ## Ranked Queue")
-    if "## Source Mix" not in text:
-        errors.append("Missing section: ## Source Mix")
+    if "## Ranked Queue" not in text and "## 우선순위 큐" not in text:
+        errors.append("Missing section: ## Ranked Queue or ## 우선순위 큐")
+    if "## Source Mix" not in text and "## 소스 구성" not in text:
+        errors.append("Missing section: ## Source Mix or ## 소스 구성")
     item_count = len(re.findall(r"^####\s+\d+\.", text, flags=re.MULTILINE))
     if item_count < min_items:
         errors.append(f"Expected at least {min_items} curated items, found {item_count}.")
