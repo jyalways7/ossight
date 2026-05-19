@@ -24,13 +24,12 @@ Collect or infer these inputs before running the workflow:
 
 - `audience`: founder, B2B marketer, investor, analyst, creator, or a custom persona.
 - `purpose`: market research, content ideation, newsletter drafting, investment research, product strategy, or competitive sensing.
-- `domains`: business, AI, startups, VC, public markets, consumer trends, Korea business, or a custom niche.
+- `domains`: business, AI, startups, VC, public markets, consumer trends, physical world, spaces, retail, Korea business, or a custom niche.
 - `source_mix`: global VC, Korea startup, AI research, market data, financial reports, community sources.
-- `source_category_mix`: optional category quotas for broad trend work, such as business, consumer, content_ip, social_trends, app_rankings, investing, korea, and ai.
+- `source_category_mix`: optional category quotas for broad trend work, such as business, consumer, physical_world, spatial_reviews, reservation, retail_offline, real_estate, content_ip, social_trends, app_rankings, investing, korea, and ai.
 - `output_mode`: daily brief, newsletter draft, investment memo, LinkedIn/X post, blog outline, Slack update, meeting agenda, sales talking points, or source map.
 - `time_window`: today, last 24 hours, this week, or a fixed date range.
 - `lens_team`: optional expert lenses or task categories to emphasize.
-- `editorial_inspirations`: optional high-level editorial traits, such as dense market narrative, practical founder questions, operator playbook, and counter-signal discipline. Use traits only; do not imitate a living writer's exact voice.
 
 If the user only says "make my daily brief", use this default:
 
@@ -60,8 +59,9 @@ If the user only says "make my daily brief", use this default:
    - Include Korean sources when the user cares about Korean business, startups, consumers, policy, or investing.
    - Rotate sources by persona and day instead of reading the same feed list every time. Keep RSS sources for automatic fetch and non-RSS newsletters, reports, and YouTube channels as watchlist sources.
    - For broad market trend work, use `mock-data/profiles/market-trend-editor.json` and preserve category diversity. Do not let AI sources fill the whole queue.
+   - For material-world, space, retail, local business, lifestyle, or offline behavior work, use `mock-data/profiles/physical-world-editor.json`. Read `references/physical-world-rubric.md` and preserve scene-first evidence: movement, dwell, queue, payment, photo, object, route, and copy.
+   - When Korean persona data, NVIDIA Korea, Nemotron, sovereign AI, or physical AI would improve interpretation, read `references/nvidia-korea-persona-layer.md` and add persona interpretation as a hypothesis layer, not as proof of demand.
    - Treat X, Threads, YouTube trending, Google Trends, and app rankings as weak signals. Use them for interest discovery, product ideas, and content hooks; verify factual claims with stronger sources.
-   - For app rankings, explain the likely user behavior behind each app's rise. Use app name, rank, free/paid context, and inferred category instead of repeating a generic "app rankings show interest" sentence.
 
 3. Gather candidate items.
    - Use public source summaries, RSS items, official posts, public reports, or mock data.
@@ -78,12 +78,15 @@ If the user only says "make my daily brief", use this default:
 
 5. Pattern-match and synthesize.
    - Read `references/editorial-rubric.md` for the editorial lens.
+   - Read `references/physical-world-rubric.md` when the user wants signals from physical spaces, objects, retail, food, hospitality, neighborhoods, pop-ups, or lifestyle routines.
+   - Read `references/nvidia-korea-persona-layer.md` when combining physical-world signals with NVIDIA Korea ecosystem, Nemotron-Personas-Korea, Korean AI developer, sovereign AI, or physical AI infrastructure signals.
    - Connect the selected signals into one directional market read.
    - Include a contrarian view or counter-signal when evidence is incomplete.
    - Explain whether the pattern is tactical, strategic, or still speculative.
 
 6. Synthesize individual signals.
    - For each signal, explain why it matters, who is affected, what changes if it is true, and what to watch next.
+   - For physical-world signals, describe the observed scene before the interpretation. Explain the material evidence, hidden desire, business translation, counter-signal, and next observation.
    - Separate evidence from interpretation.
    - Preserve original source titles as-is, even when they are English.
    - Write all explanation, summary, implications, caveats, and next actions in Korean by default.
@@ -92,7 +95,6 @@ If the user only says "make my daily brief", use this default:
 7. Produce the output.
    - Read `references/output-formats.md` for format choices.
    - Always include source links, scores, caveats, and next actions.
-   - When the user asks for an editorial insight channel, produce two files: a source-backed curation document and a separate insight memo.
    - Include at least one actionable artifact: Slack update, LinkedIn/X hook, meeting agenda, newsletter intro, research question, or sales talking point.
    - For investing topics, frame as research and education, not investment advice.
    - If the source title is English, keep the title in English but write the body below it in Korean.
@@ -140,8 +142,31 @@ python3 scripts/plan_sources.py \
   --rss-output /tmp/market-rss-sources.json \
   --app-output /tmp/market-app-sources.json \
   --manual-output /tmp/market-manual-sources.json \
-  --max-sources 36 \
+  --max-sources 32 \
   --max-per-type 8
+```
+
+For physical-world, space, retail, and local-business work, plan watchlist and manual sources:
+
+```bash
+python3 scripts/plan_sources.py \
+  --registry mock-data/source-registry.json \
+  --profile mock-data/profiles/physical-world-editor.json \
+  --output examples/physical-world-source-plan.json \
+  --manual-output /tmp/physical-world-manual-sources.json \
+  --max-sources 32 \
+  --max-per-type 8
+```
+
+Use `mock-data/manual-physical-signals.json` for a reproducible demo when live map, reservation, YouTube route, Shorts, or geotag sources are unavailable. Physical-world briefs should usually include 8-12 selected signals, not only 3-5, because the value comes from pattern repetition across source types.
+
+```bash
+python3 scripts/build_physical_brief.py \
+  --sources examples/physical-world-source-plan.json \
+  --items mock-data/manual-physical-signals.json \
+  --profile mock-data/profiles/physical-world-editor.json \
+  --output examples/physical-world-brief.md \
+  --limit 12
 ```
 
 Build a broad Daily 50 queue before narrowing into a brief:
@@ -165,31 +190,10 @@ python3 scripts/build_curated_list.py \
 python3 scripts/validate_curated_list.py examples/founder-curated-50.md --min-items 50
 ```
 
-Build an editorial insight channel with two documents:
-
-```bash
-python3 scripts/build_curated_list.py \
-  --sources examples/market-trend-source-plan.json \
-  --items /tmp/market-merged-items.json \
-  --profile mock-data/profiles/editorial-insight-channel.json \
-  --output examples/today-signal-curation.md \
-  --limit 50 \
-  --max-per-source 7 \
-  --max-per-primary-topic 14
-
-python3 scripts/build_insight_memo.py \
-  --sources examples/market-trend-source-plan.json \
-  --items /tmp/market-merged-items.json \
-  --profile mock-data/profiles/editorial-insight-channel.json \
-  --output examples/today-signal-insights.md \
-  --max-signals 14
-```
-
 ## Done When
 
 - The target audience and purpose are explicit.
 - A broad candidate queue exists when the user asked for daily discovery, ideally up to 50 source-linked items.
-- If the user asked for an insight channel, both the curation document and insight memo exist.
 - The selected signals have source links and scores.
 - The brief explains "why it matters", not only "what happened".
 - The output includes at least one reusable content angle or next action.

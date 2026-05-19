@@ -1,0 +1,63 @@
+{
+  "audience": "한국 창업자 겸 공간/생활 트렌드 에디터",
+  "purpose": "현장성이 있는 세계관의 수요, 동선, 공간, 리테일, 생활 루틴 신호 발굴",
+  "domains": [
+    "physical_world",
+    "space",
+    "place",
+    "offline",
+    "foot_traffic",
+    "reservation",
+    "waiting",
+    "retail",
+    "brand",
+    "persona_data",
+    "nvidia_ecosystem",
+    "nemotron",
+    "sovereign_ai",
+    "physical_ai",
+    "youtube",
+    "vlog",
+    "shorts",
+    "creator_route",
+    "lifestyle",
+    "consumer",
+    "real_estate",
+    "korea"
+  ],
+  "source_mix": [
+    "map reviews",
+    "reservation and waiting surfaces",
+    "public spatial data",
+    "NVIDIA Korea persona and ecosystem signals",
+    "youtube vlogs and shorts routes",
+    "commerce and lifestyle curation",
+    "commercial area signals",
+    "public geotag and visual weak signals"
+  ],
+  "source_category_mix": {
+    "physical_world": 5,
+    "persona_data": 3,
+    "nvidia_ecosystem": 3,
+    "sovereign_ai": 2,
+    "physical_ai": 2,
+    "spatial_reviews": 4,
+    "reservation": 4,
+    "retail_offline": 4,
+    "real_estate": 3,
+    "consumer": 3,
+    "social_trends": 3,
+    "content_ip": 3,
+    "korea": 3
+  },
+  "output_mode": "physical world signal brief plus space, product, and content angles",
+  "lens_team": [
+    "Spatial Operator",
+    "Lifestyle Pattern Analyst",
+    "Retail Merchandising Strategist",
+    "Korea Local Business Operator",
+    "Contrarian Evidence Editor"
+  ],
+  "tone": "Korean product writing style: concrete, observational, low-hype, scene-first, action-oriented",
+  "time_window": "last 7 days"
+}

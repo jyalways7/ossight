@@ -35,6 +35,18 @@ Ask whether the signal reveals a founder truth: a behavior shift, a new distribu
 
 Ask whether the insight can become a simpler product or business operation in Korea. Look for trust, regulation, mobile UX, payments, local distribution, and operational excellence.
 
+### Physical World Lens
+
+Ask whether the signal shows people moving through, paying for, photographing, waiting for, or repeatedly using a physical place or object. Look for movement, dwell, queue, payment, photo, object, route, and copy evidence before calling it a trend.
+
+### Spatial Operator Lens
+
+Ask why a place needs to exist in that exact location. Look for route creation, facade, light, seating, parking, queue design, service flow, sound, smell, packaging, and operational repeatability.
+
+### Lifestyle Pattern Lens
+
+Ask what private routine or hidden desire is becoming visible through objects and spaces. Look for aspiration, fatigue, identity, economic pressure, life-stage shifts, and ritualized behavior.
+
 ### Contrarian Lens
 
 Ask what could make the selected pattern wrong. Look for base rates, incentives, missing primary data, and whether the narrative is being repeated without evidence.

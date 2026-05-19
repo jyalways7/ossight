@@ -1,0 +1,2799 @@
+{
+  "profile": {
+    "audience": "한국 창업자 겸 공간/생활 트렌드 에디터",
+    "purpose": "현장성이 있는 세계관의 수요, 동선, 공간, 리테일, 생활 루틴 신호 발굴",
+    "domains": [
+      "physical_world",
+      "space",
+      "place",
+      "offline",
+      "foot_traffic",
+      "reservation",
+      "waiting",
+      "retail",
+      "brand",
+      "persona_data",
+      "nvidia_ecosystem",
+      "nemotron",
+      "sovereign_ai",
+      "physical_ai",
+      "youtube",
+      "vlog",
+      "shorts",
+      "creator_route",
+      "lifestyle",
+      "consumer",
+      "real_estate",
+      "korea"
+    ],
+    "source_mix": [
+      "map reviews",
+      "reservation and waiting surfaces",
+      "public spatial data",
+      "NVIDIA Korea persona and ecosystem signals",
+      "youtube vlogs and shorts routes",
+      "commerce and lifestyle curation",
+      "commercial area signals",
+      "public geotag and visual weak signals"
+    ],
+    "source_category_mix": {
+      "physical_world": 5,
+      "persona_data": 3,
+      "nvidia_ecosystem": 3,
+      "sovereign_ai": 2,
+      "physical_ai": 2,
+      "spatial_reviews": 4,
+      "reservation": 4,
+      "retail_offline": 4,
+      "real_estate": 3,
+      "consumer": 3,
+      "social_trends": 3,
+      "content_ip": 3,
+      "korea": 3
+    },
+    "output_mode": "physical world signal brief plus space, product, and content angles",
+    "lens_team": [
+      "Spatial Operator",
+      "Lifestyle Pattern Analyst",
+      "Retail Merchandising Strategist",
+      "Korea Local Business Operator",
+      "Contrarian Evidence Editor"
+    ],
+    "tone": "Korean product writing style: concrete, observational, low-hype, scene-first, action-oriented",
+    "time_window": "last 7 days"
+  },
+  "seed": 739755,
+  "selected_sources": [
+    {
+      "id": "opinsight",
+      "name": "OpenSurvey Trend Reports",
+      "url": "https://blog.opensurvey.co.kr/",
+      "source_type": "public_report",
+      "source_category": "consumer",
+      "access": "public_web",
+      "tier": 2,
+      "quality": 4,
+      "cadence": "monthly",
+      "domains": [
+        "consumer",
+        "korea",
+        "retail",
+        "survey",
+        "culture"
+      ],
+      "personas": [
+        "creator",
+        "founder",
+        "b2b-marketer"
+      ],
+      "geography": [
+        "korea"
+      ],
+      "selection_score": 14.34,
+      "notes": "Use public consumer trend reports for Korean market context."
+    },
+    {
+      "id": "kosis",
+      "name": "KOSIS",
+      "url": "https://kosis.kr/",
+      "source_type": "public_data",
+      "access": "public_web",
+      "tier": 1,
+      "quality": 5,
+      "cadence": "monthly",
+      "domains": [
+        "korea",
+        "statistics",
+        "macro",
+        "consumer"
+      ],
+      "personas": [
+        "investor-analyst",
+        "corporate-strategist",
+        "creator"
+      ],
+      "geography": [
+        "korea"
+      ],
+      "selection_score": 13.69,
+      "notes": "Primary Korean statistics. Use for grounding narratives in data."
+    },
+    {
+      "id": "mckinsey-insights",
+      "name": "McKinsey Insights",
+      "url": "https://www.mckinsey.com/featured-insights",
+      "source_type": "public_report",
+      "access": "public_web",
+      "tier": 2,
+      "quality": 4,
+      "cadence": "weekly",
+      "domains": [
+        "business",
+        "strategy",
+        "ai",
+        "operations",
+        "consumer"
+      ],
+      "personas": [
+        "corporate-strategist",
+        "b2b-marketer",
+        "investor-analyst"
+      ],
+      "geography": [
+        "global"
+      ],
+      "selection_score": 8.7,
+      "notes": "Useful for corporate strategy framing; watch for generic claims."
+    },
+    {
+      "id": "nvidia-nemotron-personas-korea",
+      "name": "NVIDIA Nemotron-Personas-Korea",
+      "url": "https://huggingface.co/datasets/nvidia/Nemotron-Personas-Korea",
+      "source_type": "persona_data",
+      "source_category": "persona_data",
+      "access": "public_web",
+      "tier": 1,
+      "quality": 5,
+      "cadence": "monthly",
+      "domains": [
+        "persona",
+        "personas",
+        "synthetic-persona",
+        "demographic",
+        "korea",
+        "nemotron",
+        "nvidia",
+        "sovereign_ai",
+        "dataset"
+      ],
+      "personas": [
+        "founder",
+        "creator",
+        "b2b-marketer",
+        "investor-analyst",
+        "corporate-strategist"
+      ],
+      "geography": [
+        "korea"
+      ],
+      "selection_score": 17.14,
+      "notes": "Open synthetic Korean persona dataset. Use as an interpretation and scenario-testing layer, not a substitute for user research, surveys, or transaction data."
+    },
+    {
+      "id": "nvidia-korea-personas-blog",
+      "name": "NVIDIA Korea Personas Article",
+      "url": "https://blogs.nvidia.co.kr/blog/nemotron-personas-korea/",
+      "source_type": "official_blog",
+      "source_category": "persona_data",
+      "access": "public_web",
+      "tier": 1,
+      "quality": 5,
+      "cadence": "monthly",
+      "domains": [
+        "persona",
+        "personas",
+        "synthetic-persona",
+        "korea",
+        "nemotron",
+        "nvidia",
+        "huggingface",
+        "dataset"
+      ],
+      "personas": [
+        "founder",
+        "creator",
+        "b2b-marketer",
+        "investor-analyst",
+        "corporate-strategist"
+      ],
+      "geography": [
+        "korea"
+      ],
+      "selection_score": 15.49,
+      "notes": "Official Korean article explaining Nemotron-Personas-Korea. Use for source-backed description and caveats."
+    },
+    {
+      "id": "nvidia-korea-blog",
+      "name": "NVIDIA Blog Korea",
+      "url": "https://blogs.nvidia.co.kr/",
+      "source_type": "official_blog",
+      "source_category": "nvidia_ecosystem",
+      "access": "public_web",
+      "tier": 1,
+      "quality": 5,
+      "cadence": "daily",
+      "domains": [
+        "nvidia",
+        "korea",
+        "nemotron",
+        "developer",
+        "sovereign_ai",
+        "physical_ai",
+        "gpu",
+        "enterprise",
+        "ai"
+      ],
+      "personas": [
+        "founder",
+        "creator",
+        "investor-analyst",
+        "corporate-strategist"
+      ],
+      "geography": [
+        "korea"
+      ],
+      "selection_score": 18.52,
+      "notes": "Official NVIDIA Korea blog. Use for Korean AI developer ecosystem, Nemotron, sovereign AI, physical AI, and enterprise deployment signals."
+    },
+    {
+      "id": "nvidia-ai-day-seoul",
+      "name": "NVIDIA AI Day Seoul",
+      "url": "https://blogs.nvidia.com/blog/ai-day-seoul/",
+      "source_type": "ecosystem_data",
+      "source_category": "nvidia_ecosystem",
+      "access": "public_web",
+      "tier": 1,
+      "quality": 5,
+      "cadence": "annual",
+      "domains": [
+        "nvidia",
+        "korea",
+        "developer",
+        "startup",
+        "inception",
+        "physical_ai",
+        "agentic_ai",
+        "sovereign_ai",
+        "ecosystem"
+      ],
+      "personas": [
+        "founder",
+        "investor-analyst",
+        "corporate-strategist",
+        "creator"
+      ],
+      "geography": [
+        "korea"
+      ],
+      "selection_score": 17.2,
+      "notes": "Use for Korean NVIDIA developer, startup, enterprise, and AI Day ecosystem signals."
+    },
+    {
+      "id": "nvidia-korea-ai-infrastructure",
+      "name": "NVIDIA Korea AI Infrastructure Newsroom",
+      "url": "https://nvidianews.nvidia.com/news/south-korea-ai-infrastructure",
+      "source_type": "public_report",
+      "source_category": "nvidia_ecosystem",
+      "access": "public_web",
+      "tier": 1,
+      "quality": 5,
+      "cadence": "monthly",
+      "domains": [
+        "nvidia",
+        "korea",
+        "gpu",
+        "ai-factory",
+        "sovereign_ai",
+        "physical_ai",
+        "manufacturing",
+        "robotics",
+        "infrastructure"
+      ],
+      "personas": [
+        "founder",
+        "investor-analyst",
+        "corporate-strategist"
+      ],
+      "geography": [
+        "korea"
+      ],
+      "selection_score": 14.85,
+      "notes": "Use for Korea AI infrastructure, AI factories, sovereign cloud, physical AI, manufacturing, and robotics signals."
+    },
+    {
+      "id": "youtube-kr-vlog-routes",
+      "name": "YouTube Korea Vlog Routes",
+      "url": "https://www.youtube.com/results?search_query=%ED%95%9C%EA%B5%AD+%EB%8D%B0%EC%9D%B4%ED%8A%B8+%EC%BD%94%EC%8A%A4+%EB%B8%8C%EC%9D%B4%EB%A1%9C%EA%B7%B8",
+      "source_type": "youtube",
+      "source_category": "physical_world",
+      "access": "public_web",
+      "tier": 3,
+      "quality": 4,
+      "cadence": "daily",
+      "domains": [
+        "youtube",
+        "vlog",
+        "shorts",
+        "creator_route",
+        "space",
+        "place",
+        "food",
+        "cafe",
+        "retail",
+        "consumer",
+        "korea",
+        "offline"
+      ],
+      "personas": [
+        "creator",
+        "founder",
+        "b2b-marketer"
+      ],
+      "geography": [
+        "korea"
+      ],
+      "selection_score": 25.52,
+      "notes": "Manual watchlist for public Korean vlogs and route videos. Use titles, descriptions, visible chapters, locations, and repeated visit sequences; treat claims as weak until verified with maps, reservations, or public data."
+    },
+    {
+      "id": "seoul-open-data",
+      "name": "Seoul Open Data Plaza",
+      "url": "https://data.seoul.go.kr/",
+      "source_type": "public_data",
+      "source_category": "physical_world",
+      "access": "public_web",
+      "tier": 1,
+      "quality": 5,
+      "cadence": "monthly",
+      "domains": [
+        "space",
+        "mobility",
+        "foot_traffic",
+        "local",
+        "consumer",
+        "korea",
+        "offline"
+      ],
+      "personas": [
+        "creator",
+        "founder",
+        "investor-analyst",
+        "corporate-strategist"
+      ],
+      "geography": [
+        "korea"
+      ],
+      "selection_score": 19.18,
+      "notes": "Primary public data source for Seoul mobility, local business, population, and facility datasets. Use to ground spatial narratives."
+    },
+    {
+      "id": "youtube-kr-place-shorts",
+      "name": "YouTube Korea Place Shorts",
+      "url": "https://www.youtube.com/results?search_query=%EC%84%9C%EC%9A%B8+%ED%95%AB%ED%94%8C+%EC%87%BC%EC%B8%A0",
+      "source_type": "youtube",
+      "source_category": "physical_world",
+      "access": "public_web",
+      "tier": 3,
+      "quality": 3,
+      "cadence": "daily",
+      "domains": [
+        "youtube",
+        "shorts",
+        "trending",
+        "space",
+        "place",
+        "restaurant",
+        "cafe",
+        "popup",
+        "photo",
+        "consumer",
+        "korea",
+        "offline"
+      ],
+      "personas": [
+        "creator",
+        "founder",
+        "b2b-marketer"
+      ],
+      "geography": [
+        "korea"
+      ],
+      "selection_score": 19.1,
+      "notes": "Manual weak-signal source for place-based Shorts. Track repeated places, camera sequence, waiting language, and comments asking for location; verify elsewhere before strong claims."
+    },
+    {
+      "id": "instagram-public-geotags",
+      "name": "Instagram Public Geotags",
+      "url": "https://www.instagram.com/explore/locations/",
+      "source_type": "social_signal",
+      "source_category": "physical_world",
+      "access": "public_web",
+      "tier": 3,
+      "quality": 3,
+      "cadence": "daily",
+      "domains": [
+        "space",
+        "place",
+        "photos",
+        "geotag",
+        "consumer",
+        "creator",
+        "korea",
+        "offline"
+      ],
+      "personas": [
+        "creator",
+        "founder",
+        "b2b-marketer"
+      ],
+      "geography": [
+        "korea",
+        "global"
+      ],
+      "selection_score": 16.73,
+      "notes": "Weak visual signal. Use public geotag pages or user-provided links only. Track what people photograph, not private account content."
+    },
+    {
+      "id": "naver-map-place-reviews",
+      "name": "Naver Map Place Reviews",
+      "url": "https://map.naver.com/",
+      "source_type": "map_review",
+      "source_category": "spatial_reviews",
+      "access": "public_web",
+      "tier": 2,
+      "quality": 4,
+      "cadence": "daily",
+      "domains": [
+        "space",
+        "place",
+        "reviews",
+        "photos",
+        "foot_traffic",
+        "consumer",
+        "korea",
+        "offline"
+      ],
+      "personas": [
+        "creator",
+        "founder",
+        "b2b-marketer",
+        "corporate-strategist"
+      ],
+      "geography": [
+        "korea"
+      ],
+      "selection_score": 19.92,
+      "notes": "Manual watchlist. Use public place pages, review counts, recent review language, photo patterns, and nearby clusters only. Do not bypass login, rate limits, or copy full reviews."
+    },
+    {
+      "id": "kakao-map-place-reviews",
+      "name": "Kakao Map Place Reviews",
+      "url": "https://map.kakao.com/",
+      "source_type": "map_review",
+      "source_category": "spatial_reviews",
+      "access": "public_web",
+      "tier": 2,
+      "quality": 4,
+      "cadence": "daily",
+      "domains": [
+        "space",
+        "place",
+        "reviews",
+        "photos",
+        "mobility",
+        "consumer",
+        "korea",
+        "offline"
+      ],
+      "personas": [
+        "creator",
+        "founder",
+        "b2b-marketer",
+        "corporate-strategist"
+      ],
+      "geography": [
+        "korea"
+      ],
+      "selection_score": 18.27,
+      "notes": "Manual watchlist for cross-checking Naver Map. Compare review language, route context, hours, parking, waiting, and local repeat-visit cues."
+    },
+    {
+      "id": "catchtable",
+      "name": "CatchTable",
+      "url": "https://www.catchtable.co.kr/",
+      "source_type": "reservation",
+      "source_category": "reservation",
+      "access": "public_web",
+      "tier": 2,
+      "quality": 4,
+      "cadence": "daily",
+      "domains": [
+        "reservation",
+        "restaurant",
+        "waiting",
+        "queue",
+        "consumer",
+        "korea",
+        "offline"
+      ],
+      "personas": [
+        "creator",
+        "founder",
+        "b2b-marketer"
+      ],
+      "geography": [
+        "korea"
+      ],
+      "selection_score": 17.82,
+      "notes": "Use visible reservation availability, waiting, region/category clustering, and public descriptions as demand signals. Do not automate booking or access logged-in data."
+    },
+    {
+      "id": "tabling",
+      "name": "Tabling",
+      "url": "https://www.tabling.co.kr/",
+      "source_type": "reservation",
+      "source_category": "reservation",
+      "access": "public_web",
+      "tier": 2,
+      "quality": 4,
+      "cadence": "daily",
+      "domains": [
+        "waiting",
+        "queue",
+        "restaurant",
+        "reservation",
+        "consumer",
+        "korea",
+        "offline"
+      ],
+      "personas": [
+        "creator",
+        "founder",
+        "b2b-marketer"
+      ],
+      "geography": [
+        "korea"
+      ],
+      "selection_score": 17.64,
+      "notes": "Use visible waiting/queue and restaurant discovery surfaces as weak demand signals. Verify with map reviews, social posts, and repeat observations."
+    },
+    {
+      "id": "29cm",
+      "name": "29CM",
+      "url": "https://www.29cm.co.kr/",
+      "source_type": "commerce",
+      "source_category": "retail_offline",
+      "access": "public_web",
+      "tier": 2,
+      "quality": 4,
+      "cadence": "daily",
+      "domains": [
+        "retail",
+        "brand",
+        "lifestyle",
+        "consumer",
+        "commerce",
+        "korea",
+        "offline"
+      ],
+      "personas": [
+        "creator",
+        "founder",
+        "b2b-marketer"
+      ],
+      "geography": [
+        "korea"
+      ],
+      "selection_score": 19.92,
+      "notes": "Use public curation, ranking, brand language, and offline pop-up/store signals to read lifestyle taste shifts."
+    },
+    {
+      "id": "musinsa",
+      "name": "Musinsa",
+      "url": "https://www.musinsa.com/",
+      "source_type": "commerce",
+      "source_category": "retail_offline",
+      "access": "public_web",
+      "tier": 2,
+      "quality": 4,
+      "cadence": "daily",
+      "domains": [
+        "retail",
+        "fashion",
+        "brand",
+        "consumer",
+        "commerce",
+        "korea",
+        "offline"
+      ],
+      "personas": [
+        "creator",
+        "founder",
+        "b2b-marketer"
+      ],
+      "geography": [
+        "korea"
+      ],
+      "selection_score": 18.27,
+      "notes": "Use public rankings, brand campaigns, store/pop-up language, and category movement as taste and retail execution signals."
+    },
+    {
+      "id": "todayhouse",
+      "name": "Todayhouse",
+      "url": "https://ohou.se/",
+      "source_type": "commerce",
+      "source_category": "retail_offline",
+      "access": "public_web",
+      "tier": 2,
+      "quality": 4,
+      "cadence": "daily",
+      "domains": [
+        "home",
+        "living",
+        "interior",
+        "lifestyle",
+        "consumer",
+        "korea",
+        "offline"
+      ],
+      "personas": [
+        "creator",
+        "founder",
+        "b2b-marketer"
+      ],
+      "geography": [
+        "korea"
+      ],
+      "selection_score": 16.14,
+      "notes": "Use public home/living trend surfaces to connect online taste with physical rooms, objects, storage, and routines."
+    },
+    {
+      "id": "sbiz-commercial-area",
+      "name": "Small Enterprise Commercial Area Information",
+      "url": "https://sg.sbiz.or.kr/",
+      "source_type": "real_estate",
+      "source_category": "real_estate",
+      "access": "public_web",
+      "tier": 1,
+      "quality": 5,
+      "cadence": "monthly",
+      "domains": [
+        "commercial-real-estate",
+        "local",
+        "retail",
+        "foot_traffic",
+        "lease",
+        "korea",
+        "offline",
+        "상권"
+      ],
+      "personas": [
+        "founder",
+        "investor-analyst",
+        "corporate-strategist",
+        "creator"
+      ],
+      "geography": [
+        "korea"
+      ],
+      "selection_score": 18.43,
+      "notes": "Use public commercial-area data to validate whether attention is changing local business density, category mix, or rent pressure."
+    },
+    {
+      "id": "kb-research",
+      "name": "KB Research",
+      "url": "https://www.kbfg.com/kbresearch",
+      "source_type": "public_report",
+      "access": "public_web",
+      "tier": 1,
+      "quality": 4,
+      "cadence": "monthly",
+      "domains": [
+        "korea",
+        "wealth",
+        "finance",
+        "consumer",
+        "real-estate"
+      ],
+      "personas": [
+        "investor-analyst",
+        "creator",
+        "b2b-marketer"
+      ],
+      "geography": [
+        "korea"
+      ],
+      "selection_score": 13.42,
+      "notes": "Useful for wealth reports, finance, real estate, and Korean consumer/investor behavior."
+    },
+    {
+      "id": "youtube-trends",
+      "name": "YouTube Culture & Trends",
+      "url": "https://www.youtube.com/trends/",
+      "source_type": "youtube",
+      "source_category": "content_ip",
+      "access": "public_web",
+      "tier": 2,
+      "quality": 4,
+      "cadence": "weekly",
+      "domains": [
+        "youtube",
+        "creator",
+        "content_ip",
+        "culture",
+        "consumer"
+      ],
+      "personas": [
+        "creator",
+        "b2b-marketer",
+        "founder"
+      ],
+      "geography": [
+        "global"
+      ],
+      "selection_score": 13.93,
+      "notes": "Use for platform-level trend analysis and creator economy context."
+    },
+    {
+      "id": "kocca-reports",
+      "name": "KOCCA Reports",
+      "url": "https://www.kocca.kr/",
+      "source_type": "public_report",
+      "source_category": "content_ip",
+      "access": "public_web",
+      "tier": 1,
+      "quality": 4,
+      "cadence": "monthly",
+      "domains": [
+        "content_ip",
+        "korea",
+        "creator",
+        "gaming",
+        "entertainment"
+      ],
+      "personas": [
+        "creator",
+        "founder",
+        "b2b-marketer",
+        "investor-analyst"
+      ],
+      "geography": [
+        "korea"
+      ],
+      "selection_score": 13.87,
+      "notes": "Primary Korean content industry source. Use for IP, games, media, and creator economy context."
+    },
+    {
+      "id": "youtube-trending-kr",
+      "name": "YouTube Trending Korea",
+      "url": "https://www.youtube.com/feed/trending?gl=KR",
+      "source_type": "youtube",
+      "source_category": "social_trends",
+      "access": "public_web",
+      "tier": 3,
+      "quality": 3,
+      "cadence": "daily",
+      "domains": [
+        "youtube",
+        "trending",
+        "creator",
+        "content_ip",
+        "consumer",
+        "korea"
+      ],
+      "personas": [
+        "creator",
+        "founder",
+        "b2b-marketer"
+      ],
+      "geography": [
+        "korea"
+      ],
+      "selection_score": 14.66,
+      "notes": "Manual watchlist for Korean YouTube trending videos. Use titles, channels, descriptions, and visible metrics only; verify claims elsewhere."
+    },
+    {
+      "id": "google-trends-kr",
+      "name": "Google Trends Korea",
+      "url": "https://trends.google.com/trends/trendingsearches/daily?geo=KR",
+      "source_type": "public_data",
+      "source_category": "social_trends",
+      "access": "public_web",
+      "tier": 2,
+      "quality": 4,
+      "cadence": "daily",
+      "domains": [
+        "search",
+        "trending",
+        "consumer",
+        "korea",
+        "culture"
+      ],
+      "personas": [
+        "creator",
+        "founder",
+        "b2b-marketer",
+        "investor-analyst"
+      ],
+      "geography": [
+        "korea"
+      ],
+      "selection_score": 11.73,
+      "notes": "Use as public interest signal. Treat as demand discovery, not factual proof."
+    },
+    {
+      "id": "geeknews",
+      "name": "GeekNews",
+      "url": "https://news.hada.io",
+      "feed_url": "https://news.hada.io/rss/news",
+      "source_type": "community",
+      "access": "rss",
+      "tier": 2,
+      "quality": 4,
+      "cadence": "daily",
+      "domains": [
+        "tech",
+        "korea",
+        "developer",
+        "startup",
+        "ai"
+      ],
+      "personas": [
+        "founder",
+        "creator",
+        "corporate-strategist"
+      ],
+      "geography": [
+        "korea"
+      ],
+      "selection_score": 11.31,
+      "notes": "Strong Korean developer/startup signal source; verify original links where possible."
+    },
+    {
+      "id": "venturesquare",
+      "name": "Venturesquare",
+      "url": "https://www.venturesquare.net/",
+      "source_type": "media",
+      "access": "public_web",
+      "tier": 2,
+      "quality": 4,
+      "cadence": "daily",
+      "domains": [
+        "korea",
+        "startup",
+        "funding",
+        "business"
+      ],
+      "personas": [
+        "founder",
+        "investor-analyst",
+        "creator"
+      ],
+      "geography": [
+        "korea"
+      ],
+      "selection_score": 11.55,
+      "notes": "Korean startup ecosystem and funding coverage."
+    },
+    {
+      "id": "startup-alliance",
+      "name": "Startup Alliance Korea",
+      "url": "https://startupall.kr/",
+      "source_type": "ecosystem_org",
+      "access": "public_web",
+      "tier": 1,
+      "quality": 4,
+      "cadence": "weekly",
+      "domains": [
+        "korea",
+        "startup",
+        "policy",
+        "ecosystem"
+      ],
+      "personas": [
+        "founder",
+        "investor-analyst",
+        "corporate-strategist"
+      ],
+      "geography": [
+        "korea"
+      ],
+      "selection_score": 10.38,
+      "notes": "Use for ecosystem reports, startup policy, and Korea market context."
+    },
+    {
+      "id": "platum",
+      "name": "Platum",
+      "url": "https://platum.kr/",
+      "source_type": "media",
+      "access": "public_web",
+      "tier": 2,
+      "quality": 4,
+      "cadence": "daily",
+      "domains": [
+        "korea",
+        "startup",
+        "funding",
+        "business"
+      ],
+      "personas": [
+        "founder",
+        "investor-analyst",
+        "b2b-marketer"
+      ],
+      "geography": [
+        "korea"
+      ],
+      "selection_score": 9.62,
+      "notes": "Korean startup news and funding signal."
+    },
+    {
+      "id": "apple-app-store-top-free-kr",
+      "name": "Apple App Store Top Free Korea",
+      "url": "https://www.apple.com/kr/app-store/",
+      "api_url": "https://rss.applemarketingtools.com/api/v2/kr/apps/top-free/50/apps.json",
+      "source_type": "app_rankings",
+      "source_category": "app_rankings",
+      "access": "public_api",
+      "tier": 2,
+      "quality": 4,
+      "cadence": "daily",
+      "domains": [
+        "apps",
+        "rankings",
+        "consumer",
+        "product",
+        "korea"
+      ],
+      "personas": [
+        "creator",
+        "founder",
+        "b2b-marketer",
+        "investor-analyst"
+      ],
+      "geography": [
+        "korea"
+      ],
+      "selection_score": 11.64,
+      "notes": "Fetchable public ranking source. Use rank movement as product-discovery signal, not proof of revenue."
+    },
+    {
+      "id": "bank-of-korea",
+      "name": "Bank of Korea",
+      "url": "https://www.bok.or.kr/",
+      "source_type": "public_report",
+      "access": "public_web",
+      "tier": 1,
+      "quality": 5,
+      "cadence": "weekly",
+      "domains": [
+        "korea",
+        "macro",
+        "finance",
+        "economy"
+      ],
+      "personas": [
+        "investor-analyst",
+        "corporate-strategist",
+        "creator"
+      ],
+      "geography": [
+        "korea"
+      ],
+      "selection_score": 11.62,
+      "notes": "Primary macroeconomic source for Korea."
+    },
+    {
+      "id": "mobileindex",
+      "name": "Mobile Index",
+      "url": "https://www.mobileindex.com/",
+      "source_type": "public_report",
+      "source_category": "app_rankings",
+      "access": "public_web",
+      "tier": 2,
+      "quality": 4,
+      "cadence": "monthly",
+      "domains": [
+        "apps",
+        "mobile",
+        "rankings",
+        "consumer",
+        "korea"
+      ],
+      "personas": [
+        "creator",
+        "founder",
+        "b2b-marketer",
+        "investor-analyst"
+      ],
+      "geography": [
+        "korea"
+      ],
+      "selection_score": 11.37,
+      "notes": "Korean mobile app market watchlist. Use public charts or reports only."
+    },
+    {
+      "id": "apple-app-store-top-paid-kr",
+      "name": "Apple App Store Top Paid Korea",
+      "url": "https://www.apple.com/kr/app-store/",
+      "api_url": "https://rss.applemarketingtools.com/api/v2/kr/apps/top-paid/50/apps.json",
+      "source_type": "app_rankings",
+      "source_category": "app_rankings",
+      "access": "public_api",
+      "tier": 2,
+      "quality": 4,
+      "cadence": "daily",
+      "domains": [
+        "apps",
+        "rankings",
+        "consumer",
+        "paid",
+        "korea"
+      ],
+      "personas": [
+        "creator",
+        "founder",
+        "b2b-marketer",
+        "investor-analyst"
+      ],
+      "geography": [
+        "korea"
+      ],
+      "selection_score": 11.19,
+      "notes": "Fetchable public paid-app ranking source. Combine with reviews, downloads, and category context before drawing conclusions."
+    },
+    {
+      "id": "yc-blog",
+      "name": "Y Combinator Blog",
+      "url": "https://www.ycombinator.com/blog",
+      "feed_url": "https://www.ycombinator.com/blog/rss",
+      "source_type": "vc_blog",
+      "access": "rss",
+      "tier": 1,
+      "quality": 5,
+      "cadence": "weekly",
+      "domains": [
+        "startups",
+        "founder",
+        "fundraising",
+        "ai",
+        "business"
+      ],
+      "personas": [
+        "founder",
+        "investor-analyst",
+        "creator"
+      ],
+      "geography": [
+        "global"
+      ],
+      "selection_score": 9.74,
+      "notes": "Founder and startup signal source; useful for company formation, fundraising, and founder advice."
+    },
+    {
+      "id": "lenny-newsletter",
+      "name": "Lenny's Newsletter",
+      "url": "https://www.lennysnewsletter.com/",
+      "source_type": "newsletter",
+      "access": "public_web",
+      "tier": 2,
+      "quality": 5,
+      "cadence": "weekly",
+      "domains": [
+        "product",
+        "growth",
+        "startup",
+        "operator"
+      ],
+      "personas": [
+        "founder",
+        "b2b-marketer",
+        "creator"
+      ],
+      "geography": [
+        "global"
+      ],
+      "selection_score": 9.55,
+      "notes": "Use public posts only. Strong for product/growth practice and content angles."
+    },
+    {
+      "id": "a16z",
+      "name": "a16z",
+      "url": "https://a16z.com",
+      "source_type": "vc_blog",
+      "access": "public_web",
+      "tier": 1,
+      "quality": 5,
+      "cadence": "weekly",
+      "domains": [
+        "vc",
+        "ai",
+        "business",
+        "market",
+        "crypto",
+        "enterprise"
+      ],
+      "personas": [
+        "founder",
+        "investor-analyst",
+        "b2b-marketer",
+        "creator"
+      ],
+      "geography": [
+        "global"
+      ],
+      "selection_score": 9.47,
+      "notes": "High-quality narrative and market map source. Feed path changes; keep as watchlist until verified."
+    }
+  ],
+  "rss_sources": [
+    {
+      "id": "geeknews",
+      "name": "GeekNews",
+      "url": "https://news.hada.io",
+      "feed_url": "https://news.hada.io/rss/news",
+      "source_type": "community",
+      "access": "rss",
+      "tier": 2,
+      "quality": 4,
+      "cadence": "daily",
+      "domains": [
+        "tech",
+        "korea",
+        "developer",
+        "startup",
+        "ai"
+      ],
+      "personas": [
+        "founder",
+        "creator",
+        "corporate-strategist"
+      ],
+      "geography": [
+        "korea"
+      ],
+      "selection_score": 11.31,
+      "notes": "Strong Korean developer/startup signal source; verify original links where possible."
+    },
+    {
+      "id": "yc-blog",
+      "name": "Y Combinator Blog",
+      "url": "https://www.ycombinator.com/blog",
+      "feed_url": "https://www.ycombinator.com/blog/rss",
+      "source_type": "vc_blog",
+      "access": "rss",
+      "tier": 1,
+      "quality": 5,
+      "cadence": "weekly",
+      "domains": [
+        "startups",
+        "founder",
+        "fundraising",
+        "ai",
+        "business"
+      ],
+      "personas": [
+        "founder",
+        "investor-analyst",
+        "creator"
+      ],
+      "geography": [
+        "global"
+      ],
+      "selection_score": 9.74,
+      "notes": "Founder and startup signal source; useful for company formation, fundraising, and founder advice."
+    }
+  ],
+  "app_ranking_sources": [
+    {
+      "id": "apple-app-store-top-free-kr",
+      "name": "Apple App Store Top Free Korea",
+      "url": "https://www.apple.com/kr/app-store/",
+      "api_url": "https://rss.applemarketingtools.com/api/v2/kr/apps/top-free/50/apps.json",
+      "source_type": "app_rankings",
+      "source_category": "app_rankings",
+      "access": "public_api",
+      "tier": 2,
+      "quality": 4,
+      "cadence": "daily",
+      "domains": [
+        "apps",
+        "rankings",
+        "consumer",
+        "product",
+        "korea"
+      ],
+      "personas": [
+        "creator",
+        "founder",
+        "b2b-marketer",
+        "investor-analyst"
+      ],
+      "geography": [
+        "korea"
+      ],
+      "selection_score": 11.64,
+      "notes": "Fetchable public ranking source. Use rank movement as product-discovery signal, not proof of revenue."
+    },
+    {
+      "id": "apple-app-store-top-paid-kr",
+      "name": "Apple App Store Top Paid Korea",
+      "url": "https://www.apple.com/kr/app-store/",
+      "api_url": "https://rss.applemarketingtools.com/api/v2/kr/apps/top-paid/50/apps.json",
+      "source_type": "app_rankings",
+      "source_category": "app_rankings",
+      "access": "public_api",
+      "tier": 2,
+      "quality": 4,
+      "cadence": "daily",
+      "domains": [
+        "apps",
+        "rankings",
+        "consumer",
+        "paid",
+        "korea"
+      ],
+      "personas": [
+        "creator",
+        "founder",
+        "b2b-marketer",
+        "investor-analyst"
+      ],
+      "geography": [
+        "korea"
+      ],
+      "selection_score": 11.19,
+      "notes": "Fetchable public paid-app ranking source. Combine with reviews, downloads, and category context before drawing conclusions."
+    }
+  ],
+  "manual_signal_sources": [
+    {
+      "id": "youtube-kr-vlog-routes",
+      "name": "YouTube Korea Vlog Routes",
+      "url": "https://www.youtube.com/results?search_query=%ED%95%9C%EA%B5%AD+%EB%8D%B0%EC%9D%B4%ED%8A%B8+%EC%BD%94%EC%8A%A4+%EB%B8%8C%EC%9D%B4%EB%A1%9C%EA%B7%B8",
+      "source_type": "youtube",
+      "source_category": "physical_world",
+      "access": "public_web",
+      "tier": 3,
+      "quality": 4,
+      "cadence": "daily",
+      "domains": [
+        "youtube",
+        "vlog",
+        "shorts",
+        "creator_route",
+        "space",
+        "place",
+        "food",
+        "cafe",
+        "retail",
+        "consumer",
+        "korea",
+        "offline"
+      ],
+      "personas": [
+        "creator",
+        "founder",
+        "b2b-marketer"
+      ],
+      "geography": [
+        "korea"
+      ],
+      "selection_score": 25.52,
+      "notes": "Manual watchlist for public Korean vlogs and route videos. Use titles, descriptions, visible chapters, locations, and repeated visit sequences; treat claims as weak until verified with maps, reservations, or public data."
+    },
+    {
+      "id": "seoul-open-data",
+      "name": "Seoul Open Data Plaza",
+      "url": "https://data.seoul.go.kr/",
+      "source_type": "public_data",
+      "source_category": "physical_world",
+      "access": "public_web",
+      "tier": 1,
+      "quality": 5,
+      "cadence": "monthly",
+      "domains": [
+        "space",
+        "mobility",
+        "foot_traffic",
+        "local",
+        "consumer",
+        "korea",
+        "offline"
+      ],
+      "personas": [
+        "creator",
+        "founder",
+        "investor-analyst",
+        "corporate-strategist"
+      ],
+      "geography": [
+        "korea"
+      ],
+      "selection_score": 19.18,
+      "notes": "Primary public data source for Seoul mobility, local business, population, and facility datasets. Use to ground spatial narratives."
+    },
+    {
+      "id": "youtube-kr-place-shorts",
+      "name": "YouTube Korea Place Shorts",
+      "url": "https://www.youtube.com/results?search_query=%EC%84%9C%EC%9A%B8+%ED%95%AB%ED%94%8C+%EC%87%BC%EC%B8%A0",
+      "source_type": "youtube",
+      "source_category": "physical_world",
+      "access": "public_web",
+      "tier": 3,
+      "quality": 3,
+      "cadence": "daily",
+      "domains": [
+        "youtube",
+        "shorts",
+        "trending",
+        "space",
+        "place",
+        "restaurant",
+        "cafe",
+        "popup",
+        "photo",
+        "consumer",
+        "korea",
+        "offline"
+      ],
+      "personas": [
+        "creator",
+        "founder",
+        "b2b-marketer"
+      ],
+      "geography": [
+        "korea"
+      ],
+      "selection_score": 19.1,
+      "notes": "Manual weak-signal source for place-based Shorts. Track repeated places, camera sequence, waiting language, and comments asking for location; verify elsewhere before strong claims."
+    },
+    {
+      "id": "instagram-public-geotags",
+      "name": "Instagram Public Geotags",
+      "url": "https://www.instagram.com/explore/locations/",
+      "source_type": "social_signal",
+      "source_category": "physical_world",
+      "access": "public_web",
+      "tier": 3,
+      "quality": 3,
+      "cadence": "daily",
+      "domains": [
+        "space",
+        "place",
+        "photos",
+        "geotag",
+        "consumer",
+        "creator",
+        "korea",
+        "offline"
+      ],
+      "personas": [
+        "creator",
+        "founder",
+        "b2b-marketer"
+      ],
+      "geography": [
+        "korea",
+        "global"
+      ],
+      "selection_score": 16.73,
+      "notes": "Weak visual signal. Use public geotag pages or user-provided links only. Track what people photograph, not private account content."
+    },
+    {
+      "id": "naver-map-place-reviews",
+      "name": "Naver Map Place Reviews",
+      "url": "https://map.naver.com/",
+      "source_type": "map_review",
+      "source_category": "spatial_reviews",
+      "access": "public_web",
+      "tier": 2,
+      "quality": 4,
+      "cadence": "daily",
+      "domains": [
+        "space",
+        "place",
+        "reviews",
+        "photos",
+        "foot_traffic",
+        "consumer",
+        "korea",
+        "offline"
+      ],
+      "personas": [
+        "creator",
+        "founder",
+        "b2b-marketer",
+        "corporate-strategist"
+      ],
+      "geography": [
+        "korea"
+      ],
+      "selection_score": 19.92,
+      "notes": "Manual watchlist. Use public place pages, review counts, recent review language, photo patterns, and nearby clusters only. Do not bypass login, rate limits, or copy full reviews."
+    },
+    {
+      "id": "kakao-map-place-reviews",
+      "name": "Kakao Map Place Reviews",
+      "url": "https://map.kakao.com/",
+      "source_type": "map_review",
+      "source_category": "spatial_reviews",
+      "access": "public_web",
+      "tier": 2,
+      "quality": 4,
+      "cadence": "daily",
+      "domains": [
+        "space",
+        "place",
+        "reviews",
+        "photos",
+        "mobility",
+        "consumer",
+        "korea",
+        "offline"
+      ],
+      "personas": [
+        "creator",
+        "founder",
+        "b2b-marketer",
+        "corporate-strategist"
+      ],
+      "geography": [
+        "korea"
+      ],
+      "selection_score": 18.27,
+      "notes": "Manual watchlist for cross-checking Naver Map. Compare review language, route context, hours, parking, waiting, and local repeat-visit cues."
+    },
+    {
+      "id": "catchtable",
+      "name": "CatchTable",
+      "url": "https://www.catchtable.co.kr/",
+      "source_type": "reservation",
+      "source_category": "reservation",
+      "access": "public_web",
+      "tier": 2,
+      "quality": 4,
+      "cadence": "daily",
+      "domains": [
+        "reservation",
+        "restaurant",
+        "waiting",
+        "queue",
+        "consumer",
+        "korea",
+        "offline"
+      ],
+      "personas": [
+        "creator",
+        "founder",
+        "b2b-marketer"
+      ],
+      "geography": [
+        "korea"
+      ],
+      "selection_score": 17.82,
+      "notes": "Use visible reservation availability, waiting, region/category clustering, and public descriptions as demand signals. Do not automate booking or access logged-in data."
+    },
+    {
+      "id": "tabling",
+      "name": "Tabling",
+      "url": "https://www.tabling.co.kr/",
+      "source_type": "reservation",
+      "source_category": "reservation",
+      "access": "public_web",
+      "tier": 2,
+      "quality": 4,
+      "cadence": "daily",
+      "domains": [
+        "waiting",
+        "queue",
+        "restaurant",
+        "reservation",
+        "consumer",
+        "korea",
+        "offline"
+      ],
+      "personas": [
+        "creator",
+        "founder",
+        "b2b-marketer"
+      ],
+      "geography": [
+        "korea"
+      ],
+      "selection_score": 17.64,
+      "notes": "Use visible waiting/queue and restaurant discovery surfaces as weak demand signals. Verify with map reviews, social posts, and repeat observations."
+    },
+    {
+      "id": "29cm",
+      "name": "29CM",
+      "url": "https://www.29cm.co.kr/",
+      "source_type": "commerce",
+      "source_category": "retail_offline",
+      "access": "public_web",
+      "tier": 2,
+      "quality": 4,
+      "cadence": "daily",
+      "domains": [
+        "retail",
+        "brand",
+        "lifestyle",
+        "consumer",
+        "commerce",
+        "korea",
+        "offline"
+      ],
+      "personas": [
+        "creator",
+        "founder",
+        "b2b-marketer"
+      ],
+      "geography": [
+        "korea"
+      ],
+      "selection_score": 19.92,
+      "notes": "Use public curation, ranking, brand language, and offline pop-up/store signals to read lifestyle taste shifts."
+    },
+    {
+      "id": "musinsa",
+      "name": "Musinsa",
+      "url": "https://www.musinsa.com/",
+      "source_type": "commerce",
+      "source_category": "retail_offline",
+      "access": "public_web",
+      "tier": 2,
+      "quality": 4,
+      "cadence": "daily",
+      "domains": [
+        "retail",
+        "fashion",
+        "brand",
+        "consumer",
+        "commerce",
+        "korea",
+        "offline"
+      ],
+      "personas": [
+        "creator",
+        "founder",
+        "b2b-marketer"
+      ],
+      "geography": [
+        "korea"
+      ],
+      "selection_score": 18.27,
+      "notes": "Use public rankings, brand campaigns, store/pop-up language, and category movement as taste and retail execution signals."
+    },
+    {
+      "id": "todayhouse",
+      "name": "Todayhouse",
+      "url": "https://ohou.se/",
+      "source_type": "commerce",
+      "source_category": "retail_offline",
+      "access": "public_web",
+      "tier": 2,
+      "quality": 4,
+      "cadence": "daily",
+      "domains": [
+        "home",
+        "living",
+        "interior",
+        "lifestyle",
+        "consumer",
+        "korea",
+        "offline"
+      ],
+      "personas": [
+        "creator",
+        "founder",
+        "b2b-marketer"
+      ],
+      "geography": [
+        "korea"
+      ],
+      "selection_score": 16.14,
+      "notes": "Use public home/living trend surfaces to connect online taste with physical rooms, objects, storage, and routines."
+    },
+    {
+      "id": "sbiz-commercial-area",
+      "name": "Small Enterprise Commercial Area Information",
+      "url": "https://sg.sbiz.or.kr/",
+      "source_type": "real_estate",
+      "source_category": "real_estate",
+      "access": "public_web",
+      "tier": 1,
+      "quality": 5,
+      "cadence": "monthly",
+      "domains": [
+        "commercial-real-estate",
+        "local",
+        "retail",
+        "foot_traffic",
+        "lease",
+        "korea",
+        "offline",
+        "상권"
+      ],
+      "personas": [
+        "founder",
+        "investor-analyst",
+        "corporate-strategist",
+        "creator"
+      ],
+      "geography": [
+        "korea"
+      ],
+      "selection_score": 18.43,
+      "notes": "Use public commercial-area data to validate whether attention is changing local business density, category mix, or rent pressure."
+    },
+    {
+      "id": "kb-research",
+      "name": "KB Research",
+      "url": "https://www.kbfg.com/kbresearch",
+      "source_type": "public_report",
+      "access": "public_web",
+      "tier": 1,
+      "quality": 4,
+      "cadence": "monthly",
+      "domains": [
+        "korea",
+        "wealth",
+        "finance",
+        "consumer",
+        "real-estate"
+      ],
+      "personas": [
+        "investor-analyst",
+        "creator",
+        "b2b-marketer"
+      ],
+      "geography": [
+        "korea"
+      ],
+      "selection_score": 13.42,
+      "notes": "Useful for wealth reports, finance, real estate, and Korean consumer/investor behavior."
+    },
+    {
+      "id": "youtube-trends",
+      "name": "YouTube Culture & Trends",
+      "url": "https://www.youtube.com/trends/",
+      "source_type": "youtube",
+      "source_category": "content_ip",
+      "access": "public_web",
+      "tier": 2,
+      "quality": 4,
+      "cadence": "weekly",
+      "domains": [
+        "youtube",
+        "creator",
+        "content_ip",
+        "culture",
+        "consumer"
+      ],
+      "personas": [
+        "creator",
+        "b2b-marketer",
+        "founder"
+      ],
+      "geography": [
+        "global"
+      ],
+      "selection_score": 13.93,
+      "notes": "Use for platform-level trend analysis and creator economy context."
+    },
+    {
+      "id": "youtube-trending-kr",
+      "name": "YouTube Trending Korea",
+      "url": "https://www.youtube.com/feed/trending?gl=KR",
+      "source_type": "youtube",
+      "source_category": "social_trends",
+      "access": "public_web",
+      "tier": 3,
+      "quality": 3,
+      "cadence": "daily",
+      "domains": [
+        "youtube",
+        "trending",
+        "creator",
+        "content_ip",
+        "consumer",
+        "korea"
+      ],
+      "personas": [
+        "creator",
+        "founder",
+        "b2b-marketer"
+      ],
+      "geography": [
+        "korea"
+      ],
+      "selection_score": 14.66,
+      "notes": "Manual watchlist for Korean YouTube trending videos. Use titles, channels, descriptions, and visible metrics only; verify claims elsewhere."
+    },
+    {
+      "id": "google-trends-kr",
+      "name": "Google Trends Korea",
+      "url": "https://trends.google.com/trends/trendingsearches/daily?geo=KR",
+      "source_type": "public_data",
+      "source_category": "social_trends",
+      "access": "public_web",
+      "tier": 2,
+      "quality": 4,
+      "cadence": "daily",
+      "domains": [
+        "search",
+        "trending",
+        "consumer",
+        "korea",
+        "culture"
+      ],
+      "personas": [
+        "creator",
+        "founder",
+        "b2b-marketer",
+        "investor-analyst"
+      ],
+      "geography": [
+        "korea"
+      ],
+      "selection_score": 11.73,
+      "notes": "Use as public interest signal. Treat as demand discovery, not factual proof."
+    },
+    {
+      "id": "mobileindex",
+      "name": "Mobile Index",
+      "url": "https://www.mobileindex.com/",
+      "source_type": "public_report",
+      "source_category": "app_rankings",
+      "access": "public_web",
+      "tier": 2,
+      "quality": 4,
+      "cadence": "monthly",
+      "domains": [
+        "apps",
+        "mobile",
+        "rankings",
+        "consumer",
+        "korea"
+      ],
+      "personas": [
+        "creator",
+        "founder",
+        "b2b-marketer",
+        "investor-analyst"
+      ],
+      "geography": [
+        "korea"
+      ],
+      "selection_score": 11.37,
+      "notes": "Korean mobile app market watchlist. Use public charts or reports only."
+    }
+  ],
+  "watchlist_sources": [
+    {
+      "id": "opinsight",
+      "name": "OpenSurvey Trend Reports",
+      "url": "https://blog.opensurvey.co.kr/",
+      "source_type": "public_report",
+      "source_category": "consumer",
+      "access": "public_web",
+      "tier": 2,
+      "quality": 4,
+      "cadence": "monthly",
+      "domains": [
+        "consumer",
+        "korea",
+        "retail",
+        "survey",
+        "culture"
+      ],
+      "personas": [
+        "creator",
+        "founder",
+        "b2b-marketer"
+      ],
+      "geography": [
+        "korea"
+      ],
+      "selection_score": 14.34,
+      "notes": "Use public consumer trend reports for Korean market context."
+    },
+    {
+      "id": "kosis",
+      "name": "KOSIS",
+      "url": "https://kosis.kr/",
+      "source_type": "public_data",
+      "access": "public_web",
+      "tier": 1,
+      "quality": 5,
+      "cadence": "monthly",
+      "domains": [
+        "korea",
+        "statistics",
+        "macro",
+        "consumer"
+      ],
+      "personas": [
+        "investor-analyst",
+        "corporate-strategist",
+        "creator"
+      ],
+      "geography": [
+        "korea"
+      ],
+      "selection_score": 13.69,
+      "notes": "Primary Korean statistics. Use for grounding narratives in data."
+    },
+    {
+      "id": "mckinsey-insights",
+      "name": "McKinsey Insights",
+      "url": "https://www.mckinsey.com/featured-insights",
+      "source_type": "public_report",
+      "access": "public_web",
+      "tier": 2,
+      "quality": 4,
+      "cadence": "weekly",
+      "domains": [
+        "business",
+        "strategy",
+        "ai",
+        "operations",
+        "consumer"
+      ],
+      "personas": [
+        "corporate-strategist",
+        "b2b-marketer",
+        "investor-analyst"
+      ],
+      "geography": [
+        "global"
+      ],
+      "selection_score": 8.7,
+      "notes": "Useful for corporate strategy framing; watch for generic claims."
+    },
+    {
+      "id": "nvidia-nemotron-personas-korea",
+      "name": "NVIDIA Nemotron-Personas-Korea",
+      "url": "https://huggingface.co/datasets/nvidia/Nemotron-Personas-Korea",
+      "source_type": "persona_data",
+      "source_category": "persona_data",
+      "access": "public_web",
+      "tier": 1,
+      "quality": 5,
+      "cadence": "monthly",
+      "domains": [
+        "persona",
+        "personas",
+        "synthetic-persona",
+        "demographic",
+        "korea",
+        "nemotron",
+        "nvidia",
+        "sovereign_ai",
+        "dataset"
+      ],
+      "personas": [
+        "founder",
+        "creator",
+        "b2b-marketer",
+        "investor-analyst",
+        "corporate-strategist"
+      ],
+      "geography": [
+        "korea"
+      ],
+      "selection_score": 17.14,
+      "notes": "Open synthetic Korean persona dataset. Use as an interpretation and scenario-testing layer, not a substitute for user research, surveys, or transaction data."
+    },
+    {
+      "id": "nvidia-korea-personas-blog",
+      "name": "NVIDIA Korea Personas Article",
+      "url": "https://blogs.nvidia.co.kr/blog/nemotron-personas-korea/",
+      "source_type": "official_blog",
+      "source_category": "persona_data",
+      "access": "public_web",
+      "tier": 1,
+      "quality": 5,
+      "cadence": "monthly",
+      "domains": [
+        "persona",
+        "personas",
+        "synthetic-persona",
+        "korea",
+        "nemotron",
+        "nvidia",
+        "huggingface",
+        "dataset"
+      ],
+      "personas": [
+        "founder",
+        "creator",
+        "b2b-marketer",
+        "investor-analyst",
+        "corporate-strategist"
+      ],
+      "geography": [
+        "korea"
+      ],
+      "selection_score": 15.49,
+      "notes": "Official Korean article explaining Nemotron-Personas-Korea. Use for source-backed description and caveats."
+    },
+    {
+      "id": "nvidia-korea-blog",
+      "name": "NVIDIA Blog Korea",
+      "url": "https://blogs.nvidia.co.kr/",
+      "source_type": "official_blog",
+      "source_category": "nvidia_ecosystem",
+      "access": "public_web",
+      "tier": 1,
+      "quality": 5,
+      "cadence": "daily",
+      "domains": [
+        "nvidia",
+        "korea",
+        "nemotron",
+        "developer",
+        "sovereign_ai",
+        "physical_ai",
+        "gpu",
+        "enterprise",
+        "ai"
+      ],
+      "personas": [
+        "founder",
+        "creator",
+        "investor-analyst",
+        "corporate-strategist"
+      ],
+      "geography": [
+        "korea"
+      ],
+      "selection_score": 18.52,
+      "notes": "Official NVIDIA Korea blog. Use for Korean AI developer ecosystem, Nemotron, sovereign AI, physical AI, and enterprise deployment signals."
+    },
+    {
+      "id": "nvidia-ai-day-seoul",
+      "name": "NVIDIA AI Day Seoul",
+      "url": "https://blogs.nvidia.com/blog/ai-day-seoul/",
+      "source_type": "ecosystem_data",
+      "source_category": "nvidia_ecosystem",
+      "access": "public_web",
+      "tier": 1,
+      "quality": 5,
+      "cadence": "annual",
+      "domains": [
+        "nvidia",
+        "korea",
+        "developer",
+        "startup",
+        "inception",
+        "physical_ai",
+        "agentic_ai",
+        "sovereign_ai",
+        "ecosystem"
+      ],
+      "personas": [
+        "founder",
+        "investor-analyst",
+        "corporate-strategist",
+        "creator"
+      ],
+      "geography": [
+        "korea"
+      ],
+      "selection_score": 17.2,
+      "notes": "Use for Korean NVIDIA developer, startup, enterprise, and AI Day ecosystem signals."
+    },
+    {
+      "id": "nvidia-korea-ai-infrastructure",
+      "name": "NVIDIA Korea AI Infrastructure Newsroom",
+      "url": "https://nvidianews.nvidia.com/news/south-korea-ai-infrastructure",
+      "source_type": "public_report",
+      "source_category": "nvidia_ecosystem",
+      "access": "public_web",
+      "tier": 1,
+      "quality": 5,
+      "cadence": "monthly",
+      "domains": [
+        "nvidia",
+        "korea",
+        "gpu",
+        "ai-factory",
+        "sovereign_ai",
+        "physical_ai",
+        "manufacturing",
+        "robotics",
+        "infrastructure"
+      ],
+      "personas": [
+        "founder",
+        "investor-analyst",
+        "corporate-strategist"
+      ],
+      "geography": [
+        "korea"
+      ],
+      "selection_score": 14.85,
+      "notes": "Use for Korea AI infrastructure, AI factories, sovereign cloud, physical AI, manufacturing, and robotics signals."
+    },
+    {
+      "id": "youtube-kr-vlog-routes",
+      "name": "YouTube Korea Vlog Routes",
+      "url": "https://www.youtube.com/results?search_query=%ED%95%9C%EA%B5%AD+%EB%8D%B0%EC%9D%B4%ED%8A%B8+%EC%BD%94%EC%8A%A4+%EB%B8%8C%EC%9D%B4%EB%A1%9C%EA%B7%B8",
+      "source_type": "youtube",
+      "source_category": "physical_world",
+      "access": "public_web",
+      "tier": 3,
+      "quality": 4,
+      "cadence": "daily",
+      "domains": [
+        "youtube",
+        "vlog",
+        "shorts",
+        "creator_route",
+        "space",
+        "place",
+        "food",
+        "cafe",
+        "retail",
+        "consumer",
+        "korea",
+        "offline"
+      ],
+      "personas": [
+        "creator",
+        "founder",
+        "b2b-marketer"
+      ],
+      "geography": [
+        "korea"
+      ],
+      "selection_score": 25.52,
+      "notes": "Manual watchlist for public Korean vlogs and route videos. Use titles, descriptions, visible chapters, locations, and repeated visit sequences; treat claims as weak until verified with maps, reservations, or public data."
+    },
+    {
+      "id": "seoul-open-data",
+      "name": "Seoul Open Data Plaza",
+      "url": "https://data.seoul.go.kr/",
+      "source_type": "public_data",
+      "source_category": "physical_world",
+      "access": "public_web",
+      "tier": 1,
+      "quality": 5,
+      "cadence": "monthly",
+      "domains": [
+        "space",
+        "mobility",
+        "foot_traffic",
+        "local",
+        "consumer",
+        "korea",
+        "offline"
+      ],
+      "personas": [
+        "creator",
+        "founder",
+        "investor-analyst",
+        "corporate-strategist"
+      ],
+      "geography": [
+        "korea"
+      ],
+      "selection_score": 19.18,
+      "notes": "Primary public data source for Seoul mobility, local business, population, and facility datasets. Use to ground spatial narratives."
+    },
+    {
+      "id": "youtube-kr-place-shorts",
+      "name": "YouTube Korea Place Shorts",
+      "url": "https://www.youtube.com/results?search_query=%EC%84%9C%EC%9A%B8+%ED%95%AB%ED%94%8C+%EC%87%BC%EC%B8%A0",
+      "source_type": "youtube",
+      "source_category": "physical_world",
+      "access": "public_web",
+      "tier": 3,
+      "quality": 3,
+      "cadence": "daily",
+      "domains": [
+        "youtube",
+        "shorts",
+        "trending",
+        "space",
+        "place",
+        "restaurant",
+        "cafe",
+        "popup",
+        "photo",
+        "consumer",
+        "korea",
+        "offline"
+      ],
+      "personas": [
+        "creator",
+        "founder",
+        "b2b-marketer"
+      ],
+      "geography": [
+        "korea"
+      ],
+      "selection_score": 19.1,
+      "notes": "Manual weak-signal source for place-based Shorts. Track repeated places, camera sequence, waiting language, and comments asking for location; verify elsewhere before strong claims."
+    },
+    {
+      "id": "instagram-public-geotags",
+      "name": "Instagram Public Geotags",
+      "url": "https://www.instagram.com/explore/locations/",
+      "source_type": "social_signal",
+      "source_category": "physical_world",
+      "access": "public_web",
+      "tier": 3,
+      "quality": 3,
+      "cadence": "daily",
+      "domains": [
+        "space",
+        "place",
+        "photos",
+        "geotag",
+        "consumer",
+        "creator",
+        "korea",
+        "offline"
+      ],
+      "personas": [
+        "creator",
+        "founder",
+        "b2b-marketer"
+      ],
+      "geography": [
+        "korea",
+        "global"
+      ],
+      "selection_score": 16.73,
+      "notes": "Weak visual signal. Use public geotag pages or user-provided links only. Track what people photograph, not private account content."
+    },
+    {
+      "id": "naver-map-place-reviews",
+      "name": "Naver Map Place Reviews",
+      "url": "https://map.naver.com/",
+      "source_type": "map_review",
+      "source_category": "spatial_reviews",
+      "access": "public_web",
+      "tier": 2,
+      "quality": 4,
+      "cadence": "daily",
+      "domains": [
+        "space",
+        "place",
+        "reviews",
+        "photos",
+        "foot_traffic",
+        "consumer",
+        "korea",
+        "offline"
+      ],
+      "personas": [
+        "creator",
+        "founder",
+        "b2b-marketer",
+        "corporate-strategist"
+      ],
+      "geography": [
+        "korea"
+      ],
+      "selection_score": 19.92,
+      "notes": "Manual watchlist. Use public place pages, review counts, recent review language, photo patterns, and nearby clusters only. Do not bypass login, rate limits, or copy full reviews."
+    },
+    {
+      "id": "kakao-map-place-reviews",
+      "name": "Kakao Map Place Reviews",
+      "url": "https://map.kakao.com/",
+      "source_type": "map_review",
+      "source_category": "spatial_reviews",
+      "access": "public_web",
+      "tier": 2,
+      "quality": 4,
+      "cadence": "daily",
+      "domains": [
+        "space",
+        "place",
+        "reviews",
+        "photos",
+        "mobility",
+        "consumer",
+        "korea",
+        "offline"
+      ],
+      "personas": [
+        "creator",
+        "founder",
+        "b2b-marketer",
+        "corporate-strategist"
+      ],
+      "geography": [
+        "korea"
+      ],
+      "selection_score": 18.27,
+      "notes": "Manual watchlist for cross-checking Naver Map. Compare review language, route context, hours, parking, waiting, and local repeat-visit cues."
+    },
+    {
+      "id": "catchtable",
+      "name": "CatchTable",
+      "url": "https://www.catchtable.co.kr/",
+      "source_type": "reservation",
+      "source_category": "reservation",
+      "access": "public_web",
+      "tier": 2,
+      "quality": 4,
+      "cadence": "daily",
+      "domains": [
+        "reservation",
+        "restaurant",
+        "waiting",
+        "queue",
+        "consumer",
+        "korea",
+        "offline"
+      ],
+      "personas": [
+        "creator",
+        "founder",
+        "b2b-marketer"
+      ],
+      "geography": [
+        "korea"
+      ],
+      "selection_score": 17.82,
+      "notes": "Use visible reservation availability, waiting, region/category clustering, and public descriptions as demand signals. Do not automate booking or access logged-in data."
+    },
+    {
+      "id": "tabling",
+      "name": "Tabling",
+      "url": "https://www.tabling.co.kr/",
+      "source_type": "reservation",
+      "source_category": "reservation",
+      "access": "public_web",
+      "tier": 2,
+      "quality": 4,
+      "cadence": "daily",
+      "domains": [
+        "waiting",
+        "queue",
+        "restaurant",
+        "reservation",
+        "consumer",
+        "korea",
+        "offline"
+      ],
+      "personas": [
+        "creator",
+        "founder",
+        "b2b-marketer"
+      ],
+      "geography": [
+        "korea"
+      ],
+      "selection_score": 17.64,
+      "notes": "Use visible waiting/queue and restaurant discovery surfaces as weak demand signals. Verify with map reviews, social posts, and repeat observations."
+    },
+    {
+      "id": "29cm",
+      "name": "29CM",
+      "url": "https://www.29cm.co.kr/",
+      "source_type": "commerce",
+      "source_category": "retail_offline",
+      "access": "public_web",
+      "tier": 2,
+      "quality": 4,
+      "cadence": "daily",
+      "domains": [
+        "retail",
+        "brand",
+        "lifestyle",
+        "consumer",
+        "commerce",
+        "korea",
+        "offline"
+      ],
+      "personas": [
+        "creator",
+        "founder",
+        "b2b-marketer"
+      ],
+      "geography": [
+        "korea"
+      ],
+      "selection_score": 19.92,
+      "notes": "Use public curation, ranking, brand language, and offline pop-up/store signals to read lifestyle taste shifts."
+    },
+    {
+      "id": "musinsa",
+      "name": "Musinsa",
+      "url": "https://www.musinsa.com/",
+      "source_type": "commerce",
+      "source_category": "retail_offline",
+      "access": "public_web",
+      "tier": 2,
+      "quality": 4,
+      "cadence": "daily",
+      "domains": [
+        "retail",
+        "fashion",
+        "brand",
+        "consumer",
+        "commerce",
+        "korea",
+        "offline"
+      ],
+      "personas": [
+        "creator",
+        "founder",
+        "b2b-marketer"
+      ],
+      "geography": [
+        "korea"
+      ],
+      "selection_score": 18.27,
+      "notes": "Use public rankings, brand campaigns, store/pop-up language, and category movement as taste and retail execution signals."
+    },
+    {
+      "id": "todayhouse",
+      "name": "Todayhouse",
+      "url": "https://ohou.se/",
+      "source_type": "commerce",
+      "source_category": "retail_offline",
+      "access": "public_web",
+      "tier": 2,
+      "quality": 4,
+      "cadence": "daily",
+      "domains": [
+        "home",
+        "living",
+        "interior",
+        "lifestyle",
+        "consumer",
+        "korea",
+        "offline"
+      ],
+      "personas": [
+        "creator",
+        "founder",
+        "b2b-marketer"
+      ],
+      "geography": [
+        "korea"
+      ],
+      "selection_score": 16.14,
+      "notes": "Use public home/living trend surfaces to connect online taste with physical rooms, objects, storage, and routines."
+    },
+    {
+      "id": "sbiz-commercial-area",
+      "name": "Small Enterprise Commercial Area Information",
+      "url": "https://sg.sbiz.or.kr/",
+      "source_type": "real_estate",
+      "source_category": "real_estate",
+      "access": "public_web",
+      "tier": 1,
+      "quality": 5,
+      "cadence": "monthly",
+      "domains": [
+        "commercial-real-estate",
+        "local",
+        "retail",
+        "foot_traffic",
+        "lease",
+        "korea",
+        "offline",
+        "상권"
+      ],
+      "personas": [
+        "founder",
+        "investor-analyst",
+        "corporate-strategist",
+        "creator"
+      ],
+      "geography": [
+        "korea"
+      ],
+      "selection_score": 18.43,
+      "notes": "Use public commercial-area data to validate whether attention is changing local business density, category mix, or rent pressure."
+    },
+    {
+      "id": "kb-research",
+      "name": "KB Research",
+      "url": "https://www.kbfg.com/kbresearch",
+      "source_type": "public_report",
+      "access": "public_web",
+      "tier": 1,
+      "quality": 4,
+      "cadence": "monthly",
+      "domains": [
+        "korea",
+        "wealth",
+        "finance",
+        "consumer",
+        "real-estate"
+      ],
+      "personas": [
+        "investor-analyst",
+        "creator",
+        "b2b-marketer"
+      ],
+      "geography": [
+        "korea"
+      ],
+      "selection_score": 13.42,
+      "notes": "Useful for wealth reports, finance, real estate, and Korean consumer/investor behavior."
+    },
+    {
+      "id": "youtube-trends",
+      "name": "YouTube Culture & Trends",
+      "url": "https://www.youtube.com/trends/",
+      "source_type": "youtube",
+      "source_category": "content_ip",
+      "access": "public_web",
+      "tier": 2,
+      "quality": 4,
+      "cadence": "weekly",
+      "domains": [
+        "youtube",
+        "creator",
+        "content_ip",
+        "culture",
+        "consumer"
+      ],
+      "personas": [
+        "creator",
+        "b2b-marketer",
+        "founder"
+      ],
+      "geography": [
+        "global"
+      ],
+      "selection_score": 13.93,
+      "notes": "Use for platform-level trend analysis and creator economy context."
+    },
+    {
+      "id": "kocca-reports",
+      "name": "KOCCA Reports",
+      "url": "https://www.kocca.kr/",
+      "source_type": "public_report",
+      "source_category": "content_ip",
+      "access": "public_web",
+      "tier": 1,
+      "quality": 4,
+      "cadence": "monthly",
+      "domains": [
+        "content_ip",
+        "korea",
+        "creator",
+        "gaming",
+        "entertainment"
+      ],
+      "personas": [
+        "creator",
+        "founder",
+        "b2b-marketer",
+        "investor-analyst"
+      ],
+      "geography": [
+        "korea"
+      ],
+      "selection_score": 13.87,
+      "notes": "Primary Korean content industry source. Use for IP, games, media, and creator economy context."
+    },
+    {
+      "id": "youtube-trending-kr",
+      "name": "YouTube Trending Korea",
+      "url": "https://www.youtube.com/feed/trending?gl=KR",
+      "source_type": "youtube",
+      "source_category": "social_trends",
+      "access": "public_web",
+      "tier": 3,
+      "quality": 3,
+      "cadence": "daily",
+      "domains": [
+        "youtube",
+        "trending",
+        "creator",
+        "content_ip",
+        "consumer",
+        "korea"
+      ],
+      "personas": [
+        "creator",
+        "founder",
+        "b2b-marketer"
+      ],
+      "geography": [
+        "korea"
+      ],
+      "selection_score": 14.66,
+      "notes": "Manual watchlist for Korean YouTube trending videos. Use titles, channels, descriptions, and visible metrics only; verify claims elsewhere."
+    },
+    {
+      "id": "google-trends-kr",
+      "name": "Google Trends Korea",
+      "url": "https://trends.google.com/trends/trendingsearches/daily?geo=KR",
+      "source_type": "public_data",
+      "source_category": "social_trends",
+      "access": "public_web",
+      "tier": 2,
+      "quality": 4,
+      "cadence": "daily",
+      "domains": [
+        "search",
+        "trending",
+        "consumer",
+        "korea",
+        "culture"
+      ],
+      "personas": [
+        "creator",
+        "founder",
+        "b2b-marketer",
+        "investor-analyst"
+      ],
+      "geography": [
+        "korea"
+      ],
+      "selection_score": 11.73,
+      "notes": "Use as public interest signal. Treat as demand discovery, not factual proof."
+    },
+    {
+      "id": "venturesquare",
+      "name": "Venturesquare",
+      "url": "https://www.venturesquare.net/",
+      "source_type": "media",
+      "access": "public_web",
+      "tier": 2,
+      "quality": 4,
+      "cadence": "daily",
+      "domains": [
+        "korea",
+        "startup",
+        "funding",
+        "business"
+      ],
+      "personas": [
+        "founder",
+        "investor-analyst",
+        "creator"
+      ],
+      "geography": [
+        "korea"
+      ],
+      "selection_score": 11.55,
+      "notes": "Korean startup ecosystem and funding coverage."
+    },
+    {
+      "id": "startup-alliance",
+      "name": "Startup Alliance Korea",
+      "url": "https://startupall.kr/",
+      "source_type": "ecosystem_org",
+      "access": "public_web",
+      "tier": 1,
+      "quality": 4,
+      "cadence": "weekly",
+      "domains": [
+        "korea",
+        "startup",
+        "policy",
+        "ecosystem"
+      ],
+      "personas": [
+        "founder",
+        "investor-analyst",
+        "corporate-strategist"
+      ],
+      "geography": [
+        "korea"
+      ],
+      "selection_score": 10.38,
+      "notes": "Use for ecosystem reports, startup policy, and Korea market context."
+    },
+    {
+      "id": "platum",
+      "name": "Platum",
+      "url": "https://platum.kr/",
+      "source_type": "media",
+      "access": "public_web",
+      "tier": 2,
+      "quality": 4,
+      "cadence": "daily",
+      "domains": [
+        "korea",
+        "startup",
+        "funding",
+        "business"
+      ],
+      "personas": [
+        "founder",
+        "investor-analyst",
+        "b2b-marketer"
+      ],
+      "geography": [
+        "korea"
+      ],
+      "selection_score": 9.62,
+      "notes": "Korean startup news and funding signal."
+    },
+    {
+      "id": "apple-app-store-top-free-kr",
+      "name": "Apple App Store Top Free Korea",
+      "url": "https://www.apple.com/kr/app-store/",
+      "api_url": "https://rss.applemarketingtools.com/api/v2/kr/apps/top-free/50/apps.json",
+      "source_type": "app_rankings",
+      "source_category": "app_rankings",
+      "access": "public_api",
+      "tier": 2,
+      "quality": 4,
+      "cadence": "daily",
+      "domains": [
+        "apps",
+        "rankings",
+        "consumer",
+        "product",
+        "korea"
+      ],
+      "personas": [
+        "creator",
+        "founder",
+        "b2b-marketer",
+        "investor-analyst"
+      ],
+      "geography": [
+        "korea"
+      ],
+      "selection_score": 11.64,
+      "notes": "Fetchable public ranking source. Use rank movement as product-discovery signal, not proof of revenue."
+    },
+    {
+      "id": "bank-of-korea",
+      "name": "Bank of Korea",
+      "url": "https://www.bok.or.kr/",
+      "source_type": "public_report",
+      "access": "public_web",
+      "tier": 1,
+      "quality": 5,
+      "cadence": "weekly",
+      "domains": [
+        "korea",
+        "macro",
+        "finance",
+        "economy"
+      ],
+      "personas": [
+        "investor-analyst",
+        "corporate-strategist",
+        "creator"
+      ],
+      "geography": [
+        "korea"
+      ],
+      "selection_score": 11.62,
+      "notes": "Primary macroeconomic source for Korea."
+    },
+    {
+      "id": "mobileindex",
+      "name": "Mobile Index",
+      "url": "https://www.mobileindex.com/",
+      "source_type": "public_report",
+      "source_category": "app_rankings",
+      "access": "public_web",
+      "tier": 2,
+      "quality": 4,
+      "cadence": "monthly",
+      "domains": [
+        "apps",
+        "mobile",
+        "rankings",
+        "consumer",
+        "korea"
+      ],
+      "personas": [
+        "creator",
+        "founder",
+        "b2b-marketer",
+        "investor-analyst"
+      ],
+      "geography": [
+        "korea"
+      ],
+      "selection_score": 11.37,
+      "notes": "Korean mobile app market watchlist. Use public charts or reports only."
+    },
+    {
+      "id": "apple-app-store-top-paid-kr",
+      "name": "Apple App Store Top Paid Korea",
+      "url": "https://www.apple.com/kr/app-store/",
+      "api_url": "https://rss.applemarketingtools.com/api/v2/kr/apps/top-paid/50/apps.json",
+      "source_type": "app_rankings",
+      "source_category": "app_rankings",
+      "access": "public_api",
+      "tier": 2,
+      "quality": 4,
+      "cadence": "daily",
+      "domains": [
+        "apps",
+        "rankings",
+        "consumer",
+        "paid",
+        "korea"
+      ],
+      "personas": [
+        "creator",
+        "founder",
+        "b2b-marketer",
+        "investor-analyst"
+      ],
+      "geography": [
+        "korea"
+      ],
+      "selection_score": 11.19,
+      "notes": "Fetchable public paid-app ranking source. Combine with reviews, downloads, and category context before drawing conclusions."
+    },
+    {
+      "id": "lenny-newsletter",
+      "name": "Lenny's Newsletter",
+      "url": "https://www.lennysnewsletter.com/",
+      "source_type": "newsletter",
+      "access": "public_web",
+      "tier": 2,
+      "quality": 5,
+      "cadence": "weekly",
+      "domains": [
+        "product",
+        "growth",
+        "startup",
+        "operator"
+      ],
+      "personas": [
+        "founder",
+        "b2b-marketer",
+        "creator"
+      ],
+      "geography": [
+        "global"
+      ],
+      "selection_score": 9.55,
+      "notes": "Use public posts only. Strong for product/growth practice and content angles."
+    },
+    {
+      "id": "a16z",
+      "name": "a16z",
+      "url": "https://a16z.com",
+      "source_type": "vc_blog",
+      "access": "public_web",
+      "tier": 1,
+      "quality": 5,
+      "cadence": "weekly",
+      "domains": [
+        "vc",
+        "ai",
+        "business",
+        "market",
+        "crypto",
+        "enterprise"
+      ],
+      "personas": [
+        "founder",
+        "investor-analyst",
+        "b2b-marketer",
+        "creator"
+      ],
+      "geography": [
+        "global"
+      ],
+      "selection_score": 9.47,
+      "notes": "High-quality narrative and market map source. Feed path changes; keep as watchlist until verified."
+    }
+  ]
+}

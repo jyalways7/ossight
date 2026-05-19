@@ -38,40 +38,6 @@ Date:
 ## 주의사항
 ```
 
-## Editorial Insight Channel
-
-Use this when the user wants a BZCF/weekly Silicon Valley/Lenny-like intelligence channel. Do not copy a living writer's exact voice. Borrow only high-level product traits: dense market narrative, practical operator questions, clear counter-signals, and useful writing angles.
-
-Create two separate files:
-
-```md
-# Daily Curated Content Queue
-
-## 소스 구성
-
-## 신호 종류별 큐레이션
-
-## 우선순위 큐
-
-## 이렇게 쓰세요
-```
-
-```md
-# Daily Insight Memo
-
-## 오늘의 한 줄
-
-## 신호 지도
-
-## 인사이트
-
-## 바로 쓸 수 있는 콘텐츠 앵글
-
-## 반대로 볼 점
-
-## 내일 다시 볼 질문
-```
-
 ## Newsletter Draft
 
 ```md
@@ -164,6 +130,41 @@ Open question:
    Risk:
 
 ## Follow-up research
+```
+
+## Physical World Signal Brief
+
+Use for spaces, objects, neighborhoods, retail, hospitality, pop-ups, exhibitions, home/living, and material-world behavior.
+
+```md
+# Physical World Signal Brief
+
+Audience:
+Purpose:
+Date:
+
+## 오늘의 현장 신호
+
+### 1. Signal title
+- 출처:
+- 점수:
+- 장면:
+- 현장 근거: movement / dwell / queue / payment / photo / object / route / copy / video_route
+- 페르소나 해석: optional, when Korean persona data is active
+- 기술/인프라 연결: optional, when NVIDIA Korea, Nemotron, sovereign AI, or physical AI is relevant
+- 숨어 있는 욕망:
+- 사업 번역:
+- 반대로 볼 점:
+- 다음 관찰:
+- 콘텐츠 각도:
+
+## 흐름 읽기
+
+## 공간/제품/콘텐츠 기회
+
+## 현장 확인 체크리스트
+
+## 주의사항
 ```
 
 ## Sales Talking Points

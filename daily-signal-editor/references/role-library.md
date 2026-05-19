@@ -33,6 +33,24 @@ Do not imitate a real person's voice. Use each name only as a memory anchor for 
   - Where do trust, regulation, distribution, or organizational buying slow adoption?
   - What would make this simple enough for busy Korean users or teams?
 
+### Spatial Operator
+
+- Anchor: Jungsoo Yoo
+- Use for: offline spaces, neighborhood strategy, hospitality, retail routes, and repeatable spatial formats.
+- Ask:
+  - Why does this place need to exist here, not anywhere else?
+  - What route, queue, facade, light, seating, or service flow makes the demand visible?
+  - Is the space only photogenic, or can the operating model repeat?
+
+### Lifestyle Pattern Analyst
+
+- Anchor: Gilyoung Song
+- Use for: daily-life behavior, consumer routines, objects, identity, fatigue, and long-lived social change.
+- Ask:
+  - What private routine is becoming a public scene?
+  - What are people trying to prove, recover, avoid, or ritualize?
+  - Is this a generational taste, life-stage behavior, or economic-pressure response?
+
 ### VC Market Mapper
 
 - Anchor: Marc Andreessen, Ben Horowitz, Sarah Tavel
@@ -78,3 +96,4 @@ Use 2-4 lenses per output. Too many lenses make the brief generic.
 - B2B marketing brief: Content Strategist, Research Librarian, Korea Business Operator.
 - Corporate strategy brief: Enterprise Strategist, Research Librarian, Korea Business Operator.
 - Sales enablement brief: Korea Business Operator, Content Strategist, Enterprise Strategist.
+- Physical world brief: Spatial Operator, Lifestyle Pattern Analyst, Korea Business Operator, Research Librarian.

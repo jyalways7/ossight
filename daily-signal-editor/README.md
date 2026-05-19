@@ -22,69 +22,6 @@ Daily Signal Editor는 공개 소스, RSS, 리포트 링크, 사용자가 제공
 - 브리프, 뉴스레터 초안, 콘텐츠 앵글, 리서치 메모, Slack 팀 업데이트, 전략 회의 안건 형태로 바꿉니다.
 - 출처 링크, 저작권, paywall, 투자 조언 리스크를 함께 확인합니다.
 
-## 2분 Quickstart
-
-처음이라면 mock data로 먼저 감을 잡으세요. 네트워크 없이 바로 실행됩니다.
-
-```bash
-python3 scripts/build_digest.py \
-  --sources mock-data/sample-sources.json \
-  --items mock-data/sample-items.json \
-  --profile mock-data/sample-user-profile.json \
-  --output /tmp/daily-signal-brief.md
-
-python3 scripts/validate_digest.py /tmp/daily-signal-brief.md
-```
-
-오늘의 실제 공개 RSS와 앱 순위를 섞어 큐레이션/인사이트 채널을 만들고 싶다면 아래 순서로 실행합니다.
-
-```bash
-python3 scripts/plan_sources.py \
-  --registry mock-data/source-registry.json \
-  --profile mock-data/profiles/editorial-insight-channel.json \
-  --output /tmp/source-plan.json \
-  --rss-output /tmp/rss-sources.json \
-  --app-output /tmp/app-sources.json \
-  --manual-output /tmp/manual-sources.json \
-  --max-sources 36 \
-  --max-per-type 8
-
-python3 scripts/fetch_rss.py \
-  --sources /tmp/rss-sources.json \
-  --output /tmp/rss-items.json \
-  --max-items-per-source 8 \
-  --no-enrich-pages
-
-python3 scripts/fetch_app_rankings.py \
-  --sources /tmp/app-sources.json \
-  --output /tmp/app-items.json \
-  --max-items-per-source 8
-
-python3 scripts/merge_items.py \
-  --output /tmp/merged-items.json \
-  /tmp/rss-items.json \
-  /tmp/app-items.json \
-  mock-data/manual-social-signals.json
-
-python3 scripts/build_curated_list.py \
-  --sources /tmp/source-plan.json \
-  --items /tmp/merged-items.json \
-  --profile mock-data/profiles/editorial-insight-channel.json \
-  --output /tmp/today-signal-curation.md \
-  --limit 50 \
-  --max-per-source 7 \
-  --max-per-primary-topic 14
-
-python3 scripts/build_insight_memo.py \
-  --sources /tmp/source-plan.json \
-  --items /tmp/merged-items.json \
-  --profile mock-data/profiles/editorial-insight-channel.json \
-  --output /tmp/today-signal-insights.md \
-  --max-signals 14
-```
-
-결과물은 두 개입니다. `/tmp/today-signal-curation.md`는 오늘의 신호 큐레이션, `/tmp/today-signal-insights.md`는 그 신호에서 뽑은 인사이트 메모입니다.
-
 ## 매일 쏟아지는 정보, 정작 내 사업에 쓸 건 없나요?
 
 정보가 부족해서가 아니라, **정리할 시간이 부족해서** 놓치는 기회가 너무 많으니까요.
@@ -191,6 +128,34 @@ Daily Signal Editor가 이 모든 반복적인 업무를 대신해 드릴게요.
 }
 ```
 
+현장성이 있는 세계관, 공간, 리테일, 로컬 상권, 생활 루틴을 보고 싶다면 이런 preset을 씁니다.
+
+```json
+{
+  "audience": "한국 창업자 겸 공간/생활 트렌드 에디터",
+  "purpose": "현장성이 있는 세계관의 수요, 동선, 공간, 리테일, 생활 루틴 신호 발굴",
+  "domains": ["physical_world", "space", "place", "offline", "foot_traffic", "reservation", "retail", "persona_data", "nvidia_ecosystem", "sovereign_ai", "physical_ai", "youtube", "vlog", "shorts", "lifestyle", "real_estate", "korea"],
+  "source_category_mix": {
+    "physical_world": 5,
+    "persona_data": 3,
+    "nvidia_ecosystem": 3,
+    "sovereign_ai": 2,
+    "physical_ai": 2,
+    "spatial_reviews": 4,
+    "reservation": 4,
+    "retail_offline": 4,
+    "real_estate": 3,
+    "consumer": 3,
+    "social_trends": 3,
+    "content_ip": 3,
+    "korea": 3
+  },
+  "output_mode": "physical world signal brief plus space, product, and content angles"
+}
+```
+
+이 모드는 말을 먼저 보지 않고 장면을 먼저 봅니다. 사람들이 어디로 이동하는지, 어디서 머무는지, 무엇을 위해 기다리는지, 무엇을 찍는지, 어떤 물건과 공간에 돈을 내는지부터 기록합니다. YouTube 브이로그와 쇼츠는 특히 중요하게 봅니다. 장소 하나보다 방문 순서, 코스, 입장 장면, 대기 언어가 드러나기 때문입니다. NVIDIA Korea와 Nemotron-Personas-Korea는 관찰된 장면을 한국 페르소나별 제품/공간/AI 에이전트 시나리오로 분해하는 보조 레이어로 씁니다.
+
 ## 대화하듯 쉽게 요청해보세요
 
 Codex에서 이렇게 요청합니다.
@@ -217,6 +182,7 @@ $daily-signal-editor를 사용해서 한국 창업자이자 투자자 관점의 
 - 긴 글/블로그/리포트 아웃라인.
 - 투자 리서치용 watchlist theme.
 - 한국 시장에 맞춘 글로벌 VC 글 해석.
+- 현장성이 있는 공간/리테일/상권 신호 해석.
 - 사내 공유용 Slack 업데이트.
 - 주간 전략 회의 안건.
 - 고객 미팅 전 B2B 세일즈 대화 포인트.
@@ -432,7 +398,7 @@ python3 scripts/plan_sources.py \
   --rss-output /tmp/market-rss-sources.json \
   --app-output /tmp/market-app-sources.json \
   --manual-output /tmp/market-manual-sources.json \
-  --max-sources 36 \
+  --max-sources 32 \
   --max-per-type 8
 
 python3 scripts/fetch_app_rankings.py \
@@ -463,30 +429,6 @@ python3 scripts/build_curated_list.py \
 ```
 
 X, Threads, YouTube 인급동은 로그인 우회나 무단 스크래핑을 하지 않습니다. 공개 링크, 공개 제목/설명, 사용자가 제공한 excerpt를 약한 신호로만 사용하고, 중요한 주장은 리포트나 1차 출처로 다시 확인합니다.
-
-### Editorial insight channel
-
-BZCF, 주간 실리콘밸리, Lenny's Newsletter 같은 채널에서 배울 점은 특정 문체 복제가 아니라, 밀도 높은 시장 해석, 실전 질문, 반대 근거, 바로 쓸 수 있는 콘텐츠 앵글입니다. 이 모드는 두 문서를 만듭니다.
-
-```bash
-python3 scripts/build_curated_list.py \
-  --sources examples/market-trend-source-plan.json \
-  --items /tmp/market-merged-items.json \
-  --profile mock-data/profiles/editorial-insight-channel.json \
-  --output examples/today-signal-curation.md \
-  --limit 50 \
-  --max-per-source 7 \
-  --max-per-primary-topic 14
-
-python3 scripts/build_insight_memo.py \
-  --sources examples/market-trend-source-plan.json \
-  --items /tmp/market-merged-items.json \
-  --profile mock-data/profiles/editorial-insight-channel.json \
-  --output examples/today-signal-insights.md \
-  --max-signals 14
-```
-
-첫 번째 문서는 오늘의 신호를 종류별로 큐레이션합니다. 두 번째 문서는 그 신호를 시장/제품/콘텐츠 인사이트로 바꿉니다.
 
 ## 앞으로 더 똑똑해질 계획이에요
 

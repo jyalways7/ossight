@@ -11,7 +11,7 @@
     "business_impact": 5,
     "novelty": 4,
     "content_potential": 5,
-    "why_it_matters": "AI 제품의 가치는 한 번 답을 잘하는 것보다 반복 업무를 안정적으로 줄이는 쪽으로 이동하고 있어요."
+    "why_it_matters": "The center of AI product value is shifting from one-off answers to repeatable work loops."
   },
   {
     "id": "item-002",
@@ -25,7 +25,7 @@
     "business_impact": 4,
     "novelty": 4,
     "content_potential": 5,
-    "why_it_matters": "초기 팀에게 콘텐츠는 브랜딩이 아니라 시장 반응을 싸게 배우는 루프가 될 수 있어요."
+    "why_it_matters": "For early teams, publishing can become a cheap market-learning loop rather than only a brand activity."
   },
   {
     "id": "item-003",
@@ -39,7 +39,7 @@
     "business_impact": 5,
     "novelty": 4,
     "content_potential": 5,
-    "why_it_matters": "창업자는 이 관점으로 자기 AI 제품이 얇은 기능인지, 반복 데이터가 쌓이는 방어력 있는 제품인지 점검할 수 있어요."
+    "why_it_matters": "It gives founders a concrete test for whether their AI product can become durable."
   },
   {
     "id": "item-004",
@@ -53,7 +53,7 @@
     "business_impact": 5,
     "novelty": 3,
     "content_potential": 4,
-    "why_it_matters": "한국 스타트업 자금이 특정 영역으로 모이면 카테고리 선택과 수요 증명이 더 중요해져요."
+    "why_it_matters": "Korean startup funding may be narrowing, which makes category selection and proof of demand more important."
   },
   {
     "id": "item-005",
@@ -67,7 +67,7 @@
     "business_impact": 4,
     "novelty": 3,
     "content_potential": 4,
-    "why_it_matters": "투자 콘텐츠는 종목 추천보다 자산 배분, 현금흐름, 리스크 설명 쪽으로 이동하고 있어요."
+    "why_it_matters": "Content around investing is moving from stock picking toward education, allocation, and risk framing."
   },
   {
     "id": "item-006",
@@ -81,7 +81,7 @@
     "business_impact": 3,
     "novelty": 4,
     "content_potential": 4,
-    "why_it_matters": "리서치 보조 제품은 빠른 요약보다 출처 처리, 로컬 저장, 개인정보 신뢰를 명확히 보여줄 때 선택받을 수 있어요."
+    "why_it_matters": "A research assistant product can win trust by making source handling and privacy explicit."
   },
   {
     "id": "item-007",
@@ -95,7 +95,7 @@
     "business_impact": 5,
     "novelty": 4,
     "content_potential": 5,
-    "why_it_matters": "전문 서비스 업무가 아직 수작업인 한국 SME 시장에서는 vertical AI가 실제 소프트웨어 예산으로 연결될 수 있어요."
+    "why_it_matters": "This creates a market map lens for Korean SMEs, where expert service processes are often still manual."
   },
   {
     "id": "item-008",
@@ -109,6 +109,6 @@
     "business_impact": 4,
     "novelty": 3,
     "content_potential": 4,
-    "why_it_matters": "반복되는 내부 업무에서 출발한 도구는 팀이 매일 쓰는 워크플로가 되기 쉽고, 제품화 가능성도 더 선명해져요."
+    "why_it_matters": "Daily Signal Editor itself can be framed as a productized internal workflow."
   }
 ]

@@ -24,17 +24,31 @@ TYPE_DIVERSITY_ORDER = [
     "official_blog",
     "vc_blog",
     "newsletter",
+    "public_data",
     "public_report",
     "media",
     "community",
     "social_signal",
     "app_rankings",
     "youtube",
+    "map_review",
+    "reservation",
+    "commerce",
+    "real_estate",
 ]
 
 CATEGORY_DIVERSITY_ORDER = [
     "business",
     "consumer",
+    "persona_data",
+    "nvidia_ecosystem",
+    "sovereign_ai",
+    "physical_ai",
+    "physical_world",
+    "spatial_reviews",
+    "reservation",
+    "retail_offline",
+    "real_estate",
     "content_ip",
     "social_trends",
     "app_rankings",
@@ -78,8 +92,34 @@ def source_category(source: dict[str, Any]) -> str:
     source_type = source.get("source_type")
     if source_type == "app_rankings":
         return "app_rankings"
+    if source_type == "map_review":
+        return "spatial_reviews"
+    if source_type == "reservation":
+        return "reservation"
+    if source_type == "real_estate":
+        return "real_estate"
+    if source_type == "commerce":
+        return "retail_offline"
+    if source_type == "persona_data":
+        return "persona_data"
+    if source_type == "ecosystem_data":
+        return "nvidia_ecosystem"
+    if {"persona", "personas", "synthetic-persona", "demographic", "페르소나"} & domains:
+        return "persona_data"
+    if {"nvidia", "nemotron", "cuda", "dgx", "inception", "gpu"} & domains:
+        return "nvidia_ecosystem"
+    if {"sovereign-ai", "sovereign_ai", "k-ai", "foundation-model", "소버린"} & domains:
+        return "sovereign_ai"
+    if {"physical-ai", "physical_ai", "robotics", "digital-twin", "omniverse", "factory"} & domains:
+        return "physical_ai"
     if source_type in {"social_signal", "community"}:
         return "social_trends"
+    if {"offline", "space", "place", "physical", "popup", "store", "foot_traffic", "waiting"} & domains:
+        return "physical_world"
+    if {"real-estate", "commercial-real-estate", "lease", "rent", "vacancy", "상권", "임대"} & domains:
+        return "real_estate"
+    if {"reservation", "waiting", "queue", "예약", "대기"} & domains:
+        return "reservation"
     if "content_ip" in domains or "creator" in domains or "youtube" in domains:
         return "content_ip"
     if "consumer" in domains or "retail" in domains or "commerce" in domains:
@@ -234,8 +274,9 @@ def main() -> int:
         source
         for source in selected
         if (
-            source.get("source_type") in {"social_signal", "youtube", "app_rankings"}
-            or source_category(source) in {"social_trends", "app_rankings"}
+            source.get("source_type") in {"social_signal", "youtube", "app_rankings", "map_review", "reservation", "commerce", "real_estate"}
+            or source_category(source)
+            in {"social_trends", "app_rankings", "physical_world", "spatial_reviews", "reservation", "retail_offline", "real_estate"}
         )
         and not source.get("feed_url")
         and not source.get("api_url")

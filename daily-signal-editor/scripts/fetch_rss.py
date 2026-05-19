@@ -60,9 +60,18 @@ TOPIC_KEYWORDS = {
     ],
     "developer": ["developer", "developers", "code", "github", "open source", "api", "data science", "코드", "개발"],
     "consumer": ["consumer", "shopping", "retail", "brand", "commerce", "lifestyle", "trend", "소비", "쇼핑", "브랜드", "라이프스타일"],
+    "persona_data": ["persona", "personas", "synthetic persona", "demographic", "census", "페르소나", "합성 데이터", "인구통계"],
+    "nvidia_ecosystem": ["nvidia", "nemotron", "cuda", "dgx", "inception", "gpu", "엔비디아"],
+    "sovereign_ai": ["sovereign ai", "sovereign", "foundation model", "k-ai", "소버린", "파운데이션 모델"],
+    "physical_ai": ["physical ai", "robotics", "robot", "digital twin", "omniverse", "factory", "피지컬 ai", "로봇", "디지털 트윈", "팩토리"],
     "content_ip": ["creator", "creators", "content", "ip", "streaming", "youtube", "gaming", "game", "entertainment", "fan", "콘텐츠", "크리에이터", "팬덤", "게임", "엔터"],
     "app_rankings": ["app", "apps", "mobile app", "app store", "ranking", "rankings", "앱", "모바일", "순위"],
     "social_trends": ["trend", "trending", "viral", "meme", "x.com", "threads", "youtube", "shorts", "틱톡", "인급동", "밈", "바이럴"],
+    "physical_world": ["offline", "physical", "space", "place", "store", "popup", "pop-up", "restaurant", "cafe", "hotel", "공간", "장소", "매장", "팝업", "오프라인", "카페", "호텔"],
+    "spatial_reviews": ["review", "reviews", "rating", "map", "geotag", "photo spot", "place review", "리뷰", "지도", "별점", "포토스팟", "방문자"],
+    "reservation": ["reservation", "booking", "waitlist", "waiting", "queue", "table", "예약", "대기", "웨이팅", "줄", "캐치테이블", "테이블링"],
+    "retail_offline": ["retail", "shop", "brand", "merchandising", "flagship", "department store", "리테일", "쇼룸", "플래그십", "백화점", "편집숍"],
+    "real_estate": ["real estate", "commercial real estate", "lease", "rent", "vacancy", "foot traffic", "상권", "임대", "공실", "유동인구", "상가"],
     "security": ["ctf", "security", "vulnerability", "privacy"],
     "legal": ["legal", "law", "privacy", "regulatory", "governance", "compliance", "법률", "규제"],
     "korea": ["korea", "korean", "한국", "국내", "스타트업"],
@@ -181,7 +190,7 @@ def has_keyword(text: str, keyword: str) -> bool:
 
 def score_hint(text: str, base: int = 3) -> int:
     lowered = text.lower()
-    strong_terms = ["ai", "agent", "startup", "market", "workflow", "funding", "enterprise", "consumer", "creator", "ranking", "app", "content", "brand"]
+    strong_terms = ["ai", "agent", "startup", "market", "workflow", "funding", "enterprise", "consumer", "creator", "ranking", "app", "content", "brand", "offline", "space", "place", "reservation", "queue", "retail", "persona", "nvidia", "nemotron", "sovereign", "physical ai", "상권", "공간", "예약", "대기", "페르소나", "소버린"]
     weak_terms = ["joins", "welcome", "congratulations", "podcast", "event"]
     score = base + sum(1 for term in strong_terms if has_keyword(lowered, term)) // 2
     if any(has_keyword(lowered, term) for term in weak_terms):
@@ -243,6 +252,24 @@ def why_it_matters(text: str, topics: list[str]) -> str:
         return "콘텐츠와 IP 흐름은 팬덤, 커머스, 게임, 오프라인 경험으로 확장될 수 있어요. 단순 조회수보다 반복 소비와 2차 수익화를 봐야 해요."
     if "consumer" in topic_set:
         return "소비자 관심의 변화는 가격, 채널, 브랜드 메시지를 바꿔요. 사람들이 실제로 시간과 돈을 쓰는 이유를 확인해야 해요."
+    if "physical_world" in topic_set:
+        return "오프라인 신호는 사람이 실제로 이동하고 머물고 돈을 내는 흔적이에요. 말보다 강한 수요 증거가 될 수 있어요."
+    if "spatial_reviews" in topic_set:
+        return "공간 리뷰는 만족도보다 방문 동기, 사진 구도, 불편, 재방문 언어를 봐야 해요. 공간이 어떤 욕망을 해결하는지 드러나요."
+    if "reservation" in topic_set:
+        return "예약과 대기는 시간 비용을 감수한 수요예요. 유행인지 반복 루틴인지 확인하면 더 강한 사업 신호가 돼요."
+    if "retail_offline" in topic_set:
+        return "리테일 신호는 취향이 물건과 진열, 동선으로 굳어지는 순간을 보여줘요. 온라인 언어가 오프라인 매출로 바뀌는지 봐야 해요."
+    if "real_estate" in topic_set:
+        return "상권과 임대 신호는 공급자가 어디에 베팅하는지 보여줘요. 브랜드와 사람의 흐름이 공간 가격을 바꾸는지 확인해야 해요."
+    if "persona_data" in topic_set:
+        return "페르소나 데이터는 관찰된 장면을 한국 사용자 맥락으로 해석하게 해줘요. 현장 신호를 제품 가설과 시나리오 평가로 바꿀 수 있어요."
+    if "nvidia_ecosystem" in topic_set:
+        return "NVIDIA 생태계 신호는 한국 AI 개발자, 스타트업, 대기업, 인프라가 어디에 모이는지 보여줘요. 실행 가능한 기술 채택 맥락을 읽어야 해요."
+    if "sovereign_ai" in topic_set:
+        return "소버린 AI 신호는 한국어, 규제, 산업 데이터, 공공 인프라가 결합되는 방향을 보여줘요. 로컬 제품 전략의 기준점이 될 수 있어요."
+    if "physical_ai" in topic_set:
+        return "피지컬 AI 신호는 로봇, 제조, 모빌리티, 공간 운영이 AI와 연결되는 지점을 보여줘요. 현장과 시뮬레이션의 간극을 봐야 해요."
     if "social_trends" in topic_set:
         return "소셜 트렌드는 빠르게 식을 수 있지만 대중의 언어와 관심사를 빨리 보여줘요. 제품 훅이나 콘텐츠 가설을 만들 때 유용해요."
     return "후보 신호로는 볼 수 있어요. 다만 전략에 반영하려면 더 강한 1차 출처나 반복 패턴을 확인해야 해요."

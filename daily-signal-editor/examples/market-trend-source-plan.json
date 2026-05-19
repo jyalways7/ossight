@@ -412,7 +412,7 @@
       "source_category": "social_trends",
       "access": "public_web",
       "tier": 3,
-      "quality": 3,
+      "quality": 2,
       "cadence": "daily",
       "domains": [
         "social",
@@ -429,7 +429,7 @@
       "geography": [
         "global"
       ],
-      "selection_score": 13.75,
+      "selection_score": 12.55,
       "notes": "Manual weak-signal watchlist. Do not bypass login or scrape protected content. Use public posts only and verify claims with stronger sources."
     },
     {
@@ -440,7 +440,7 @@
       "source_category": "social_trends",
       "access": "public_web",
       "tier": 3,
-      "quality": 3,
+      "quality": 2,
       "cadence": "daily",
       "domains": [
         "social",
@@ -457,7 +457,7 @@
       "geography": [
         "global"
       ],
-      "selection_score": 13.3,
+      "selection_score": 12.1,
       "notes": "Manual weak-signal watchlist for casual conversation shifts. Use user-provided public links or excerpts."
     },
     {
@@ -928,112 +928,6 @@
       ],
       "selection_score": 13.01,
       "notes": "Use as narrative and interview source; verify factual claims with primary links."
-    },
-    {
-      "id": "latent-space",
-      "name": "Latent Space",
-      "url": "https://www.latent.space/",
-      "source_type": "newsletter_podcast",
-      "access": "public_web",
-      "tier": 2,
-      "quality": 5,
-      "cadence": "weekly",
-      "domains": [
-        "ai",
-        "developer",
-        "agents",
-        "models"
-      ],
-      "personas": [
-        "founder",
-        "creator",
-        "corporate-strategist"
-      ],
-      "geography": [
-        "global"
-      ],
-      "selection_score": 12.08,
-      "notes": "Strong AI engineer/operator source. Use public posts, podcast pages, and transcripts when available."
-    },
-    {
-      "id": "ycombinator-youtube",
-      "name": "Y Combinator YouTube",
-      "url": "https://www.youtube.com/@ycombinator",
-      "source_type": "youtube",
-      "access": "public_web",
-      "tier": 2,
-      "quality": 4,
-      "cadence": "weekly",
-      "domains": [
-        "founder",
-        "startup",
-        "ai",
-        "fundraising"
-      ],
-      "personas": [
-        "founder",
-        "creator"
-      ],
-      "geography": [
-        "global"
-      ],
-      "selection_score": 11.99,
-      "notes": "Founder education videos; use public titles/descriptions/transcripts when available."
-    },
-    {
-      "id": "openai-news",
-      "name": "OpenAI News",
-      "url": "https://openai.com/news",
-      "feed_url": "https://openai.com/news/rss.xml",
-      "source_type": "official_blog",
-      "access": "rss",
-      "tier": 1,
-      "quality": 5,
-      "cadence": "weekly",
-      "domains": [
-        "ai",
-        "agents",
-        "product",
-        "research",
-        "enterprise"
-      ],
-      "personas": [
-        "founder",
-        "b2b-marketer",
-        "corporate-strategist",
-        "investor-analyst"
-      ],
-      "geography": [
-        "global"
-      ],
-      "selection_score": 11.9,
-      "notes": "Primary source for OpenAI product, research, and workplace AI workflow announcements."
-    },
-    {
-      "id": "import-ai",
-      "name": "Import AI",
-      "url": "https://jack-clark.net/",
-      "source_type": "newsletter",
-      "access": "public_web",
-      "tier": 2,
-      "quality": 5,
-      "cadence": "weekly",
-      "domains": [
-        "ai",
-        "research",
-        "policy",
-        "safety"
-      ],
-      "personas": [
-        "investor-analyst",
-        "corporate-strategist",
-        "creator"
-      ],
-      "geography": [
-        "global"
-      ],
-      "selection_score": 11.61,
-      "notes": "Good for AI research and policy signal; convert carefully into business implications."
     }
   ],
   "rss_sources": [
@@ -1150,35 +1044,6 @@
       ],
       "selection_score": 13.37,
       "notes": "High-volume AI startup and product news. Use as discovery; verify strategic claims with primary sources."
-    },
-    {
-      "id": "openai-news",
-      "name": "OpenAI News",
-      "url": "https://openai.com/news",
-      "feed_url": "https://openai.com/news/rss.xml",
-      "source_type": "official_blog",
-      "access": "rss",
-      "tier": 1,
-      "quality": 5,
-      "cadence": "weekly",
-      "domains": [
-        "ai",
-        "agents",
-        "product",
-        "research",
-        "enterprise"
-      ],
-      "personas": [
-        "founder",
-        "b2b-marketer",
-        "corporate-strategist",
-        "investor-analyst"
-      ],
-      "geography": [
-        "global"
-      ],
-      "selection_score": 11.9,
-      "notes": "Primary source for OpenAI product, research, and workplace AI workflow announcements."
     }
   ],
   "app_ranking_sources": [
@@ -1338,7 +1203,7 @@
       "source_category": "social_trends",
       "access": "public_web",
       "tier": 3,
-      "quality": 3,
+      "quality": 2,
       "cadence": "daily",
       "domains": [
         "social",
@@ -1355,7 +1220,7 @@
       "geography": [
         "global"
       ],
-      "selection_score": 13.75,
+      "selection_score": 12.55,
       "notes": "Manual weak-signal watchlist. Do not bypass login or scrape protected content. Use public posts only and verify claims with stronger sources."
     },
     {
@@ -1366,7 +1231,7 @@
       "source_category": "social_trends",
       "access": "public_web",
       "tier": 3,
-      "quality": 3,
+      "quality": 2,
       "cadence": "daily",
       "domains": [
         "social",
@@ -1383,7 +1248,7 @@
       "geography": [
         "global"
       ],
-      "selection_score": 13.3,
+      "selection_score": 12.1,
       "notes": "Manual weak-signal watchlist for casual conversation shifts. Use user-provided public links or excerpts."
     },
     {
@@ -1498,31 +1363,6 @@
       ],
       "selection_score": 13.01,
       "notes": "Use as narrative and interview source; verify factual claims with primary links."
-    },
-    {
-      "id": "ycombinator-youtube",
-      "name": "Y Combinator YouTube",
-      "url": "https://www.youtube.com/@ycombinator",
-      "source_type": "youtube",
-      "access": "public_web",
-      "tier": 2,
-      "quality": 4,
-      "cadence": "weekly",
-      "domains": [
-        "founder",
-        "startup",
-        "ai",
-        "fundraising"
-      ],
-      "personas": [
-        "founder",
-        "creator"
-      ],
-      "geography": [
-        "global"
-      ],
-      "selection_score": 11.99,
-      "notes": "Founder education videos; use public titles/descriptions/transcripts when available."
     }
   ],
   "watchlist_sources": [
@@ -1863,7 +1703,7 @@
       "source_category": "social_trends",
       "access": "public_web",
       "tier": 3,
-      "quality": 3,
+      "quality": 2,
       "cadence": "daily",
       "domains": [
         "social",
@@ -1880,7 +1720,7 @@
       "geography": [
         "global"
       ],
-      "selection_score": 13.75,
+      "selection_score": 12.55,
       "notes": "Manual weak-signal watchlist. Do not bypass login or scrape protected content. Use public posts only and verify claims with stronger sources."
     },
     {
@@ -1891,7 +1731,7 @@
       "source_category": "social_trends",
       "access": "public_web",
       "tier": 3,
-      "quality": 3,
+      "quality": 2,
       "cadence": "daily",
       "domains": [
         "social",
@@ -1908,7 +1748,7 @@
       "geography": [
         "global"
       ],
-      "selection_score": 13.3,
+      "selection_score": 12.1,
       "notes": "Manual weak-signal watchlist for casual conversation shifts. Use user-provided public links or excerpts."
     },
     {
@@ -2293,83 +2133,6 @@
       ],
       "selection_score": 13.01,
       "notes": "Use as narrative and interview source; verify factual claims with primary links."
-    },
-    {
-      "id": "latent-space",
-      "name": "Latent Space",
-      "url": "https://www.latent.space/",
-      "source_type": "newsletter_podcast",
-      "access": "public_web",
-      "tier": 2,
-      "quality": 5,
-      "cadence": "weekly",
-      "domains": [
-        "ai",
-        "developer",
-        "agents",
-        "models"
-      ],
-      "personas": [
-        "founder",
-        "creator",
-        "corporate-strategist"
-      ],
-      "geography": [
-        "global"
-      ],
-      "selection_score": 12.08,
-      "notes": "Strong AI engineer/operator source. Use public posts, podcast pages, and transcripts when available."
-    },
-    {
-      "id": "ycombinator-youtube",
-      "name": "Y Combinator YouTube",
-      "url": "https://www.youtube.com/@ycombinator",
-      "source_type": "youtube",
-      "access": "public_web",
-      "tier": 2,
-      "quality": 4,
-      "cadence": "weekly",
-      "domains": [
-        "founder",
-        "startup",
-        "ai",
-        "fundraising"
-      ],
-      "personas": [
-        "founder",
-        "creator"
-      ],
-      "geography": [
-        "global"
-      ],
-      "selection_score": 11.99,
-      "notes": "Founder education videos; use public titles/descriptions/transcripts when available."
-    },
-    {
-      "id": "import-ai",
-      "name": "Import AI",
-      "url": "https://jack-clark.net/",
-      "source_type": "newsletter",
-      "access": "public_web",
-      "tier": 2,
-      "quality": 5,
-      "cadence": "weekly",
-      "domains": [
-        "ai",
-        "research",
-        "policy",
-        "safety"
-      ],
-      "personas": [
-        "investor-analyst",
-        "corporate-strategist",
-        "creator"
-      ],
-      "geography": [
-        "global"
-      ],
-      "selection_score": 11.61,
-      "notes": "Good for AI research and policy signal; convert carefully into business implications."
     }
   ]
 }

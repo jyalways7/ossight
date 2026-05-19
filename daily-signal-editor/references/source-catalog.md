@@ -21,6 +21,15 @@ For broad trend work, enforce category diversity instead of letting AI dominate.
 
 - `business`: general company, strategy, retail, platform, and market-model shifts.
 - `consumer`: consumer behavior, lifestyle, shopping, brand, and survey reports.
+- `persona_data`: synthetic persona datasets and public explanations used for hypothesis generation and scenario testing.
+- `nvidia_ecosystem`: NVIDIA Korea ecosystem, developer, startup, AI Day, enterprise AI, and infrastructure signals.
+- `sovereign_ai`: Korean sovereign AI, local model, language, public-private AI, and national AI infrastructure signals.
+- `physical_ai`: robotics, digital twins, manufacturing AI, mobility, simulation, AI factories, and field-operation signals.
+- `physical_world`: material-world behavior such as movement, dwell, payment, photos, routes, and offline experiences.
+- `spatial_reviews`: map reviews, public place pages, review counts, photo patterns, complaints, and repeat-visit language.
+- `reservation`: public reservation, waiting, queue, and availability surfaces.
+- `retail_offline`: commerce curation, brand ranking, store/pop-up activation, merchandising, and lifestyle objects.
+- `real_estate`: commercial-area data, business density, foot traffic, vacancy, lease, and rent narratives.
 - `content_ip`: creator economy, YouTube, games, entertainment, fandom, and IP extensions.
 - `social_trends`: X, Threads, YouTube trending, Google Trends, Reddit, and community weak signals.
 - `app_rankings`: app store charts, mobile rankings, traffic/ranking reports.
@@ -33,6 +42,10 @@ Planner outputs are separated by collection method:
 - `rss_sources`: fetch automatically with `scripts/fetch_rss.py`.
 - `app_ranking_sources`: fetch with `scripts/fetch_app_rankings.py` when an `api_url` exists.
 - `manual_signal_sources`: inspect manually or use user-provided public links/excerpts. This includes X, Threads, and YouTube trending.
+
+For physical-world work, most sources are watchlist or manual sources. Do not scrape map reviews, bypass platform controls, automate bookings, or collect private account content. Record only short public observations and link to the public surface.
+
+For NVIDIA Korea persona work, treat Nemotron-Personas-Korea as a scenario and evaluation layer. It can sharpen Korean persona hypotheses, but it does not replace user interviews, survey data, transaction data, or observed behavior.
 
 Example:
 
@@ -81,6 +94,7 @@ Use video sources as watchlist items unless transcripts are available:
 - a16z YouTube for market narrative and interviews.
 - Gartner YouTube for enterprise technology framing.
 - YouTube Trending Korea for fast public-interest signals. Treat titles and visible metrics as weak signals, not proof.
+- YouTube Korea vlogs and place Shorts for physical-world work. Track route order, repeated locations, entrance shots, waiting language, comments asking for location, and creator-made courses. Verify with map reviews, reservation surfaces, or public spatial data.
 
 ### Social, Search, and App Ranking Signals
 
@@ -97,6 +111,41 @@ When these sources produce a signal, ask:
 - Is the interest rising, recurring, or just a one-day spike?
 - Does the signal imply a product idea, content hook, distribution channel, or IP extension?
 - What stronger source would confirm it?
+
+### Physical World, Space, and Retail Signals
+
+Use these to observe where online attention becomes embodied behavior:
+
+- Map/place reviews: Naver Map, Kakao Map, Google Maps where public. Look for recent review language, photo repetition, complaints, revisit words, and route context.
+- Reservation and waiting: CatchTable, Tabling, public booking availability, visible waitlist language, and regional/category clustering.
+- Public spatial data: Seoul Open Data, commercial-area data, transport and foot-traffic datasets, small-business density, vacancy, and local facility data.
+- Retail and lifestyle curation: 29CM, Musinsa, Todayhouse, department-store pop-ups, flagship stores, and public brand campaigns.
+- Public visual signals: Instagram public geotags, YouTube vlogs, Shorts/Reels titles, and creator routes. Treat as weak signals, but include them intentionally because they reveal movement order and scene design better than text-only sources.
+
+When these sources produce a signal, ask:
+
+- What scene is repeated: movement, dwell, queue, payment, photo, object, route, or copy?
+- What hidden desire is being materialized?
+- Is this attention, a habit, or a market?
+- Which stronger source confirms it: reservation data, map reviews, public spatial data, commerce ranking, or repeated brand replication?
+- Can the format survive outside the original neighborhood?
+
+### NVIDIA Korea Persona and Ecosystem Signals
+
+Use these to connect Korean physical-world and consumer observations with AI adoption capability:
+
+- NVIDIA Blog Korea and NVIDIA AI Day Seoul: developer, startup, enterprise, sovereign AI, and physical AI ecosystem cues.
+- Nemotron-Personas-Korea: synthetic Korean personas for scenario generation and evaluation prompts.
+- NVIDIA Korea AI infrastructure announcements: AI factories, sovereign cloud, manufacturing, robotics, and physical AI capability.
+- Hugging Face dataset metadata: license, release context, dataset scale, tags, and intended use.
+
+When these sources produce a signal, ask:
+
+- Which Korean persona jobs does this help separate?
+- Does the signal change product feasibility, distribution, or evaluation?
+- Is this a real deployment path or only ecosystem narrative?
+- Which observed behavior would validate the persona hypothesis?
+- Which human research or operational data is still missing?
 
 ### Tier 3: Community and Social Signals
 

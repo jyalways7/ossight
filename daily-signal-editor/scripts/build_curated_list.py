@@ -22,9 +22,21 @@ TOPIC_LABELS = {
     "legal": "규제",
     "korea": "한국 시장",
     "consumer": "소비자 관심",
+    "persona_data": "페르소나 데이터",
+    "nvidia_ecosystem": "NVIDIA 생태계",
+    "sovereign_ai": "소버린 AI",
+    "physical_ai": "피지컬 AI",
     "content_ip": "콘텐츠/IP",
     "app_rankings": "앱 순위",
     "social_trends": "소셜 트렌드",
+    "physical_world": "현장/오프라인",
+    "spatial_reviews": "공간 리뷰",
+    "reservation": "예약/대기",
+    "retail_offline": "리테일/취향",
+    "real_estate": "상권/부동산",
+    "foot_traffic": "동선/체류",
+    "place": "장소",
+    "space": "공간",
     "creator": "크리에이터",
     "apps": "앱",
     "rankings": "순위",
@@ -84,25 +96,6 @@ def is_allowed_item(item: dict) -> bool:
 def primary_topic(item: dict) -> str:
     topics = item.get("topics") or ["unknown"]
     return str(topics[0] or "unknown")
-
-
-def render_kind_groups(queue: list[dict]) -> list[str]:
-    grouped: dict[str, list[dict]] = {}
-    for item in queue:
-        grouped.setdefault(primary_topic(item), []).append(item)
-
-    lines = ["", "## 신호 종류별 큐레이션", ""]
-    for topic, items in sorted(grouped.items(), key=lambda row: (-len(row[1]), topic_label(row[0]))):
-        lines.append(f"### {topic_label(topic)}")
-        for item in items[:5]:
-            lines.append(
-                f"- [{item['title']}]({item.get('url', '')}) "
-                f"({item.get('source_name', item.get('source_id', 'unknown'))}, {item.get('score', 'n/a')} / 5)"
-            )
-        if len(items) > 5:
-            lines.append(f"- 외 {len(items) - 5}개")
-        lines.append("")
-    return lines
 
 
 def select_queue(
@@ -186,8 +179,6 @@ def render_queue(profile: dict, queue: list[dict], scored_count: int) -> str:
     ]
     for source, count in source_counts.most_common():
         lines.append(f"- {source}: {count}")
-
-    lines.extend(render_kind_groups(queue))
 
     lines.extend(["", "## 우선순위 큐", ""])
     current_tier = ""
